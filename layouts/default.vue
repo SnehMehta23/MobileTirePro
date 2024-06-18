@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+  <LayoutAppHeader/>
   <slot/>
   <LayoutAppFooter/>
 </template>

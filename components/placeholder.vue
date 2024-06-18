@@ -8,7 +8,7 @@
       <img src="/images/logo_img.png" alt="">
       <section class="text-center text-white text-xl">
         Opening Soon!
-        Monday - Saturday 4:00pm to 5:30pm
+        Monday - Saturday 4:00pm to 5:30pm ||
         Saturdays 7:30am - 5:30pm
       </section>
     </div>
@@ -17,7 +17,7 @@
         Pardon our dust!
       </div>
       <div>
-        Mobile Tires Pro customers, we are working on delivering a quality website for you
+        Mobile Tire Pro customers! We are working on delivering a quality website for you
       </div>
     </div>
   </div>
