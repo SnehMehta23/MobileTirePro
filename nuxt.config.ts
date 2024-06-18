@@ -6,6 +6,11 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-        }
+            script: [
+                // Square Web Payments SDK
+                { src: "https://sandbox.web.squarecdn.com/v1/square.js" },
+            ],
+        },
+
     }
 })
