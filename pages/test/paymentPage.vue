@@ -5,7 +5,7 @@ const locationId = 'L5TYMTK1GRZGC';
 let card;
 let paymentStatus = ref("");
 let loading = ref(true);
-let googlePay = ref("")
+
 
 onMounted(async () => {
   loading.value = true;
