@@ -1,48 +1,15 @@
 <script setup lang="ts">
-import heroSection from "~/components/layout/heroSection.vue"
+
 </script>
 
 <template>
-  <heroSection />
-
-  <div class="flex flex-col items-center justify-center">
-    <p>Some bullshit</p>
-    <h4>Some more bullshit</h4>
+  <HeroSection />
+  <div class="flex flex-col items-center justify-center mb-2">
+    <p class="text-3xl">How It <span class="text-red-500">Works</span></p>
+    <h4 class="text-xl m-2">Driving Excellence: Our Tire Service Process</h4>
   </div>
-
-  <div>
-    <!-- Bento Box Area -->
-    <div>
-      <div>
-        <div></div>
-        <p></p>
-        <img src="" alt="">
-      </div>
-      <div>
-        <div></div>
-        <p></p>
-        <img src="" alt="">
-      </div>
-      <div>
-        <div></div>
-        <p></p>
-        <img src="" alt="">
-      </div>
-      <div>
-        <div></div>
-        <p></p>
-        <img src="" alt="">
-      </div>
-    </div>
-
-    <!-- Leaflet Section -->
-    <section>
-      <!-- Interactive Map Flexed -->
-      <div></div>
-      <!-- Towns Serviced Flexed -->
-      <div></div>
-    </section>
-  </div>
+  <BentoGrid />
+  <LeafletComponent />
 </template>
 
 <style>
