@@ -32,18 +32,22 @@
                         <div>
                             <div>
                                 <h6></h6>
+                                <!-- Front Left Tire -->
                                 <span></span>
                             </div>
                             <div>
                                 <h6></h6>
+                                <!-- Front Right Tire -->
                                 <span></span>
                             </div>
                             <div>
                                 <h6></h6>
+                                <!-- Back Left Tire -->
                                 <span></span>
                             </div>
                             <div>
                                 <h6></h6>
+                                <!-- Back Right Tire -->
                                 <span></span>
                             </div>
                         </div>
