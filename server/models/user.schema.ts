@@ -1,7 +1,5 @@
 import {defineMongooseModel} from "#nuxt/mongoose";
 
-
-const {mongo} = useRuntimeConfig().auth
 export const userSchema = defineMongooseModel({
     name: 'User',
     schema: {
@@ -13,5 +11,16 @@ export const userSchema = defineMongooseModel({
         password: {
             type: 'string'
         }
-    }
+    },
+    hooks(schema) {
+        schema.pre('save', function (this, next) {
+            if (this.password && this.email)
+                next()
+
+            throw createError({
+                statusCode: 500,
+                statusMessage: 'validation failed',
+            })
+        })
+    },
 })

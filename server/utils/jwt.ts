@@ -10,7 +10,7 @@ const JWT_SECRET = new TextEncoder().encode(mongo.secret)
 export async function createJWT(email: string) {
 //@ts-ignore
     return jwt.sign({email: email}, temp, {
-        expiresIn: 172800 //24 hours
+        expiresIn: 172800 //48 hours
     })
 }
 
