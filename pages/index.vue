@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <!-- <HeroSection /> -->
   <HeroSection />
   <div class="flex flex-col items-center justify-center mb-2">
     <p class="text-3xl">How It <span class="text-red-500">Works</span></p>
