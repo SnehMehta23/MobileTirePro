@@ -8,6 +8,12 @@ export default defineNuxtConfig({
         "@vue-email/nuxt",
         "nuxt3-leaflet"
     ],
+    googleFonts: {
+        families: {
+          Lato: [100, 300, 400, 700, 900] // Add the weights you need
+        },
+        display: 'swap' // This is optional but recommended for better performance
+    },
     app: {
         head: {
             charset: 'utf-8',

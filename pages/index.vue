@@ -16,5 +16,6 @@
 <style>
 body {
   background-color: #FAFAFA;
+  font-family: Lato;
 }
 </style>
