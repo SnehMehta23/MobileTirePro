@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     ],
     googleFonts: {
         families: {
-          Lato: [100, 300, 400, 700, 900] // Add the weights you need
+          Lato: [400, 700, 900] // Add the weights you need
         },
         display: 'swap' // This is optional but recommended for better performance
     },
