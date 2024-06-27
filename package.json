@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/icon": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "leaflet": "^1.9.4",
     "nuxt3-leaflet": "^1.0.13",
@@ -22,6 +23,7 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.4.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/seo": "^2.0.0-rc.10",
     "@vue-email/nuxt": "^0.8.19"
