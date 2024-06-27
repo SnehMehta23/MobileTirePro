@@ -7,8 +7,20 @@ export default defineNuxtConfig({
         "@nuxtjs/seo",
         "@vue-email/nuxt",
         "nuxt-mongoose",
-        './modules/auth.module'
+        './modules/auth.module',
+        '@nuxtjs/color-mode',
+        "@nuxt/icon"
     ],
+    colorMode: {
+        preference: 'light', // default value of $colorMode.preference
+        fallback: 'light', // fallback value if not system preference found
+        hid: 'nuxt-color-mode-script',
+        globalName: '__NUXT_COLOR_MODE__',
+        componentName: 'ColorScheme',
+        classPrefix: '',
+        classSuffix: '-mode',
+        storageKey: 'nuxt-color-mode'
+    },
     app: {
         head: {
             charset: 'utf-8',
