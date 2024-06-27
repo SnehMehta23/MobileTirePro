@@ -3,15 +3,14 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 </script>
 
 <template>
-    <section class="flex justify-center gap-20 mt-8 text-left">
+    <section class="flex justify-center gap-20 mt-8 text-left max-w-7xl mx-auto">
         <div class="space-y-2 w-[500px] p-8">
             <h1 class="text-5xl">Tire Service at Your Doorstep</h1>
             <p class="text-2xl">Skip the tire shop hassle. We bring expert tire installation right to you!</p>
             <p class="text-xl">Save time and stress with our mobile tire service. Whether you're at home or work we
                 don't
-                compromise on quality of service. Book your appointment by choosing your vehicle type or reach out for
-                any
-                questions. </p>
+                compromise on quality of service. Book your appointment with ease! Start by choosing your vehicle type
+            </p>
             <div class="flex gap-2">
                 <vehicleTypeSquare vehicleType="Sedan" imageUrl="/images/sedan.png" />
                 <vehicleTypeSquare vehicleType="SUV" imageUrl="/images/SUV.png" />
@@ -19,7 +18,7 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
                 <vehicleTypeSquare vehicleType="EV" imageUrl="/images/electriccar.png" />
             </div>
             <hr class="border-t-4 border-gray-200">
-            <p class="text-lg font-medium text-orange-600 text-left mt-2 underline cursor-pointer">
+            <p class="text-md font-medium text-orange-600 text-left mt-2 underline cursor-pointer text-nowrap">
                 Curious about your tires? Contact us for a no-cost assessment!
             </p>
         </div>

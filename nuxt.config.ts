@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         "@nuxtjs/google-fonts",
         "@nuxtjs/seo",
         "@vue-email/nuxt",
+      "nuxt3-leaflet",
         "nuxt-mongoose",
         './modules/auth.module',
         '@nuxtjs/color-mode',
@@ -20,6 +21,12 @@ export default defineNuxtConfig({
         classPrefix: '',
         classSuffix: '-mode',
         storageKey: 'nuxt-color-mode'
+    ],
+    googleFonts: {
+        families: {
+          Lato: [400, 700, 900] // Add the weights you need
+        },
+        display: 'swap' // This is optional but recommended for better performance
     },
     app: {
         head: {
