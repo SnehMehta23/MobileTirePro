@@ -6,9 +6,16 @@ export default defineNuxtConfig({
         "@nuxtjs/google-fonts",
         "@nuxtjs/seo",
         "@vue-email/nuxt",
-        "nuxt-mongoose",
+        "nuxt3-leaflet",
+      "nuxt-mongoose",
         './modules/auth.module'
     ],
+    googleFonts: {
+        families: {
+          Lato: [400, 700, 900] // Add the weights you need
+        },
+        display: 'swap' // This is optional but recommended for better performance
+    },
     app: {
         head: {
             charset: 'utf-8',
