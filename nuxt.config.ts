@@ -6,7 +6,9 @@ export default defineNuxtConfig({
         "@nuxtjs/google-fonts",
         "@nuxtjs/seo",
         "@vue-email/nuxt",
-        "nuxt3-leaflet"
+        "nuxt3-leaflet",
+      "nuxt-mongoose",
+        './modules/auth.module'
     ],
     googleFonts: {
         families: {
@@ -19,5 +21,11 @@ export default defineNuxtConfig({
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
         }
-    }
+    },
+    mongoose: {
+        uri: process.env.MONGODB_URI,
+        options: {},
+        modelsDir: 'models',
+        devtools: true,
+    },
 })
