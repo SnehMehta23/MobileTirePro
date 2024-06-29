@@ -38,20 +38,23 @@
         </div>
     </div>
 
-    <style>
-        @media (min-width: 768px) {
-            #history-section::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                width: 58.33%;
-                /* 7/12 of the container width */
-                background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-                z-index: 5;
-                pointer-events: none;
-            }
-        }
-    </style>
+
 </template>
+<style>
+@media (min-width: 768px) {
+  #history-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58.33%;
+    /* 7/12 of the container width */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+</style>
+<script setup lang="ts">
+</script>
