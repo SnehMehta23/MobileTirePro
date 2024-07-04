@@ -11,6 +11,12 @@ export default defineNuxtConfig({
         './modules/auth.module',
         '@nuxtjs/color-mode',
     ],
+    tailwindcss: {
+        configPath: '~/tailwind.config.js',
+        exposeConfig: true,
+        injectPosition: 0,
+        viewer: true,
+    },
     //@ts-ignore
     colorMode: {
         preference: 'light', // default value of $colorMode.preference
@@ -24,12 +30,11 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-            Lato: [400, 700, 900] // Add the weights you need
-        }
-        ,
-        display: 'swap' // This is optional but recommended for better performance
-    }
-    ,
+          Lato: [400, 700, 900],
+          'Kumbh Sans': [400, 700, 900]
+        },
+        display: 'swap'
+    },
     app: {
         head: {
             charset: 'utf-8',

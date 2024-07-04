@@ -1,10 +1,10 @@
 <template>
-    <div id="history-section" class="rounded-lg relative overflow-hidden md:mt-12 md:mx-32 md:mb-12 min-h-[600px]">
+    <div id="history-section" class="rounded-lg relative overflow-hidden md:mt-12 md:mx-32 md:mb-12 min-h-[600px] text-dark-charcoal">
         <div class="flex flex-col md:flex-row">
             <div
-                class="md:w-7/12 relative z-10 bg-[#f5f5f5] border border-gray-50 shadow-2xl rounded-lg drop-shadow-md bg-opacity-90 p-8 md:pr-16 md:-mr-24">
-                <h2 class="text-2xl text-darkGreen-700 font-bold font-ubuntu mb-4">Our History</h2>
-                <hr class="w-24 h-1 bg-red-500 border-0 rounded mt-2" />
+                class="md:w-7/12 relative z-10 bg-light-gray border border-off-white shadow-2xl rounded-lg drop-shadow-md bg-opacity-90 p-8 md:pr-16 md:-mr-24">
+                <h2 class="text-2xl font-bold font-ubuntu mb-4">Our History</h2>
+                <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-lg font-manrope mb-8 mt-2">
                     Mobile Tire Pro's journey and ambitions began when an experienced technician with over 15 years at a
                     renowned tire shop, recognized the need for a more customer-friendly approach to tire service. Our
@@ -16,8 +16,8 @@
                     benefiting
                     from years of industry insight and a dedication to your complete satisfaction.
                 </p>
-                <h2 class="text-2xl text-darkGreen-700 font-bold font-ubuntu mb-4">Quality Commitment</h2>
-                <hr class="w-24 h-1 bg-red-500 border-0 rounded mt-2" />
+                <h2 class="text-2xl font-bold font-ubuntu mb-4">Quality Commitment</h2>
+                <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-lg font-manrope mt-2">
                     At Mobile Tire Pro, we are dedicated to providing a seamless and stress-free tire installation
                     service by
@@ -41,6 +41,13 @@
 
 </template>
 <style>
+h2 {
+    font-family: 'Lato', sans-serif;
+}
+p {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
 @media (min-width: 768px) {
   #history-section::after {
     content: '';
