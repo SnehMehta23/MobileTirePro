@@ -10,7 +10,6 @@ export default defineNuxtConfig({
         "nuxt-mongoose",
         './modules/auth.module',
         '@nuxtjs/color-mode',
-        "@nuxt/icon"
     ],
     //@ts-ignore
     colorMode: {
