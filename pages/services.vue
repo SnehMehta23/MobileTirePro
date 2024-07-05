@@ -1,6 +1,6 @@
 <template>
     <div>
-        nibbas do be servicing 
+        nibbas do be servicing
     </div>
 </template>
 

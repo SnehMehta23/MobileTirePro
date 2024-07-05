@@ -5,21 +5,23 @@
         <div class="flex items-center">
           <img src="/public/images/logo_img2.png" alt="Mobile Tire Pro" class="h-36 w-auto min-w-[48px] mr-2">
         </div>
-        <div class="hidden sm:flex items-center space-x-4">
-          <a v-for="link in links" :href="link.to" class="text-charcoal-gray hover:text-dark-charcoal">{{ link.label }}</a>
+        <div class="hidden lg:flex items-center space-x-4">
+          <a v-for="link in links" :key="link.to" :href="link.to" 
+             class="text-charcoal-gray hover:text-dark-charcoal">
+            {{ link.label }}
+          </a>
           <button class="bg-vivid-red text-pale-gray px-4 py-2 rounded-full hover:bg-crimson-red transition duration-300">
             Book Now
           </button>
           <div class="cursor-pointer">
             <Icon
-                :name="iconName"
-                @click="toggleTheme"
-                :id="iconName"
+              :name="iconName"
+              @click="toggleTheme"
+              :id="iconName"
             />
-
           </div>
         </div>
-        <div class="sm:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <!-- Mobile menu button -->
           <button @click="mobileMenuOpen = !mobileMenuOpen"
                   class="text-slate-gray hover:text-charcoal-gray focus:outline-none">
@@ -33,28 +35,36 @@
       </div>
     </div>
     <!-- Mobile menu -->
-    <div v-if="mobileMenuOpen" class="sm:hidden">
+    <div v-if="mobileMenuOpen" class="lg:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a v-for="link in links" :href="link.to"
+        <a v-for="link in links" :key="link.to" :href="link.to"
            class="block px-3 py-2 text-charcoal-gray hover:text-dark-charcoal">{{ link.label }}</a>
         <button
             class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300">
           Book Now
         </button>
+        <div class="px-3 py-2">
+          <Icon
+            :name="iconName"
+            @click="toggleTheme"
+            :id="iconName"
+            class="cursor-pointer"
+          />
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup>
-
 const mobileMenuOpen = ref(false);
 const colorMode = useColorMode();
 const links = [
   {to: '/', label: 'Home'},
   {to: '/about', label: 'About'},
   {to: '/services', label: 'Services'},
-  {to: '#', label: 'Log In'}]
+  {to: '#', label: 'Log In'}
+];
 
 const iconName = computed(() =>
     colorMode.preference === 'light' ? 'iconamoon:mode-dark-bold' : 'iconamoon:mode-light'
@@ -63,5 +73,4 @@ const iconName = computed(() =>
 const toggleTheme = () => {
   colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light';
 };
-
 </script>
