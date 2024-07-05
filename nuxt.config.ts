@@ -1,10 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: {enabled: true},
+    app: {
+        head: {
+          title: "Mobile Tire Pro",
+          link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'canonical', href: 'https://www.mobiletirepro.com/' }
+          ],
+          meta: [
+            { charset: "utf-8" },
+            { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+            { name: "description", content: "Mobile Tire Pro LLC: Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service. Available weekdays 4-5pm and Saturdays 7:30am-5pm. Book online or call for professional, efficient service at your location. Competitive pricing with special offers for new customers. Experience hassle-free tire installation with Mobile Tire Pro." },
+            { name: "keywords", content: "Mobile tire installation,On-site tire service,New tire fitting,TPMS service,At-home tire installation,EV tire service,Same-day tire installation,Professional mobile tire service" },
+            // Open Graph / Facebook
+            { property: "og:type", content: "website" },
+            { property: "og:url", content: "https://www.mobiletirepro.com/" }, // Replace with your actual URL
+            { property: "og:title", content: "Mobile Tire Pro" },
+            { property: "og:description", content: "Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service." },
+            { property: "og:image", content: "https://www.mobiletirepro.com/og-image.jpg" }, // Replace with your actual image URL
+            // Twitter
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:url", content: "https://www.mobiletirepro.com/" }, // Replace with your actual URL
+            { name: "twitter:title", content: "Mobile Tire Pro" },
+            { name: "twitter:description", content: "Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service." },
+            { name: "twitter:image", content: "https://www.mobiletirepro.com/twitter-image.jpg" }, // Replace with your actual image URL
+          ],
+        },
+      },
     modules: [
         "@nuxtjs/tailwindcss",
         "@nuxtjs/google-fonts",
-        "@nuxtjs/seo",
         "nuxt3-leaflet",
         "nuxt-mongoose",
         './modules/auth.module',

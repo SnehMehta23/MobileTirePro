@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@types/jsonwebtoken": "^9.0.6",
     "bcryptjs": "^2.4.3",
@@ -26,8 +25,6 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.2",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/seo": "^2.0.0-rc.10",
-    "@vue-email/nuxt": "^0.8.19"
+    "@nuxtjs/google-fonts": "^3.2.0"
   }
 }
