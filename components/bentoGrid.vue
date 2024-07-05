@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import NumberedCircle from '~/components/NumberedCircle.vue'
+import NumberedCircle from '~/components/numberedCircle.vue'
 </script>
 
 <style scoped>
