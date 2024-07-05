@@ -50,10 +50,6 @@
     </div>
 </template>
 
-<script>
-import NumberedCircle from '~/components/NumberedCircle.vue'
-</script>
-
 <style scoped>
 /* You can add any additional custom styles here if needed */
 </style>

@@ -15,13 +15,14 @@
     "@types/jsonwebtoken": "^9.0.6",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
+    "leaflet": "^1.9.4",
     "nuxt": "^3.12.2",
     "nuxt-mongoose": "^1.0.6",
+    "nuxt-vue3-google-signin": "^0.0.11",
+    "nuxt3-leaflet": "^1.0.13",
     "typescript": "^5.4.5",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "leaflet": "^1.9.4",
-    "nuxt3-leaflet": "^1.0.13"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.2",
