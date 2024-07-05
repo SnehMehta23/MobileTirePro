@@ -16,7 +16,8 @@ export default defineNuxtConfig({
         exposeConfig: true,
         injectPosition: 0,
         viewer: true,
-
+    },
+    //@ts-ignore
     googleSignIn: {
         clientId: '44678613954-1iv2ppns1kiosof9nkgdnr3orp3nbor4.apps.googleusercontent.com',
     },
@@ -33,8 +34,8 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-          Lato: [400, 700, 900],
-          'Kumbh Sans': [400, 700, 900]
+            Lato: [400, 700, 900],
+            'Kumbh Sans': [400, 700, 900]
         },
         display: 'swap'
     },
@@ -61,7 +62,7 @@ export default defineNuxtConfig({
             autoprefixer: {},
             cssnano:
                 process.env.NODE_ENV === 'production'
-                    ? { preset: ['default', { discardComments: { removeAll: true } }] }
+                    ? {preset: ['default', {discardComments: {removeAll: true}}]}
                     : false, // disable cssnano when not in production
         },
     }
