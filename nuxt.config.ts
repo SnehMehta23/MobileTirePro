@@ -11,6 +11,12 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         'nuxt-vue3-google-signin'
     ],
+    tailwindcss: {
+        configPath: '~/tailwind.config.js',
+        exposeConfig: true,
+        injectPosition: 0,
+        viewer: true,
+
     googleSignIn: {
         clientId: '44678613954-1iv2ppns1kiosof9nkgdnr3orp3nbor4.apps.googleusercontent.com',
     },
@@ -27,12 +33,11 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-            Lato: [400, 700, 900] // Add the weights you need
-        }
-        ,
-        display: 'swap' // This is optional but recommended for better performance
-    }
-    ,
+          Lato: [400, 700, 900],
+          'Kumbh Sans': [400, 700, 900]
+        },
+        display: 'swap'
+    },
     app: {
         head: {
             charset: 'utf-8',

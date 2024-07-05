@@ -56,7 +56,7 @@ var coverageRadius = 25000; // in meters
 </script>
 
 <template>
-    <div class="max-w-6xl mx-auto p-4">
+    <div class="max-w-6xl mx-auto p-4 text-dark-charcoal">
         <div class="flex flex-col md:flex-row gap-4">
             <div class="w-full md:w-2/3">
                 <LMap style="height: 400px" :zoom="10" :center="centralPoint" :use-global-leaflet="false">
@@ -66,7 +66,7 @@ var coverageRadius = 25000; // in meters
                     <LCircle :lat-lng="centralPoint" :radius="coverageRadius" :color="'red'" />
                 </LMap>
             </div>
-            <div class="w-full md:w-1/3 bg-gray-100 p-4 rounded-lg flex flex-col" style="height: 400px;">
+            <div class="w-full md:w-1/3 bg-cool-gray-light p-4 rounded-lg flex flex-col" style="height: 400px;">
                 <h2 class="text-lg font-semibold mb-2">Cities We Service</h2>
                 <div class="flex-grow overflow-auto">
                     <ul class="columns-2 gap-x-4 list-disc pl-5">
