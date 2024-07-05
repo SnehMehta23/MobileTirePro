@@ -10,6 +10,9 @@ export const userSchema = defineMongooseModel({
         name: 'string',
         password: {
             type: 'string'
+        },
+        picture: {
+            type: 'string'
         }
     },
     hooks(schema) {

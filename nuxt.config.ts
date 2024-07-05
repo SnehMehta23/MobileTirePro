@@ -5,17 +5,20 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         "@nuxtjs/google-fonts",
         "@nuxtjs/seo",
-        "@vue-email/nuxt",
         "nuxt3-leaflet",
         "nuxt-mongoose",
         './modules/auth.module',
         '@nuxtjs/color-mode',
+        'nuxt-vue3-google-signin'
     ],
     tailwindcss: {
         configPath: '~/tailwind.config.js',
         exposeConfig: true,
         injectPosition: 0,
         viewer: true,
+
+    googleSignIn: {
+        clientId: '44678613954-1iv2ppns1kiosof9nkgdnr3orp3nbor4.apps.googleusercontent.com',
     },
     //@ts-ignore
     colorMode: {
@@ -51,6 +54,16 @@ export default defineNuxtConfig({
         modelsDir: 'models',
         devtools:
             true,
+    },
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+            cssnano:
+                process.env.NODE_ENV === 'production'
+                    ? { preset: ['default', { discardComments: { removeAll: true } }] }
+                    : false, // disable cssnano when not in production
+        },
     }
 
 })
