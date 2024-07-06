@@ -65,14 +65,6 @@ export default defineNuxtConfig({
         },
         display: 'swap'
     },
-    app: {
-        head: {
-            charset: 'utf-8',
-            viewport:
-                'width=device-width, initial-scale=1',
-        }
-    }
-    ,
     mongoose: {
         uri: process.env.MONGODB_URI,
         options:
