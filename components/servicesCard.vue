@@ -1,0 +1,24 @@
+<!-- ServiceCard.vue -->
+<template>
+    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-200 flex flex-col h-full">
+        <div class="flex items-center mb-4">
+            <img :src="service.icon" :alt="service.title" class="w-12 h-12 mr-4">
+            <h3 class="text-xl font-bold text-gray-800">{{ service.title }}</h3>
+        </div>
+        <p class="text-gray-600 mb-6 flex-grow">{{ service.description }}</p>
+        <button
+            class="bg-vivid-red text-white font-bold py-2 px-6 rounded-full hover:bg-crimson-red transition duration-300 shadow-lg self-start mt-auto">
+            Check Availability
+        </button>
+    </div>
+</template>
+
+<script setup lang="ts">
+defineProps<{
+    service: {
+        title: string;
+        description: string;
+        icon: string;
+    }
+}>()
+</script>

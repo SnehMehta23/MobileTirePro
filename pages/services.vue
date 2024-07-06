@@ -1,7 +1,5 @@
 <template>
-    <div>
-        nibbas do be servicing
-    </div>
+    <HeroSectionWithImageLeft />
 </template>
 
 <script setup>
