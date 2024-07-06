@@ -44,15 +44,8 @@
     </div>
 </template>
 
-<script>
-import NumberedCircle from '~/components/numberedCircle.vue'
-</script>
 
 <style scoped>
-h6 {
-    font-family: 'Lato', sans-serif;
-}
-span {
-    font-family: 'Kumbh Sans', sans-serif;
-}
+/* You can add any additional custom styles here if needed */
 </style>
+
