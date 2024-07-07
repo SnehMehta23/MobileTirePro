@@ -3,12 +3,14 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 </script>
 
 <template>
-    <section class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
+    <section class="darkMode flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
         <div class="space-y-2 items-center flex flex-col p-8">
             <h1 class="text-5xl font-lato">Tire Service at Your Doorstep</h1>
-            <p class="text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire installation right to you!
+            <p class="text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire installation
+                right to you!
             </p>
-            <p class="text-xl w-[750px] font-kumbh text-slate-600">Save time and stress with our mobile tire service. Whether
+            <p class="text-xl w-[750px] font-kumbh text-slate-600">Save time and stress with our mobile tire service.
+                Whether
                 you're at home or
                 work we
                 don't
@@ -28,10 +30,11 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 </template>
 
 <style scoped>
-    h1 {
-        font-family: 'Lato', sans-serif;
-    }
-    p {
-        font-family: 'Kumbh Sans', sans-serif
-    }
+h1 {
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-family: 'Kumbh Sans', sans-serif
+}
 </style>
