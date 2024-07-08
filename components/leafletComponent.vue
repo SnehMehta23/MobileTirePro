@@ -66,7 +66,7 @@ var coverageRadius = 25000; // in meters
                     <LCircle :lat-lng="centralPoint" :radius="coverageRadius" :color="'red'" />
                 </LMap>
             </div>
-            <div class="w-full md:w-1/3 bg-cool-gray-light p-4 rounded-lg flex flex-col" style="height: 400px;">
+            <div class="w-full md:w-1/3 dark:text-white dark:bg-gray-900 bg-cool-gray-light p-4 rounded-lg flex flex-col" style="height: 400px;">
                 <h2 class="text-lg font-semibold mb-2">Cities We Service</h2>
                 <div class="flex-grow overflow-auto">
                     <ul class="columns-2 gap-x-4 list-disc pl-5">

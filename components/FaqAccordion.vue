@@ -1,6 +1,6 @@
 <template>
     <div class="faq-accordion">
-        <div v-for="(item, index) in faqItems" :key="index" class="faq-item">
+        <div v-for="(item, index) in faqItems" :key="index" class="faq-item dark:text-white">
             <button @click="toggleItem(index)" class="faq-question" :aria-expanded="openItems[index]"
                 :aria-controls="'faq-answer-' + index">
                 {{ item.question }}
@@ -53,12 +53,16 @@ const toggleItem = (index) => {
     background-color: #f0f0f0;
 }
 
+.dark .faq-question:hover{
+  background-color: crimson;
+}
+
 .icon {
     font-size: 1.5rem;
 }
 
 .faq-answer {
     padding: 1rem;
-    background-color: #f9f9f9;
+
 }
 </style>

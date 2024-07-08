@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto px-4 max-w-4xl my-6 text-dark-charcoal">
         <div class="grid grid-cols-3 gap-4">
-            <div class="bg-pale-pink rounded-lg p-6 col-span-2 border border-vivid-red">
+            <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 col-span-2 border border-vivid-red">
                 <div>
                     <NumberedCircle :number="1" />
                     <h6 class="font-bold">Book Your Appointment</h6>
@@ -13,7 +13,7 @@
                 </div>
             </div>
 
-            <div class="bg-pale-pink rounded-lg p-6">
+            <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6">
                 <div>
                     <NumberedCircle :number="2" />
                     <h6 class="font-bold">Profile & Email Confirmation</h6>
@@ -22,7 +22,7 @@
             </div>
 
             <div class="col-span-3 grid grid-cols-2 gap-4">
-                <div class="bg-pale-pink rounded-lg p-6">
+                <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6">
                     <div>
                         <NumberedCircle :number="3" />
                         <h6 class="font-bold">Prepare For Visit</h6>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="bg-pale-pink rounded-lg p-6 border border-vivid-red">
+                <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 border border-vivid-red">
                     <div>
                         <NumberedCircle :number="4" />
                         <h6 class="font-bold">Go do something else!</h6>
