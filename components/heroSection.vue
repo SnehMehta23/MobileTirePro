@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
+
+const colorMode = useColorMode()
+
 </script>
 
 <template>
@@ -18,10 +21,14 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
                 compromise on quality of service. Book your appointment with ease! Start by choosing your vehicle type
             </p>
             <div class="flex gap-2">
-                <vehicleTypeSquare vehicleType="Sedan" imageUrl="/images/icons/sedan.webp" />
-                <vehicleTypeSquare vehicleType="SUV" imageUrl="/images/icons/SUV.webp" />
-                <vehicleTypeSquare vehicleType="Truck" imageUrl="/images/icons/pickuptruck.webp" />
-                <vehicleTypeSquare vehicleType="EV" imageUrl="/images/icons/electriccar.webp" />
+                <vehicleTypeSquare vehicleType="Sedan"
+                    :imageUrl="colorMode.value === 'light' ? '/images/icons/sedan.webp' : '/images/icons/sedanwhite.webp'" />
+                <vehicleTypeSquare vehicleType="SUV"
+                    :imageUrl="colorMode.value === 'light' ? '/images/icons/SUV.webp' : '/images/icons/SUVwhite.webp'" />
+                <vehicleTypeSquare vehicleType="Truck"
+                    :imageUrl="colorMode.value === 'light' ? '/images/icons/pickuptruck.webp' : '/images/icons/pickuptruckwhite.webp'" />
+                <vehicleTypeSquare vehicleType="EV"
+                    :imageUrl="colorMode.value === 'light' ? '/images/icons/electriccar.webp' : '/images/icons/electriccarwhite.webp'" />
             </div>
             <!-- <p class="text-md font-medium text-orange-600 text-center mt-2 underline cursor-pointer text-nowrap">
                 Curious about your tires? Contact us for a no-cost assessment!
