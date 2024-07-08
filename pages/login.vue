@@ -1,8 +1,11 @@
 <script setup lang="ts">
-
+definePageMeta({
+  middleware: "login"
+})
 
 //State variable to hold our form data
 import {type CredentialResponse, decodeCredential} from "vue3-google-signin";
+import {reloadNuxtApp} from "#app";
 
 const authForm = reactive({
   username: "",
@@ -30,7 +33,7 @@ async function login() {
 
 const handleLoginSuccess = async (response: CredentialResponse) => {
   const {credential} = response;
-  const data =  decodeCredential(credential)
+  const data = decodeCredential(credential)
   await sendCredentialsToBackend(data)
 };
 
@@ -43,7 +46,7 @@ const sendCredentialsToBackend = async (credentials: any) => {
   })
   if ((await user)) {
     console.log(user)
-    navigateTo('/')
+    reloadNuxtApp()
   }
 }
 
