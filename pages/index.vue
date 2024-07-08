@@ -6,8 +6,8 @@
   <!-- <HeroSection /> -->
   <HeroSection />
   <div class="flex flex-col items-center justify-center mb-2 text-dark-charcoal">
-    <p class="text-3xl">How It <span class="text-vivid-red">Works</span></p>
-    <h4 class="text-xl m-2">Driving Excellence: Our Tire Service Process</h4>
+    <p class="text-3xl dark:text-white">How It <span class="text-vivid-red">Works</span></p>
+    <h4 class="text-xl m-2 dark:text-white">Driving Excellence: Our Tire Service Process</h4>
   </div>
   <BentoGrid />
   <LeafletComponent />
@@ -17,5 +17,9 @@
 body {
   background-color: #FAFAFA;
   font-family: 'Lato', sans-serif;
+}
+
+.dark body {
+  background-color: #1e1f26;
 }
 </style>

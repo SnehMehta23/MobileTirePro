@@ -5,11 +5,11 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 <template>
     <section class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
         <div class="space-y-2 items-center flex flex-col p-8">
-            <h1 class="text-5xl font-lato">Tire Service at Your Doorstep</h1>
+            <h1 class="text-5xl font-lato dark:text-white">Tire Service at Your Doorstep</h1>
             <p class="text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire installation
                 right to you!
             </p>
-            <p class="text-xl w-[750px] font-kumbh text-slate-600">Save time and stress with our mobile tire service.
+            <p class="text-xl w-[750px] font-kumbh text-slate-600 dark:text-slate-400">Save time and stress with our mobile tire service.
                 Whether
                 you're at home or
                 work we
