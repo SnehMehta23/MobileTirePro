@@ -3,7 +3,7 @@ import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 </script>
 
 <template>
-    <section class="darkMode flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
+    <section class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
         <div class="space-y-2 items-center flex flex-col p-8">
             <h1 class="text-5xl font-lato">Tire Service at Your Doorstep</h1>
             <p class="text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire installation

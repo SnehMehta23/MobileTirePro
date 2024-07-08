@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         "nuxt-mongoose",
         './modules/auth.module',
         '@nuxtjs/color-mode',
-        'nuxt-vue3-google-signin'
+        'nuxt-vue3-google-signin',
     ],
     tailwindcss: {
         configPath: '~/tailwind.config.js',
