@@ -1,15 +1,12 @@
 <template>
     <div class="container mx-auto px-4 max-w-4xl my-6 text-dark-charcoal">
         <div class="grid grid-cols-3 gap-4">
-            <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 col-span-2 border border-vivid-red">
+            <div
+                class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 col-span-2 border border-vivid-red">
                 <div>
                     <NumberedCircle :number="1" />
                     <h6 class="font-bold">Book Your Appointment</h6>
                     <span>Schedule a date for us to come out to you!</span>
-                </div>
-                <div>
-                    <!-- todo add image -->
-                    <img src="" alt="">
                 </div>
             </div>
 
@@ -36,7 +33,8 @@
                     <div>
                         <NumberedCircle :number="4" />
                         <h6 class="font-bold">Go do something else!</h6>
-                        <span>Kick back, relax and have peace of mind knowing that MTP will take care of the rest!</span>
+                        <span>Kick back, relax and have peace of mind knowing that MTP will take care of the
+                            rest!</span>
                     </div>
                 </div>
             </div>
@@ -48,4 +46,3 @@
 <style scoped>
 /* You can add any additional custom styles here if needed */
 </style>
-
