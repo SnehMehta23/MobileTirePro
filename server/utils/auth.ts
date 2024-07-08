@@ -19,16 +19,21 @@ export async function clearAuth(event: H3Event) {
 
 
 export async function requireAuth(event: H3Event) {
-    const token = (await _useSession(event)).data.token
-    console.log(token)
+    try {
+        const token = (await _useSession(event)).data.token
 
-    if (!token)
-        throw createError({
-            statusCode: 401,
-            statusText: 'Unauthorized! token invalid.'
-        })
+        if (!token) {
+            throw createError({
+                statusCode: 408,
+                statusText: 'Unauthorized! token invalid.'
+            })
+        }
 
-    const payload = verifyToken(token)
+        const payload = verifyToken(token)
 
-   return payload
+        return payload
+    } catch (e) {
+        return 408
+    }
+
 }

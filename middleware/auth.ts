@@ -1,15 +1,23 @@
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(async (to, from) => {
 
     async function isAuthenticated() {
-        const res = await $fetch('/api/auth/test', {
-            method: 'GET'
-        })
-        //@ts-ignore
-        if ((!res.token)) {
-            return navigateTo("/login")
+        try {
+            const res = await $fetch('/api/auth/test', {
+                method: 'GET'
+            })
+            if (!res) {
+                return false
+            }
+        } catch (e) {
+            console.error(e)
         }
     }
 
-    isAuthenticated()
+    console.log(await isAuthenticated())
+    if (!await isAuthenticated()) {
+
+        return navigateTo('/login')
+    }
+
 
 })
