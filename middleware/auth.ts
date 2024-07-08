@@ -9,6 +9,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
         }
     }
 
-    isAuthenticated()
+    try {
+        isAuthenticated()
+    } catch (e) {
+        console.error(e)
+    }
 
 })
