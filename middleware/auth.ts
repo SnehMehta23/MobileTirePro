@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
             method: 'GET'
         })
         //@ts-ignore
-        if ((!res.token)) {
+        if (res == false) {
             return navigateTo("/login")
         }
     }
