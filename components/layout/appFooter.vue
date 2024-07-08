@@ -9,9 +9,16 @@
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div class="flex items-center space-x-4">
             <div class="w-6 h-6">
-              <img src="/public/images/racing.png" alt="">
+              <img src="/public/images/racing.png" alt="MobileTirePro logo">
             </div>
             <p class="text-gray-400">Convenience meets expertise in tire care</p>
+          </div>
+          <div class="text-sm text-gray-500">
+            <h4 class="font-semibold mb-2">Hours of Operation:</h4>
+            <ul>
+              <li>Weekday appointments: 4pm - 5pm</li>
+              <li>Saturday appointments: 7:00am - 4pm</li>
+            </ul>
           </div>
         </div>
 
