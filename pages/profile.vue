@@ -101,7 +101,4 @@ const {data} = await useFetch('/api/user/profile', {
   }
 })
 
-console.log(data)
-
-
 </script>

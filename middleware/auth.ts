@@ -4,9 +4,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
         const res = await $fetch('/api/auth/test', {
             method: 'GET'
         })
-        //@ts-ignore
-        if (!res.isLoggedIn) {
-            return navigateTo("/login")
+        if (!res) {
+            navigateTo("/")
         }
     }
 
