@@ -85,9 +85,12 @@
 
 <script setup>
 import {ref} from 'vue'
-
 const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs"]
 const activeTab = ref('All')
+
+definePageMeta({
+  middleware: 'auth'
+})
 
 const user = ref('')
 
