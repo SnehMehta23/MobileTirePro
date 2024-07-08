@@ -21,7 +21,6 @@ export async function clearAuth(event: H3Event) {
 export async function requireAuth(event: H3Event) {
     try {
         const token = (await _useSession(event)).data.token
-        console.log(token)
 
         if (!token) {
             throw createError({
