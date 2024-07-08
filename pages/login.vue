@@ -4,8 +4,8 @@ definePageMeta({
 })
 
 //State variable to hold our form data
-import {type CredentialResponse, decodeCredential} from "vue3-google-signin";
-import {reloadNuxtApp} from "#app";
+import { type CredentialResponse, decodeCredential } from "vue3-google-signin";
+import { reloadNuxtApp } from "#app";
 
 const authForm = reactive({
   username: "",
@@ -32,7 +32,7 @@ async function login() {
 }
 
 const handleLoginSuccess = async (response: CredentialResponse) => {
-  const {credential} = response;
+  const { credential } = response;
   const data = decodeCredential(credential)
   await sendCredentialsToBackend(data)
 };
@@ -57,7 +57,7 @@ const sendCredentialsToBackend = async (credentials: any) => {
 <template>
   <div class="flex justify-center items-center pt-5">
     <div
-        class="shadow-xl bg-gray-50 rounded-lg px-5 py-2.5 space-y-4 h-[20rem] w-[20rem] flex justify-center items-center flex-col">
+      class="shadow-xl bg-gray-50 rounded-lg px-5 py-2.5 space-y-4 h-[20rem] w-[20rem] flex justify-center items-center flex-col">
       <div class=" font-semibold text-2xl">
         Login
       </div>
@@ -65,18 +65,17 @@ const sendCredentialsToBackend = async (credentials: any) => {
         <div class="space-y-6">
           <div class=" flex flex-col">
             <input v-model="authForm.username" placeholder="Username"
-                   class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600" type="text"/>
+              class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600" type="text" />
           </div>
           <div class="flex flex-col">
             <input v-model="authForm.password" placeholder="Password"
-                   class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600"
-                   type="password"/>
+              class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600" type="password" />
           </div>
           <div class="space-y-2.5">
             <div class="flex justify-center items-center px-4 py-2  rounded-lg bg-red-500 hover:bg-red-600 text-white">
               <button @click.prevent="login">Log in</button>
             </div>
-            <GoogleSignInButton class="w-full" @success="handleLoginSuccess"/>
+            <GoogleSignInButton class="w-full" @success="handleLoginSuccess" />
           </div>
         </div>
       </form>
@@ -85,6 +84,4 @@ const sendCredentialsToBackend = async (credentials: any) => {
 
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
