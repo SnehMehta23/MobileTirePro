@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex items-center">
-          <img src="/public/images/logos/logo_img2.webp" alt="Mobile Tire Pro" class="h-36 w-auto min-w-[48px] mr-2">
+          <img src="/images/logos/logo_img2.webp" alt="Mobile Tire Pro Logo" class="h-36 w-auto min-w-[48px] mr-2">
         </div>
         <div class="hidden lg:flex items-center space-x-4">
           <a v-for="link in links" :key="link.to" :href="link.to"
@@ -25,7 +25,7 @@
         </div>
         <div class="lg:hidden flex items-center">
           <!-- Mobile menu button -->
-          <button @click="mobileMenuOpen = !mobileMenuOpen"
+          <button @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu Button"
             class="text-slate-gray dark:text-gray-400 hover:text-charcoal-gray dark:hover:text-white focus:outline-none">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path v-if="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
