@@ -5,14 +5,12 @@ export default defineNuxtRouteMiddleware((to, from) => {
             method: 'GET'
         })
         if (!res) {
-            navigateTo("/")
+           return navigateTo("/login")
         }
     }
 
-    try {
-        isAuthenticated()
-    } catch (e) {
-        console.error(e)
-    }
+
+    isAuthenticated()
+
 
 })
