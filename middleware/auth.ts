@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
             method: 'GET'
         })
         //@ts-ignore
-        if (res == false) {
+        if (!res.isLoggedIn) {
             return navigateTo("/login")
         }
     }

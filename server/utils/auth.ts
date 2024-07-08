@@ -23,12 +23,16 @@ export async function requireAuth(event: H3Event) {
     console.log(token)
 
     if (!token)
-        throw createError({
-            statusCode: 401,
-            statusText: 'Unauthorized! token invalid.'
-        })
+        return {
+            isLoggedIn: false
+        }
+
+    // throw createError({
+    //     statusCode: 401,
+    //     statusText: 'Unauthorized! token invalid.'
+    // })
 
     const payload = verifyToken(token)
 
-   return payload
+    return payload
 }
