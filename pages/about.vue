@@ -72,7 +72,7 @@
             <div class="md:w-7/12 relative overflow-hidden">
                 <div class="absolute inset-0 opacity-50">
                     <img class="w-full h-full object-cover transform translate-y-8"
-                        src="/public/images/vecteezy_mobile-tire-service-abstract-concept-vector-illustration_35795024.eps.webp"
+                        src="/images/vecteezy_mobile-tire-service-abstract-concept-vector-illustration_35795024.eps.webp"
                         alt="Mobile Tire Service Illustration">
                 </div>
             </div>
