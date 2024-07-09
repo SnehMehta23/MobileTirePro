@@ -52,8 +52,10 @@ const services = [
       class="bg-gradient-to-r from-pale-red to-vivid-red dark:from-gray-900 dark:to-vivid-red rounded-lg shadow-lg p-8 mb-12">
       <div class="flex flex-col lg:flex-row justify-between items-center">
         <div class="lg:w-2/3 mb-6 lg:mb-0">
-          <h2 class="text-3xl font-bold text-white mb-2">Comprehensive Tire Solutions for Every Vehicle</h2>
-          <p class="text-xl text-white">From installation to seasonal changes, we've got you covered</p>
+          <h2 class="text-3xl font-bold text-dark-charcoal dark:text-white mb-2">Comprehensive Tire Solutions for Every
+            Vehicle</h2>
+          <p class="text-xl text-dark-charcoal dark:text-white">From installation to seasonal changes, we've got you
+            covered</p>
         </div>
         <div class="lg:w-1/3 text-right">
           <p class="text-white text-lg">

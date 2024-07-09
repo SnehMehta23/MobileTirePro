@@ -55,33 +55,39 @@ const sendCredentialsToBackend = async (credentials: any) => {
 
 
 <template>
-  <div class="flex justify-center items-center pt-5">
+  <div class="flex justify-center items-center p-8 bg-gray-100">
     <div
-      class="shadow-xl bg-gray-50 rounded-lg px-5 py-2.5 space-y-4 h-[20rem] w-[20rem] flex justify-center items-center flex-col">
-      <div class=" font-semibold text-2xl">
-        Login
+      class="flex w-full max-w-4xl xl:bg-gradient-to-r xl:from-pale-red xl:to-vivid-red xl:dark:from-gray-900 xl:dark:to-vivid-red bg-white rounded-lg shadow-xl overflow-hidden">
+      <div class="w-1/2 bg-cover bg-center hidden md:block"
+        style="background-image: url('/images/undraw_automobile_repair_ywci.webp');">
       </div>
-      <form>
-        <div class="space-y-6">
-          <div class=" flex flex-col">
-            <input v-model="authForm.username" placeholder="Username"
-              class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600" type="text" />
-          </div>
-          <div class="flex flex-col">
-            <input v-model="authForm.password" placeholder="Password"
-              class=" bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600" type="password" />
-          </div>
-          <div class="space-y-2.5">
-            <div class="flex justify-center items-center px-4 py-2  rounded-lg bg-red-500 hover:bg-red-600 text-white">
-              <button @click.prevent="login">Log in</button>
+
+      <div class="w-full md:w-1/2 p-8">
+        <div class="text-2xl font-semibold mb-6">Login</div>
+        <form>
+          <div class="space-y-6">
+            <div class="flex flex-col">
+              <input v-model="authForm.username" placeholder="Username"
+                class="bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600 py-2"
+                type="text" />
             </div>
-            <GoogleSignInButton class="w-full" @success="handleLoginSuccess" />
+            <div class="flex flex-col">
+              <input v-model="authForm.password" placeholder="Password"
+                class="bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600 py-2"
+                type="password" />
+            </div>
+            <div class="space-y-4">
+              <button @click.prevent="login"
+                class="w-full px-4 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-semibold transition duration-300">
+                Log in
+              </button>
+              <GoogleSignInButton class="w-full" @success="handleLoginSuccess" />
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-
 </template>
 
 <style scoped></style>
