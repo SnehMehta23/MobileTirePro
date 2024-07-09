@@ -68,12 +68,12 @@ const sendCredentialsToBackend = async (credentials: any) => {
           <div class="space-y-6">
             <div class="flex flex-col">
               <input v-model="authForm.username" placeholder="Username"
-                class="bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600 py-2"
+                class="bg-gray-50 border-b border-slate-300 focus:outline-none rounded-md focus:border-slate-600 py-2"
                 type="text" />
             </div>
             <div class="flex flex-col">
               <input v-model="authForm.password" placeholder="Password"
-                class="bg-gray-50 border-b border-slate-300 focus:outline-none focus:border-slate-600 py-2"
+                class="bg-gray-50 border-b border-slate-300 focus:outline-none rounded-md focus:border-slate-600 py-2"
                 type="password" />
             </div>
             <div class="space-y-4">

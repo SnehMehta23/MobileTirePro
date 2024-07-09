@@ -1,4 +1,31 @@
 <script setup lang="ts">
+
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      carImages: [
+        {
+          id: 1,
+          src: '/images/jeep.webp',
+          alt: 'Jeep'
+        },
+        {
+          id: 2,
+          src: '/images/hyundai.webp',
+          alt: 'Hyundai'
+        },
+        {
+          id: 3,
+          src: '/images/classicCar.webp',
+          alt: 'Classic Car'
+        },
+      ]
+    }
+  }
+}
 </script>
 
 <template>
@@ -9,6 +36,14 @@
     <h4 class="text-xl m-2 dark:text-white">Driving Excellence: Our Tire Service Process</h4>
   </div>
   <BentoGrid />
+  <div class="flex flex-col items-center justify-center mb-2 text-dark-charcoal">
+    <p class="text-3xl dark:text-white">How It <span class="text-vivid-red">Looks</span></p>
+    <h4 class="text-xl m-2 dark:text-white">Customer Testimonials & Car Showcase</h4>
+  </div>
+  <div>
+    <ImageCarousel :images="carImages" />
+  </div>
+
   <LeafletComponent />
 </template>
 
