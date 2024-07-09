@@ -96,8 +96,10 @@ const user = ref('')
 const { data } = await useFetch('/api/user/profile', {
   method: 'GET',
   onResponse({ request, response }) {
-    user.value = response._data
+    // user.value = response._data
   }
 })
+
+user.value = data.value;
 
 </script>

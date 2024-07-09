@@ -5,7 +5,9 @@ export default defineEventHandler(async (event) => {
 
     try {
         const payload = await requireAuth(event)
-        if (payload === 408) return false
+        if (payload === 408){
+            return false
+        }
         return (await _useSession(event)).data
     } catch (e: any) {
         console.error(e.message);
