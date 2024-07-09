@@ -1,9 +1,9 @@
 <template>
     <div id="history-section"
-        class="rounded-lg relative overflow-hidden md:mt-12 md:mx-auto md:mb-12 min-h-[600px] text-dark-charcoal max-w-7xl px-4 sm:px-6 lg:px-8">
+        class="rounded-lg relative overflow-hidden mt-6 md:mt-12 md:mx-auto mb-8 md:mb-16 min-h-[600px] text-dark-charcoal max-w-7xl px-4 sm:px-6 lg:px-8 py-4 md:py-2">
         <div class="flex flex-col md:flex-row">
             <div
-                class="w-full xl:w-7/12 relative z-10 dark:bg-dark-charcoal bg-light-gray border border-off-white shadow-2xl rounded-lg drop-shadow-md bg-opacity-90 p-8 md:p-12 text-dark-charcoal dark:text-white">
+                class="w-full xl:w-7/12 relative z-10 dark:bg-dark-charcoal bg-light-gray border border-off-white shadow-2xl rounded-lg drop-shadow-md bg-opacity-90 p-6 sm:p-8 md:p-12 text-dark-charcoal dark:text-white">
                 <h2 class="text-2xl font-bold mb-4">About Us</h2>
                 <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-md mb-8 mt-2">

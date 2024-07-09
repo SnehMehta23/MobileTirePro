@@ -6,13 +6,17 @@ const colorMode = useColorMode()
 </script>
 
 <template>
-    <section class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
-        <div class="space-y-2 items-center flex flex-col p-8">
-            <h1 class="text-5xl font-lato dark:text-white">Tire Service at Your Doorstep</h1>
-            <p class="text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire installation
+    <section
+        class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8">
+        <div class="space-y-2 items-center flex flex-col p-4 sm:p-8">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-lato dark:text-white">Tire Service at Your Doorstep</h1>
+            <p class="text-xl sm:text-2xl font-kumbh text-vivid-red">Skip the tire shop hassle. We bring expert tire
+                installation
                 right to you!
             </p>
-            <p class="text-xl w-[750px] font-kumbh text-slate-600 dark:text-slate-400">Save time and stress with our
+            <p
+                class="text-base sm:text-lg lg:text-xl font-kumbh text-slate-600 dark:text-slate-400 max-w-full sm:max-w-[750px]">
+                Save time and stress with our
                 mobile tire service.
                 Whether
                 you're at home or
@@ -20,7 +24,7 @@ const colorMode = useColorMode()
                 don't
                 compromise on quality of service. Book your appointment with ease! Start by choosing your vehicle type
             </p>
-            <div class="flex gap-2">
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-4">
                 <vehicleTypeSquare vehicleType="Sedan"
                     :imageUrl="colorMode.value === 'light' ? '/images/icons/sedan.webp' : '/images/icons/sedanwhite.webp'" />
                 <vehicleTypeSquare vehicleType="SUV"
@@ -30,9 +34,6 @@ const colorMode = useColorMode()
                 <vehicleTypeSquare vehicleType="EV"
                     :imageUrl="colorMode.value === 'light' ? '/images/icons/electriccar.webp' : '/images/icons/electriccarwhite.webp'" />
             </div>
-            <!-- <p class="text-md font-medium text-orange-600 text-center mt-2 underline cursor-pointer text-nowrap">
-                Curious about your tires? Contact us for a no-cost assessment!
-            </p> -->
         </div>
     </section>
 </template>
