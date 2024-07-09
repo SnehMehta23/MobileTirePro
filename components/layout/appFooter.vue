@@ -9,7 +9,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div class="flex items-center space-x-4">
             <div class="w-6 h-6">
-              <img src="/public/images/icons/racing.webp" alt="MobileTirePro logo">
+              <img src="/images/icons/racing.webp" alt="Mobile Tire Pro Small Icon Logo">
             </div>
             <p class="text-gray-400">Convenience meets expertise in tire care</p>
           </div>

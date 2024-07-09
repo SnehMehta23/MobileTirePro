@@ -29,7 +29,7 @@ const services = [
         <div class="hidden lg:block lg:w-7/12">
           <img
             src="/images/isometric-car-repair-horizontal-banner-with-serviceman-making-tire-service-vector-illustration.webp"
-            alt="Tire service technician" class="w-full h-auto">
+            alt="Tire Service Technician Illustration" class="w-full h-auto">
         </div>
         <div
           class="w-full lg:w-7/12 text-center lg:text-left lg:pl-8 p-6 lg:p-0 bg-black bg-opacity-30 lg:bg-transparent rounded-lg lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2">

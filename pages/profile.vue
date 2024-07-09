@@ -8,8 +8,7 @@
         <div class="flex items-center mb-4">
           <div class="relative rounded-full overflow-hidden w-12 h-12 border-2 border-vivid-red mr-4">
             <img class="absolute inset-0 w-full h-full object-cover"
-                 :src="user.picture?user.picture:'https://placeholder.com/64x64'"
-                 alt="">
+              :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
           </div>
           <div class="space-x-2">
             <select name="cars">
@@ -35,12 +34,12 @@
         <div class="mb-8">
           <h3 class="text-lg font-semibold mb-2">[Vehicle Service History]</h3>
           <div
-              class="flex space-x-4 mb-4 p-2 bg-light-gray bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light">
-                        <span v-for="content in tabNavContent" :key="content" @click="activeTab = content"
-                              class="cursor-pointer transition duration-300"
-                              :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
-                            {{ content }}
-                        </span>
+            class="flex space-x-4 mb-4 p-2 bg-light-gray bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light">
+            <span v-for="content in tabNavContent" :key="content" @click="activeTab = content"
+              class="cursor-pointer transition duration-300"
+              :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
+              {{ content }}
+            </span>
           </div>
           <div>
             <!-- Placeholder for tab content -->
@@ -84,7 +83,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs"]
 const activeTab = ref('All')
 
@@ -94,9 +93,9 @@ definePageMeta({
 
 const user = ref('')
 
-const {data} = await useFetch('/api/user/profile', {
+const { data } = await useFetch('/api/user/profile', {
   method: 'GET',
-  onResponse({request, response}) {
+  onResponse({ request, response }) {
     user.value = response._data
   }
 })
