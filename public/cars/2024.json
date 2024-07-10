@@ -1,0 +1,2660 @@
+[
+    {
+        "year": 2024,
+        "make": "Acura",
+        "model": "Integra",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Acura",
+        "model": "MDX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Acura",
+        "model": "RDX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Acura",
+        "model": "TLX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Acura",
+        "model": "ZDX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Alfa Romeo",
+        "model": "Giulia",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Alfa Romeo",
+        "model": "Stelvio",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Alfa Romeo",
+        "model": "Tonale",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Aston Martin",
+        "model": "DBX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A4 allroad",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A6 allroad",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "A8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "e-tron GT",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q4 e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q4 Sportback e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q5 Sportback",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q8 e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "Q8 Sportback e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS 3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS 5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS 6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS 7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS e-tron GT",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "RS Q8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "S8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ5 Sportback",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ8 e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Audi",
+        "model": "SQ8 Sportback e-tron",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "2 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "3 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "4 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "5 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "7 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "8 Series",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "i4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "i5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "i7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "iX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "M2",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "M3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "M4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "M8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X1",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X2",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X3 M",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X4 M",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X5 M",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X6 M",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "X7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "XM",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "BMW",
+        "model": "Z4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Buick",
+        "model": "Enclave",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Buick",
+        "model": "Encore GX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Buick",
+        "model": "Envision",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Buick",
+        "model": "Envista",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "Celestiq",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "CT4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "CT5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "Escalade",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "Escalade ESV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "LYRIQ",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "XT4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "XT5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Cadillac",
+        "model": "XT6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Blazer",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Blazer EV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Colorado Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Equinox",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Equinox EV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Express 2500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Express 2500 Passenger",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Express 3500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Express 3500 Passenger",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 1500 Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 1500 Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 1500 Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 2500 HD Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 2500 HD Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 2500 HD Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 3500 HD Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 3500 HD Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 3500 HD Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Suburban",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Tahoe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Trailblazer",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Traverse",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Traverse Limited",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Trax",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chrysler",
+        "model": "Pacifica",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Chrysler",
+        "model": "Pacifica Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Dodge",
+        "model": "Durango",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Dodge",
+        "model": "Hornet",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "FIAT",
+        "model": "500e",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Fisker",
+        "model": "Ocean",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Bronco",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Bronco Sport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "E-Transit 350 Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Edge",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Escape",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Escape Plug-in Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Expedition",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Expedition MAX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Explorer",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F150 Lightning",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F150 Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F150 Super Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F150 SuperCrew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F250 Super Duty Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F250 Super Duty Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F250 Super Duty Super Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F350 Super Duty Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F350 Super Duty Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F350 Super Duty Super Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F450 Super Duty Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F450 Super Duty Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Maverick",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Mustang",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Mustang MACH-E",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Ranger SuperCrew",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Transit 150 Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Transit 250 Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Transit 350 Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Transit 350 HD Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Transit 350 Passenger Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "Electrified G80",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "Electrified GV70",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "G70",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "G80",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "G90",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "GV60",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "GV70",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Genesis",
+        "model": "GV80",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Acadia",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Canyon Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "HUMMER EV Pickup",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "HUMMER EV SUV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Savana 2500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Savana 2500 Passenger",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Savana 3500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Savana 3500 Passenger",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 1500 Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 1500 Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 1500 Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 2500 HD Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 2500 HD Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 2500 HD Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 3500 HD Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 3500 HD Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 3500 HD Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra EV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Terrain",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Yukon",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Yukon XL",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Accord",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Accord Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Civic",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Civic Type R",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "CR-V",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "CR-V Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "HR-V",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Odyssey",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Passport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Pilot",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Prologue",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Ridgeline",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Elantra",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Elantra Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "IONIQ 5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "IONIQ 6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "IONIQ 7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Kona",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Kona Electric",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "NEXO",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Palisade",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Santa Cruz",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Santa Fe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Santa Fe Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Sonata",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Sonata Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Tucson",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Tucson Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Tucson Plug-in Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Venue",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "INFINITI",
+        "model": "Q50",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "INFINITI",
+        "model": "QX50",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "INFINITI",
+        "model": "QX55",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "INFINITI",
+        "model": "QX60",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "INFINITI",
+        "model": "QX80",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jaguar",
+        "model": "E-PACE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jaguar",
+        "model": "F-PACE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jaguar",
+        "model": "F-TYPE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jaguar",
+        "model": "I-PACE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jaguar",
+        "model": "XF",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Compass",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Gladiator",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Grand Cherokee",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Grand Cherokee 4xe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Grand Cherokee L",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Grand Wagoneer",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Grand Wagoneer L",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Recon",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wagoneer",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wagoneer L",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler 2 Door",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler 4 Door",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler 4xe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Carnival",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "EV6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "EV9",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Forte",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "K5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Niro",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Niro EV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Niro Plug-in Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Seltos",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sorento",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sorento Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sorento Plug-in Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Soul",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sportage",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sportage Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Sportage Plug-in Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Kia",
+        "model": "Telluride",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Defender 110",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Defender 130",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Defender 90",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Discovery",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Discovery Sport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Range Rover",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Range Rover Evoque",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Range Rover Sport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Land Rover",
+        "model": "Range Rover Velar",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "ES",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "GX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "IS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "LC",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "LS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "LX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "NX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "RC",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "RX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "RZ",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "TX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "UX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lincoln",
+        "model": "Aviator",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lincoln",
+        "model": "Corsair",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lincoln",
+        "model": "Nautilus",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lincoln",
+        "model": "Navigator",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lincoln",
+        "model": "Navigator L",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Lucid",
+        "model": "Air",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Maserati",
+        "model": "Ghibli",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Maserati",
+        "model": "GranTurismo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Maserati",
+        "model": "Grecale",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Maserati",
+        "model": "Levante",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Maserati",
+        "model": "Quattroporte",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-30",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-50",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-70",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-90",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "CX-90 PHEV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "MAZDA3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MAZDA",
+        "model": "MX-5 Miata",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "C-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "CLA",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "CLE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "E-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "eSprinter",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "G-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLA",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLB",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLC",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLC Coupe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "GLS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG CLA",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG EQE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG EQE SUV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG EQS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG G-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG GLA",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG GLB",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG GLE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG GLE Coupe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-AMG GT",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-EQ EQB",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-EQ EQE",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-EQ EQE SUV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-EQ EQS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-EQ EQS SUV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-Maybach EQS SUV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-Maybach GLS",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Mercedes-Maybach S-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "S-Class",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 2500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 2500 Crew",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 2500 Passenger",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 3500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 3500 XD Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mercedes-Benz",
+        "model": "Sprinter 4500 Cargo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MINI",
+        "model": "Clubman",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MINI",
+        "model": "Convertible",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MINI",
+        "model": "Countryman",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MINI",
+        "model": "Hardtop 2 Door",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "MINI",
+        "model": "Hardtop 4 Door",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Eclipse Cross",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Mirage",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Mirage G4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Outlander",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Outlander PHEV",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Mitsubishi",
+        "model": "Outlander Sport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Altima",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Armada",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Frontier Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Frontier King Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "GT-R",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Kicks",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "LEAF",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Murano",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Pathfinder",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Rogue",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Sentra",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Titan Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Titan King Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "TITAN XD Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Versa",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Nissan",
+        "model": "Z",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Polestar",
+        "model": "2",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Polestar",
+        "model": "3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Polestar",
+        "model": "4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Polestar",
+        "model": "5",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "718 Boxster",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "718 Cayman",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "718 Spyder",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "911",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Cayenne",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Cayenne Coupe",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Macan",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Panamera",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Taycan",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Taycan Cross Turismo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Porsche",
+        "model": "Taycan Sport Turismo",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "1500 Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "1500 Quad Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "2500 Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "2500 Mega Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "2500 Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "3500 Crew Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "3500 Mega Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "3500 Regular Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "ProMaster Cargo Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Ram",
+        "model": "ProMaster Window Van",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Rivian",
+        "model": "R1S",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Rivian",
+        "model": "R1T",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Ascent",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "BRZ",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Crosstrek",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Forester",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Impreza",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Legacy",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "Outback",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Subaru",
+        "model": "WRX",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Tesla",
+        "model": "Cybertruck",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Tesla",
+        "model": "Model 3",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Tesla",
+        "model": "Model S",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Tesla",
+        "model": "Model X",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Tesla",
+        "model": "Model Y",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "4Runner",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Camry",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Camry Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Corolla",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Corolla Cross",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Corolla Cross Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Corolla Hatchback",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Corolla Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Crown",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "GR Corolla",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "GR Supra",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "GR86",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Grand Highlander",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Grand Highlander Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Highlander",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Highlander Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Land Cruiser",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Mirai",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Prius",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Prius Prime",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "RAV4",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "RAV4 Hybrid",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "RAV4 Prime",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Sequoia",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Sienna",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tacoma Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tacoma XtraCab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tundra CrewMax",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tundra Double Cab",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tundra Hybrid CrewMax",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Venza",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "VinFast",
+        "model": "VF 6",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "VinFast",
+        "model": "VF 7",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "VinFast",
+        "model": "VF 8",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Atlas",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Atlas Cross Sport",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Jetta",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Jetta GLI",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Taos",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volkswagen",
+        "model": "Tiguan",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "C40 Recharge",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "S60",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "S90",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "V60",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "V90",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "XC40",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "XC40 Recharge",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "XC60",
+        "body_styles": null
+    },
+    {
+        "year": 2024,
+        "make": "Volvo",
+        "model": "XC90",
+        "body_styles": null
+    }
+]

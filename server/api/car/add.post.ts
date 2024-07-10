@@ -12,6 +12,7 @@ export default defineEventHandler(async (event) => {
         const newCar = new carSchema({make, model, year, tires, owner: user?._id})
         await newCar.save()
         await userSchema.findByIdAndUpdate(user?._id, {$push:{cars: newCar._id}})
+        return 'OK'
     }catch (e) {
         console.error(e)
     }
