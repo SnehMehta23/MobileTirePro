@@ -18,7 +18,7 @@
             class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log
             out</span>
           <button
-            class="bg-vivid-red text-pale-gray px-4 py-2 rounded-full hover:bg-crimson-red transition duration-300">
+            class="bg-vivid-red text-pale-gray px-4 py-2 rounded-full hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
             Book Now
           </button>
           <LightDarkToggle />
@@ -45,10 +45,9 @@
             link.label
           }}</a>
         <button
-          class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300">
+          class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
           Book Now
         </button>
-        <LightDarkToggle />
       </div>
     </div>
   </nav>

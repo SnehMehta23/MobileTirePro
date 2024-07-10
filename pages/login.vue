@@ -56,8 +56,7 @@ const sendCredentialsToBackend = async (credentials: any) => {
 
 <template>
   <div class="flex justify-center items-center p-8 bg-gray-100">
-    <div
-      class="flex w-full max-w-4xl xl:bg-gradient-to-r xl:from-pale-red xl:to-vivid-red xl:dark:from-gray-900 xl:dark:to-vivid-red bg-white rounded-lg shadow-xl overflow-hidden">
+    <div class="flex w-full max-w-4xl bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="w-1/2 bg-cover bg-center hidden md:block"
         style="background-image: url('/images/undraw_automobile_repair_ywci.webp');">
       </div>

@@ -8,7 +8,7 @@
         </div>
         <p class="text-gray-600 mb-6 dark:text-white flex-grow">{{ service.description }}</p>
         <button
-            class="bg-vivid-red text-white font-bold py-2 px-6 rounded-full hover:bg-crimson-red transition duration-300 shadow-lg self-start mt-auto">
+            class="bg-vivid-red text-white font-bold py-2 px-6 rounded-full hover:bg-crimson-red self-start mt-auto transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
             Check Availability
         </button>
     </div>

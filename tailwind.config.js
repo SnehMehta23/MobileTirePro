@@ -2,6 +2,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        "3xl": "1800px",
+      },
       colors: {
         "pale-gray": "#fafafa",
         "light-gray": "#f5f5f5",
