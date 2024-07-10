@@ -42,7 +42,7 @@
           <div>
             <!-- Placeholder for tab content -->
             <!--            <p>{{ activeTab }}</p>-->
-            <div class="text-xl">{{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}</div>
+            <div class="text-xl">{{ selectedCar?.year }} {{ selectedCar?.make }} {{ selectedCar?.model }}</div>
           </div>
         </div>
 
