@@ -6,7 +6,8 @@
                 {{ item.question }}
                 <span class="icon">{{ openItems[index] ? '−' : '+' }}</span>
             </button>
-            <div v-show="openItems[index]" :id="'faq-answer-' + index" class="faq-answer">
+            <div v-show="openItems[index]" :id="'faq-answer-' + index"
+                class="faq-answer bg-dark-charcoal text-white dark:bg-white dark:text-dark-charcoal">
                 {{ item.answer }}
             </div>
         </div>
@@ -53,8 +54,8 @@ const toggleItem = (index) => {
     background-color: #f0f0f0;
 }
 
-.dark .faq-question:hover{
-  background-color: crimson;
+.dark .faq-question:hover {
+    background-color: crimson;
 }
 
 .icon {

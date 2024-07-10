@@ -22,7 +22,7 @@ const services = [
 </script>
 
 <template>
-  <div class="relative dark:bg-[#1e1f26] overflow-hidden bg-gray-100 min-h-[70vh] lg:min-h-0 hero-bg">
+  <div class="relative dark:bg-deep-charcoal overflow-hidden bg-gray-100 min-h-[70vh] lg:min-h-0 hero-bg">
     <div class="absolute inset-0 bg-black opacity-50 lg:hidden"></div>
     <div class="container mx-auto px-4 py-8 h-full relative z-10">
       <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between h-full">
