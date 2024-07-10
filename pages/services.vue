@@ -10,28 +10,24 @@
 <script setup>
 const faqItems = [
     {
-        question: "Do you do single tire rotations?",
-        answer: "No single tire installations! Customers need to call if they need only 3 tires installed. No tire repairs or rotations offered."
+        question: "Do you offer single or 3 tire installations",
+        answer: "At this time we do not offer single tire installations, please call, text, or email if you need 3 tires installed. "
     },
     {
         question: "Do I have to pay online?",
         answer: "Payment taken online (preferred) or in person. Cash, venmo, and card payments are also accepted."
     },
     {
-        question: "Do you replace TPMS Sensors?",
-        answer: "Any replacement of TPMS sensors needs to be known before we show up for appointment to make sure we arrive with the correct supplies for the job."
+        question: "How long will my service take?",
+        answer: "We ask for 2 ½ hours total time. 1 hour time window for us to arrive, and then 1 ½ hours to complete the work. Any vehicle with oversized or ultra high performance tires we ask for 3 hours. Please be understanding that delays happen, we understand the importance of your time."
     },
     {
-        question: "How long does a typical service take?",
-        answer: "Customers should expect roughly 1 hour to complete the work when we get there. To account for delays from jobs earlier in the day and traveling from job to job, we will ask for your vehicle for a 2 hour time window to be safe."
+        question: "Do I need to stay on site while my vehicle is being worked on?",
+        answer: "This is preferred but not required. All that we ask is that there is a secure spot to return keys and that you have your phone handy in case an issue comes up."
     },
     {
-        question: "Can I go run to the store or do something else while you are working on my car?",
-        answer: "We would prefer the customer be on sight while vehicle is being worked on, that way we can get and give back keys (if customer is not there we need to be able to get the keys and return them in a secure location.) We also need to be able to speak with customer in case a problem arrises, Jobs need to be able to be done as efficiently as possible."
-    },
-    {
-        question: "If you are coming to me, where will you work on my car?",
-        answer: "Vehicles can be worked on in your garage, driveway, or public parking lot (a 3- 4 feet of free space on each side of the vehicle) - but a majority of the work will be taken care in our truck."
+        question: "Where can you work on my car?",
+        answer: "We will work on your car in your driveway, in your garage, or in a safe, public parking lot. Please ensure 3 feet of space on each side of the vehicle."
     }
 ]
 </script>
