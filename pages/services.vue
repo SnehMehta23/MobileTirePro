@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="dark:bg-deep-charcoal">
         <HeroSectionWithImageLeft />
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto dark:bg-gray-900">
             <FaqAccordion :faqItems="faqItems" />
         </div>
     </div>

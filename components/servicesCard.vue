@@ -1,6 +1,7 @@
 <!-- ServiceCard.vue -->
 <template>
-    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-none flex flex-col h-full">
+    <div
+        class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 border border-gray-200 dark:border-none flex flex-col h-full">
         <div class="flex items-center mb-4">
             <img :src="service.icon" :alt="service.title" class="w-12 h-12 mr-4">
             <h3 class="text-xl font-bold text-gray-800 dark:text-white">{{ service.title }}</h3>
