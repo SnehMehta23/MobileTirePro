@@ -5,18 +5,19 @@
                 class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 col-span-2 border border-vivid-red 2xl:p-8">
                 <div class="space-y-2 2xl:space-y-4">
                     <NumberedCircle :number="1" />
-                    <h6 class="font-bold text-lg 2xl:text-xl">Book Your Appointment</h6>
-                    <span class="2xl:text-lg">Schedule a date for us to come out to you! After scheduling an appointment
-                        make sure to
-                        confirm the time!</span>
+                    <h6 class="font-bold text-lg 2xl:text-xl">Create Your Account</h6>
+                    <span class="2xl:text-lg">Creating your account allows you to schedule appointments and see past
+                        services.</span>
                 </div>
             </div>
 
             <div class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 2xl:p-8">
                 <div class="space-y-2 2xl:space-y-4">
                     <NumberedCircle :number="2" />
-                    <h6 class="font-bold text-lg 2xl:text-xl">Profile Checkup</h6>
-                    <span class="2xl:text-lg">Check out your vehicle profile!</span>
+                    <h6 class="font-bold text-lg 2xl:text-xl">Schedule An Appointment</h6>
+                    <span class="2xl:text-lg">Schedule a date and time for us to come out to you. Be sure to check your
+                        email for an appointment confirmation.
+                    </span>
                 </div>
             </div>
 
@@ -25,8 +26,8 @@
                     <div class="space-y-2 2xl:space-y-4">
                         <NumberedCircle :number="3" />
                         <h6 class="font-bold text-lg 2xl:text-xl">Prepare For Visit</h6>
-                        <span class="2xl:text-lg">Make sure there is enough room around your vehicle for us to operate.
-                            Become familiar with your profile page
+                        <span class="2xl:text-lg">Please be sure the vehicle is in a safe location with at least 3 feet
+                            of room on each side.
                         </span>
                     </div>
                 </div>
@@ -35,10 +36,9 @@
                     class="bg-pale-pink dark:bg-gray-900 dark:text-white rounded-lg p-6 2xl:p-8 border border-vivid-red">
                     <div class="space-y-2 2xl:space-y-4">
                         <NumberedCircle :number="4" />
-                        <h6 class="font-bold text-lg 2xl:text-xl">Go do something else!</h6>
-                        <span class="2xl:text-lg">Kick back, relax and have peace of mind knowing that MTP will take
-                            care of the
-                            rest!</span>
+                        <h6 class="font-bold text-lg 2xl:text-xl">Kick back and relax!:</h6>
+                        <span class="2xl:text-lg">Mobile Tire Pro will take care of the rest upon
+                            arrival. </span>
                     </div>
                 </div>
             </div>

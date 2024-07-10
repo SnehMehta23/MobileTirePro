@@ -3,12 +3,14 @@ let townList = [
     "Algonquin",
     "Barrington",
     "Carpentersville",
+    "Cary",
     "Crystal Lake",
     "Huntley",
     "Island Lake",
     "Johnsburg",
     "Lake in the Hills",
     "Lake Villa",
+    "Lake Zurich",
     "Lakemoor",
     "McHenry",
     "Richmond",
@@ -16,6 +18,7 @@ let townList = [
     "Round Lake",
     "Spring Grove",
     "Volo",
+    "Wauconda",
     "Wonder Lake",
     "Woodstock"
 ]
@@ -39,6 +42,9 @@ var towns = [
     [42.4022, -88.3162], // Ringwood
     [42.3911, -88.2415], // Johnsburg
     [42.4447, -88.2365], // Spring Grove
+    [42.2078, -88.2395], // Cary
+    [42.1967, -88.0884], // Lake Zurich
+    [42.2592, -88.1387]  // Wauconda
 ];
 
 // Calculate the center point of the coverage area
@@ -66,11 +72,12 @@ var coverageRadius = 25000; // in meters
                     <LCircle :lat-lng="centralPoint" :radius="coverageRadius" :color="'red'" />
                 </LMap>
             </div>
-            <div class="w-full md:w-1/3 dark:text-white dark:bg-gray-900 bg-cool-gray-light p-4 rounded-lg flex flex-col" style="height: 400px;">
+            <div class="w-full md:w-1/3 dark:text-white dark:bg-gray-900 bg-cool-gray-light p-4 rounded-lg flex flex-col"
+                style="height: 400px;">
                 <h2 class="text-lg font-semibold mb-2">Cities We Service</h2>
                 <div class="flex-grow overflow-auto">
                     <ul class="columns-2 gap-x-4 list-disc pl-5">
-                        <li class="text-lg mb-1 break-inside-avoid" v-for="town in townList" :key="town">{{ town }}</li>
+                        <li class="text-md mb-1 break-inside-avoid" v-for="town in townList" :key="town">{{ town }}</li>
                     </ul>
                 </div>
             </div>
