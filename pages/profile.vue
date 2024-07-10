@@ -116,6 +116,7 @@ const refreshAll = async () => {
     await refreshNuxtData();
   } finally {
     cars.value = carData.value;
+    selectedCar.value = cars.value.at(-1)
   }
 
 }
