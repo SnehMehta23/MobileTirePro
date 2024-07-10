@@ -13,7 +13,9 @@
           <a v-if="isLogged === false"
             class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white"
             href="/login">Log
-            in</a>
+            in</a><a v-if="isLogged === true"
+            class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white"
+            href="/profile">Profile</a>
           <span @click="handleLogout" v-if="isLogged === true"
             class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log
             out</span>

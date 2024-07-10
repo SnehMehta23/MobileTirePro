@@ -78,14 +78,14 @@ async function addCar() {
           </select>
         </div>
         <div v-if="carData" class="w-full flex justify-start items-start gap-1">
-          <span>Year: </span>
+          <span>Make: </span>
           <select class="w-full px-2 py-1 rounded-md bg-gray-100 hover:bg-red-100" v-model="selectedMake"
                   name="" id="">
             <option v-for="make in uniqueMakes" :value="make">{{ make }}</option>
           </select>
         </div>
         <div v-if="selectedMake" class="w-full flex justify-start items-start gap-1">
-          <span>Year: </span>
+          <span>Model: </span>
           <select class="w-full px-2 py-1 rounded-md bg-gray-100 hover:bg-red-100" v-model="selectedModel"
                   name="" id="">
             <option v-for="model in filteredModels" :value="model">{{ model }}</option>
