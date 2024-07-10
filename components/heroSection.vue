@@ -2,10 +2,14 @@
 import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
 
 const colorMode = useColorMode()
-
 </script>
 
 <template>
+    <!-- Promotional Banner -->
+    <div class="w-full bg-vivid-red text-white text-center py-2 font-bold">
+        First 10 customers who need 4 tires installed get 25% off their service
+    </div>
+
     <section
         class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
         <div class="space-y-2 items-center flex flex-col p-4 sm:p-8 2xl:p-12">
