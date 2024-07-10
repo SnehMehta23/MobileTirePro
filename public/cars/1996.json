@@ -1,0 +1,1568 @@
+[
+    {
+        "year": 1996,
+        "make": "Acura",
+        "model": "Integra",
+        "body_styles": "[\"Sedan\", \"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Acura",
+        "model": "NSX",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Acura",
+        "model": "RL",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Acura",
+        "model": "SLX",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Acura",
+        "model": "TL",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Audi",
+        "model": "A4",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Audi",
+        "model": "A6",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Audi",
+        "model": "Cabriolet",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "BMW",
+        "model": "3 Series",
+        "body_styles": "[\"Hatchback\", \"Coupe\", \"Sedan\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "BMW",
+        "model": "7 Series",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "BMW",
+        "model": "8 Series",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "BMW",
+        "model": "M3",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "BMW",
+        "model": "Z3",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Century",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "LeSabre",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Park Avenue",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Regal",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Riviera",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Roadmaster",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Buick",
+        "model": "Skylark",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Cadillac",
+        "model": "DeVille",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Cadillac",
+        "model": "Eldorado",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Cadillac",
+        "model": "Fleetwood",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Cadillac",
+        "model": "Seville",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "1500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "1500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "2500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "2500 HD Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "2500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "3500 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "3500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "3500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Astro Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Astro Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Beretta",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Blazer",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Caprice Classic",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Cavalier",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Corsica",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Express 1500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Express 2500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Express 3500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "G-Series 1500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "G-Series 2500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "G-Series G30",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Impala",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Lumina",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Lumina Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Lumina Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Monte Carlo",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "S10 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "S10 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Sportvan G30",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Suburban 1500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Suburban 2500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chevrolet",
+        "model": "Tahoe",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "Cirrus",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "Concorde",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "LHS",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "New Yorker",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "Sebring",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Chrysler",
+        "model": "Town & Country",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Avenger",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Caravan Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Dakota Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Dakota Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Grand Caravan Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Intrepid",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Neon",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 1500 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 1500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 2500 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 2500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 3500 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram 3500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Van 1500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Van 2500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Van 3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Wagon 1500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Wagon 2500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Ram Wagon 3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Stealth",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Stratus",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Dodge",
+        "model": "Viper",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Eagle",
+        "model": "Summit",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Eagle",
+        "model": "Talon",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Eagle",
+        "model": "Vision",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Aerostar Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Aerostar Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Aspire",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Bronco",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Club Wagon",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Contour",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Crown Victoria",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Econoline E150 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Econoline E250 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Econoline E350 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Escort",
+        "body_styles": "[\"Hatchback\", \"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Explorer",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F150 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F150 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F250 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F250 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F250 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F350 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F350 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "F350 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Mustang",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Probe",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Ranger Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Ranger Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Taurus",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Thunderbird",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Windstar Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Ford",
+        "model": "Windstar Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Geo",
+        "model": "Metro",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Geo",
+        "model": "Prizm",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Geo",
+        "model": "Tracker",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "1500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "1500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "2500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "2500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "3500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "3500 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "3500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Jimmy",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Rally Wagon G3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Safari Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Safari Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 1500 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 1500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 2500 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 2500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 3500 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Savana 3500 Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Sonoma Club Coupe Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Sonoma Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Suburban 1500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Suburban 2500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Vandura G3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "GMC",
+        "model": "Yukon",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "Accord",
+        "body_styles": "[\"Sedan\", \"Wagon\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "Civic",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "del Sol",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "Odyssey",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "Passport",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Honda",
+        "model": "Prelude",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "HUMMER",
+        "model": "H1",
+        "body_styles": "[\"SUV\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Hyundai",
+        "model": "Accent",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Hyundai",
+        "model": "Elantra",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Hyundai",
+        "model": "Sonata",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "INFINITI",
+        "model": "G",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "INFINITI",
+        "model": "I",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "INFINITI",
+        "model": "J",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "INFINITI",
+        "model": "Q",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Isuzu",
+        "model": "Hombre Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Isuzu",
+        "model": "Oasis",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Isuzu",
+        "model": "Rodeo",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Isuzu",
+        "model": "Trooper",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Jaguar",
+        "model": "XJ",
+        "body_styles": "[\"Sedan\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Jeep",
+        "model": "Cherokee",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Jeep",
+        "model": "Grand Cherokee",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Kia",
+        "model": "Sephia",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Kia",
+        "model": "Sportage",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Land Rover",
+        "model": "Discovery",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Land Rover",
+        "model": "Range Rover",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lexus",
+        "model": "ES",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lexus",
+        "model": "GS",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lexus",
+        "model": "LS",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lexus",
+        "model": "LX",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lexus",
+        "model": "SC",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lincoln",
+        "model": "Continental",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lincoln",
+        "model": "Mark VIII",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Lincoln",
+        "model": "Town Car",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "626",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "B-Series Cab Plus",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "B-Series Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "Millenia",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "MPV",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "MX-5 Miata",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "MX-6",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "MAZDA",
+        "model": "Protege",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercedes-Benz",
+        "model": "C-Class",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercedes-Benz",
+        "model": "E-Class",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercedes-Benz",
+        "model": "S-Class",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercedes-Benz",
+        "model": "SL-Class",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Cougar",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Grand Marquis",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Mystique",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Sable",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Tracer",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mercury",
+        "model": "Villager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "3000GT",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Diamante",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Eclipse",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Galant",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Mighty Max Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Mirage",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Mitsubishi",
+        "model": "Montero",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "200SX",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "240SX",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "300ZX",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Altima",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "King Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Maxima",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Pathfinder",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Quest",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Nissan",
+        "model": "Sentra",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "88",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "98",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Achieva",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Aurora",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Bravada",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Ciera",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Cutlass Supreme",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Oldsmobile",
+        "model": "Silhouette",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Plymouth",
+        "model": "Breeze",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Plymouth",
+        "model": "Grand Voyager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Plymouth",
+        "model": "Neon",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Plymouth",
+        "model": "Voyager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Bonneville",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Firebird",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Grand Am",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Grand Prix",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Sunfire",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Pontiac",
+        "model": "Trans Sport",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Porsche",
+        "model": "911",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Saab",
+        "model": "900",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Saab",
+        "model": "9000",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Saturn",
+        "model": "S-Series",
+        "body_styles": "[\"Coupe\", \"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Subaru",
+        "model": "Impreza",
+        "body_styles": "[\"Coupe\", \"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Subaru",
+        "model": "Legacy",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Subaru",
+        "model": "SVX",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Suzuki",
+        "model": "Esteem",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Suzuki",
+        "model": "Sidekick",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Suzuki",
+        "model": "Swift",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Suzuki",
+        "model": "X-90",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "4Runner",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Avalon",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Camry",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Celica",
+        "body_styles": "[\"Hatchback\", \"Convertible\", \"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Corolla",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Land Cruiser",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Paseo",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Previa",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "RAV4",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Supra",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "T100 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "T100 Xtracab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Tacoma Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Tacoma Xtracab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Toyota",
+        "model": "Tercel",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volkswagen",
+        "model": "Cabrio",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volkswagen",
+        "model": "Golf",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volkswagen",
+        "model": "Jetta",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volkswagen",
+        "model": "Passat",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volvo",
+        "model": "850",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1996,
+        "make": "Volvo",
+        "model": "960",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    }
+]

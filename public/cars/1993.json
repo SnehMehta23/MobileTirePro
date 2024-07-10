@@ -1,0 +1,1748 @@
+[
+    {
+        "year": 1993,
+        "make": "Acura",
+        "model": "Integra",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Acura",
+        "model": "Legend",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Acura",
+        "model": "NSX",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Acura",
+        "model": "Vigor",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Alfa Romeo",
+        "model": "164",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Alfa Romeo",
+        "model": "Spider",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Audi",
+        "model": "100",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Audi",
+        "model": "90",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Audi",
+        "model": "Quattro",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Audi",
+        "model": "S4",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "BMW",
+        "model": "3 Series",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "BMW",
+        "model": "5 Series",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "BMW",
+        "model": "7 Series",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "BMW",
+        "model": "8 Series",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "BMW",
+        "model": "M5",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Century",
+        "body_styles": "[\"Sedan\", \"Wagon\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "LeSabre",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Park Avenue",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Regal",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Riviera",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Roadmaster",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Buick",
+        "model": "Skylark",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "Allante",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "DeVille",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "Eldorado",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "Fleetwood",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "Seville",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Cadillac",
+        "model": "Sixty Special",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "1500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "1500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "2500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "2500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "3500 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "3500 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "3500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "APV Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Astro Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Astro Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Beretta",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Blazer",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Caprice Classic",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Cavalier",
+        "body_styles": "[\"Coupe\", \"Sedan\", \"Wagon\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Corsica",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "G-Series G10",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "G-Series G20",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "G-Series G30",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Lumina",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Lumina APV",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "S10 Blazer",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "S10 Extended Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "S10 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Sportvan G10",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Sportvan G20",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Sportvan G30",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Suburban 1500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chevrolet",
+        "model": "Suburban 2500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "Concorde",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "Fifth Ave",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "Imperial",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "LeBaron",
+        "body_styles": "[\"Coupe\", \"Convertible\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "New Yorker",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Chrysler",
+        "model": "Town & Country",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Caravan Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Caravan Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Colt",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D150 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D150 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D250 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D250 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D350 Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "D350 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Dakota Club Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Dakota Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Daytona",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Dynasty",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Grand Caravan Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Intrepid",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram 50 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Van B150",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Van B250",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Van B350",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Wagon B150",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Wagon B250",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ram Wagon B350",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Ramcharger",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Shadow",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Spirit",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Stealth",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Dodge",
+        "model": "Viper",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Eagle",
+        "model": "Summit",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Eagle",
+        "model": "Talon",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Eagle",
+        "model": "Vision",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Aerostar Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Aerostar Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Bronco",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Club Wagon",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Crown Victoria",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Econoline E150 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Econoline E250 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Econoline E350 Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Escort",
+        "body_styles": "[\"Hatchback\", \"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Explorer",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F150 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F150 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F250 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F250 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F350 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F350 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "F350 Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Festiva",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Mustang",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Probe",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Ranger Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Ranger Super Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Taurus",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Tempo",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Ford",
+        "model": "Thunderbird",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Geo",
+        "model": "Metro",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Geo",
+        "model": "Prizm",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Geo",
+        "model": "Storm",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Geo",
+        "model": "Tracker",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "1500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "1500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "2500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "2500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "3500 Club Coupe",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "3500 Crew Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "3500 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Jimmy",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Rally Wagon 1500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Rally Wagon 2500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Rally Wagon 3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Safari Cargo",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Safari Passenger",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Sonoma Club Coupe Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Sonoma Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Suburban 1500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Suburban 2500",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Vandura 1500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Vandura 2500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Vandura 3500",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "GMC",
+        "model": "Yukon",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Honda",
+        "model": "Accord",
+        "body_styles": "[\"Coupe\", \"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Honda",
+        "model": "Civic",
+        "body_styles": "[\"Coupe\", \"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Honda",
+        "model": "del Sol",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Honda",
+        "model": "Prelude",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "HUMMER",
+        "model": "H1",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Hyundai",
+        "model": "Elantra",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Hyundai",
+        "model": "Excel",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Hyundai",
+        "model": "Scoupe",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Hyundai",
+        "model": "Sonata",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "INFINITI",
+        "model": "G",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "INFINITI",
+        "model": "J",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "INFINITI",
+        "model": "Q",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Amigo",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Rodeo",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Spacecab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Stylus",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Isuzu",
+        "model": "Trooper",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Jaguar",
+        "model": "XJ",
+        "body_styles": "[\"Sedan\", \"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Jeep",
+        "model": "Cherokee",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Jeep",
+        "model": "Grand Cherokee",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Jeep",
+        "model": "Wrangler",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Land Rover",
+        "model": "Defender 110",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Land Rover",
+        "model": "Range Rover",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lexus",
+        "model": "ES",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lexus",
+        "model": "GS",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lexus",
+        "model": "LS",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lexus",
+        "model": "SC",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lincoln",
+        "model": "Continental",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lincoln",
+        "model": "Mark VIII",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Lincoln",
+        "model": "Town Car",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "323",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "626",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "929",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "B-Series Cab Plus",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "B-Series Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "MPV",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "MX-3",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "MX-5 Miata",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "MX-6",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "Navajo",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "Protege",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "MAZDA",
+        "model": "RX-7",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "190 E",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 CE",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 D",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 E",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 SD",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 SE",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 SL",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "300 TE",
+        "body_styles": "[\"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "400 E",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "400 SEL",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "500 E",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "500 SEC",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "500 SEL",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "500 SL",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "600 SEC",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "600 SEL",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercedes-Benz",
+        "model": "600 SL",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Capri",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Cougar",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Grand Marquis",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Sable",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Topaz",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Tracer",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mercury",
+        "model": "Villager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "3000GT",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Diamante",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Eclipse",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Expo",
+        "body_styles": "[\"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Galant",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Mighty Max Macro Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Mighty Max Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Mirage",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Montero",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Mitsubishi",
+        "model": "Precis",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "240SX",
+        "body_styles": "[\"Hatchback\", \"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "300ZX",
+        "body_styles": "[\"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Altima",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "King Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Maxima",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "NX",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Pathfinder",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Quest",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Nissan",
+        "model": "Sentra",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "88",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "98",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Achieva",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Bravada",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Cutlass Ciera",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Cutlass Cruiser",
+        "body_styles": "[\"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Cutlass Supreme",
+        "body_styles": "[\"Coupe\", \"Convertible\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Oldsmobile",
+        "model": "Silhouette",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Acclaim",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Colt",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Colt Vista",
+        "body_styles": "[\"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Grand Voyager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Laser",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Sundance",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Plymouth",
+        "model": "Voyager",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Bonneville",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Firebird",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Grand Am",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Grand Prix",
+        "body_styles": "[\"Sedan\", \"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "LeMans",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Sunbird",
+        "body_styles": "[\"Coupe\", \"Sedan\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Pontiac",
+        "model": "Trans Sport",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Porsche",
+        "model": "911",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Porsche",
+        "model": "928",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Porsche",
+        "model": "968",
+        "body_styles": "[\"Coupe\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Saab",
+        "model": "900",
+        "body_styles": "[\"Hatchback\", \"Sedan\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Saab",
+        "model": "9000",
+        "body_styles": "[\"Hatchback\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Saturn",
+        "model": "S-Series",
+        "body_styles": "[\"Coupe\", \"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Subaru",
+        "model": "Impreza",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Subaru",
+        "model": "Justy",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Subaru",
+        "model": "Legacy",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Subaru",
+        "model": "Loyale",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Subaru",
+        "model": "SVX",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Suzuki",
+        "model": "Samurai",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Suzuki",
+        "model": "Sidekick",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Suzuki",
+        "model": "Swift",
+        "body_styles": "[\"Sedan\", \"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "4Runner",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Camry",
+        "body_styles": "[\"Wagon\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Celica",
+        "body_styles": "[\"Coupe\", \"Hatchback\", \"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Corolla",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Land Cruiser",
+        "body_styles": "[\"SUV\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "MR2",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Paseo",
+        "body_styles": "[\"Coupe\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Previa",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Supra",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "T100 Regular Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Tercel",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Toyota",
+        "model": "Xtra Cab",
+        "body_styles": "[\"Pickup\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Cabriolet",
+        "body_styles": "[\"Convertible\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Corrado",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Eurovan",
+        "body_styles": "[\"Van/Minivan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Fox",
+        "body_styles": "[\"Coupe\", \"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Golf III",
+        "body_styles": "[\"Hatchback\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Jetta III",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volkswagen",
+        "model": "Passat",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volvo",
+        "model": "240",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volvo",
+        "model": "850",
+        "body_styles": "[\"Sedan\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volvo",
+        "model": "940",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    },
+    {
+        "year": 1993,
+        "make": "Volvo",
+        "model": "960",
+        "body_styles": "[\"Sedan\", \"Wagon\"]"
+    }
+]
