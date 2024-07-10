@@ -42,7 +42,7 @@
           <div>
             <!-- Placeholder for tab content -->
             <!--            <p>{{ activeTab }}</p>-->
-            <div class="text-xl">{{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}</div>
+            <div class="text-xl">{{ selectedCar?.year }} {{ selectedCar?.make }} {{ selectedCar?.model }}</div>
           </div>
         </div>
 
@@ -116,6 +116,7 @@ const refreshAll = async () => {
     await refreshNuxtData();
   } finally {
     cars.value = carData.value;
+    selectedCar.value = cars.value.at(-1)
   }
 
 }
