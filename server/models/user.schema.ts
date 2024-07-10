@@ -13,7 +13,11 @@ export const userSchema = defineMongooseModel({
         },
         picture: {
             type: 'string'
-        }
+        },
+        cars: [{
+            type: 'ObjectId',
+            ref: 'Car'
+        }]
     },
     hooks(schema) {
         schema.pre('save', function (this, next) {

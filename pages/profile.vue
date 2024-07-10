@@ -11,17 +11,12 @@
               :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
           </div>
           <div class="space-x-2">
-            <select name="cars">
-              <option value="">
-                Tesla
-              </option>
-              <option value="">
-                F150
-              </option>
+            <select v-model="selectedCar" name="cars">
+              <option :value="cars[index]" v-for="(data, index) in cars">{{data?.model}} {{data?.year}}</option>
             </select>
-            <span class="bg-pale-red px-2 py-1 rounded">Year</span>
-            <span class="bg-pale-red px-2 py-1 rounded">Make</span>
-            <span class="bg-pale-red px-2 py-1 rounded">Model</span>
+            <span class="bg-pale-red px-2 py-1 rounded">{{ selectedCar?.year }}</span>
+            <span class="bg-pale-red px-2 py-1 rounded">{{ selectedCar?.make }}</span>
+            <span class="bg-pale-red px-2 py-1 rounded">{{ selectedCar?.model }}</span>
           </div>
         </div>
 
@@ -43,7 +38,8 @@
           </div>
           <div>
             <!-- Placeholder for tab content -->
-            <p>{{ activeTab }}</p>
+<!--            <p>{{ activeTab }}</p>-->
+            <div class="text-xl">{{selectedCar.year}} {{selectedCar.make}} {{selectedCar.model}}</div>
           </div>
         </div>
 
@@ -53,27 +49,27 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="border p-2 flex flex-col rounded shadow-sm">
               <h6 class="font-semibold">Front Left</h6>
-              <span>[tire pressure]</span>
-              <span>[tire type]</span>
-              <span>[tire size]</span>
+              <span>{{selectedCar?.tires[0].pressure}} PSI</span>
+              <span>{{selectedCar?.tires[0].type}}</span>
+              <span>{{selectedCar?.tires[0].size}}</span>
             </div>
             <div class="border p-2 flex flex-col rounded shadow-sm">
               <h6 class="font-semibold">Front Right</h6>
-              <span>[tire pressure]</span>
-              <span>[tire type]</span>
-              <span>[tire size]</span>
+              <span>{{selectedCar?.tires[2].pressure}} PSI</span>
+              <span>{{selectedCar?.tires[2].type}}</span>
+              <span>{{selectedCar?.tires[2].size}}</span>
             </div>
             <div class="border p-2 flex flex-col rounded shadow-sm">
               <h6 class="font-semibold">Back Left</h6>
-              <span>[tire pressure]</span>
-              <span>[tire type]</span>
-              <span>[tire size]</span>
+              <span>{{selectedCar?.tires[2].pressure}} PSI</span>
+              <span>{{selectedCar?.tires[2].type}}</span>
+              <span>{{selectedCar?.tires[2].size}}</span>
             </div>
             <div class="border p-2 flex flex-col rounded shadow-sm">
               <h6 class="font-semibold">Back Right</h6>
-              <span>[tire pressure]</span>
-              <span>[tire type]</span>
-              <span>[tire size]</span>
+              <span>{{selectedCar?.tires[3].pressure}} PSI</span>
+              <span>{{selectedCar?.tires[3].type}}</span>
+              <span>{{selectedCar?.tires[3].size}}</span>
             </div>
           </div>
         </section>
@@ -82,7 +78,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs"]
 const activeTab = ref('All')
@@ -92,6 +88,8 @@ definePageMeta({
 })
 
 const user = ref('')
+const cars = ref('')
+const selectedCar = ref('')
 
 const { data } = await useFetch('/api/user/profile', {
   method: 'GET',
@@ -100,6 +98,17 @@ const { data } = await useFetch('/api/user/profile', {
   }
 })
 
+const carData = await useFetch('/api/car/list', {
+  method: 'GET'
+})
+
+
+console.log(carData)
+
 user.value = data.value;
+cars.value = carData.data.value;
+if(cars.value){
+  selectedCar.value = cars.value[0]
+}
 
 </script>
