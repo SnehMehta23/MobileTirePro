@@ -17,6 +17,10 @@ export const userSchema = defineMongooseModel({
         cars: [{
             type: 'ObjectId',
             ref: 'Car'
+        }],
+        apts: [{
+            type: 'ObjectId',
+            ref: 'Apt'
         }]
     },
     hooks(schema) {

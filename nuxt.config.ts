@@ -36,6 +36,7 @@ export default defineNuxtConfig({
         './modules/auth.module',
         '@nuxtjs/color-mode',
         'nuxt-vue3-google-signin',
+
     ],
     tailwindcss: {
         configPath: '~/tailwind.config.js',
@@ -83,6 +84,9 @@ export default defineNuxtConfig({
                     ? {preset: ['default', {discardComments: {removeAll: true}}]}
                     : false, // disable cssnano when not in production
         },
+    },
+    build: {
+        transpile: ['@vuepic/vue-datepicker']
     }
 
 })

@@ -1,5 +1,181 @@
-<template>
-    <section class="flex justify-center gap-20 mt-8 text-center max-w-7xl mx-auto text-dark-charcoal">
+<script setup lang="ts">
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 
-    </section>
+
+const date = ref(new Date());
+const available = ref('')
+const selectedDate = ref('')
+const selectedService = ref('')
+const selectedCar = ref('')
+const isLoading = ref(false)
+
+const address = reactive({
+  street: '',
+  city: '',
+  zipcode: '',
+  State: 'IL'
+})
+
+const services = ['2 Tire installation (Large SUV/Truck/EV)',
+  '2 Tire installation (Sedan/Coupe/Small SUV)',
+  '4 Tire installation (Large SUV/Truck/EV)',
+  "4 Tire installation (Sedan/Coupe/Small SUV)"]
+
+
+watch(date, async (newDate, oldDate) => {
+  if (newDate) {
+    selectedDate.value = ''
+    selectedCar.value = ''
+    selectedService.value = ''
+    await check();
+    console.log(available.value)
+  }
+
+})
+
+const {data: carData, refresh} = await useFetch('/api/car/list', {
+  method: 'GET'
+})
+
+if (carData) {
+
+}
+
+
+async function check() {
+  const data: any = await $fetch('/api/apts/check', {
+    method: 'POST',
+    body: {
+      day: date.value
+    }
+  })
+  available.value = data
+}
+
+async function submitAppointment() {
+  try {
+    const data = $fetch('/api/apts/create', {
+      method: 'POST',
+      body: {
+        appointmentDate: setTimeOnDate(date.value, selectedDate.value),
+        carId: selectedCar.value,
+        service: selectedService.value,
+        address: `${address.street} ${address.city} ${address.State} ${address.zipcode}`
+      }
+    })
+  } catch (e: any) {
+    console.error(e.message)
+  }
+}
+
+function setTimeOnDate(date: Date, timeString: string) {
+  // Create a new Date object based on the original date to avoid mutating it
+  let newDate = new Date(date);
+
+  // Extract hour and meridian (AM/PM) from the time string
+  let timeParts = timeString.match(/(\d+)(AM|PM)/i);
+  if (!timeParts) {
+    throw new Error("Invalid time string format");
+  }
+
+  let hour = parseInt(timeParts[1]);
+  let meridian = timeParts[2].toUpperCase();
+
+  // Adjust the hour based on AM/PM
+  if (meridian === "PM" && hour < 12) {
+    hour += 12;
+  }
+  if (meridian === "AM" && hour === 12) {
+    hour = 0;
+  }
+
+  // Set hours, minutes, seconds, and milliseconds to the new Date object
+  newDate.setHours(hour, 0, 0, 0);
+
+  // Return the new date object in ISO format
+  return newDate.toISOString();
+}
+
+// async function callValidateAddress() {
+//   // Construct request
+//   const request = {
+//     address: {
+//       regionCode: 'US',
+//       addressLines: [`${address.street}`, `${address.city} ${address.State} ${address.zipcode}`],
+//     },
+//   };
+//
+//   // Run request
+//   const response = await addressValidationClient.validateAddress(request);
+//   console.log(response);
+// }
+
+
+</script>
+
+<template>
+
+  <section class="w-full h-full flex justify-center items-center">
+    <div class="w-1/4 flex justify-center items-center border-vivid-red border rounded px-5 py-5">
+      <div class="flex w-3/4 flex-col justify-center items-center gap-3">
+        <VueDatePicker v-model="date"/>
+        <div v-if="available" class="dark:text-white">Available times</div>
+        <div class="grid grid-cols-4 gap-2" v-if="available">
+          <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">
+            <div @click="selectedDate = key" v-if="value"
+                 :class="['bg-vivid-red px-3 py-2 text-white rounded cursor-pointer hover:bg-red-700', {['bg-red-700'] : selectedDate == key}]">
+              {{ key }}
+            </div>
+          </template>
+        </div>
+        <div v-if="selectedDate" class="flex flex-col gap-3 justify-center items-center">
+          <div class="dark:text-white">Services</div>
+          <div @click="selectedService = service"
+               :class="['bg-vivid-red px-3 py-1 text-white rounded cursor-pointer hover:bg-red-700', {['bg-red-700'] : selectedService == service}]"
+               v-for="service in services">{{ service }}
+          </div>
+        </div>
+        <div v-if="selectedService">
+          <select class="px-3 py-2 rounded w-[15rem]" v-if="carData" v-model="selectedCar">
+            <option value="" disabled selected>Select a Vehicle</option>
+            <option v-for="cars in carData" :value="cars._id">{{ cars.year }} {{ cars.make }} {{ cars.model }}</option>
+          </select>
+        </div>
+        <div v-if="selectedService" class="flex flex-col justify-start items-start w-full dark:text-white gap-2">
+          <div class="flex-col flex gap-1 w-full">
+            <label for="">Street Address:</label>
+            <input v-model="address.street" class="px-2 py-1 rounded text-black" type="text">
+          </div>
+          <div class="flex-col flex gap-1 w-full">
+            <label for="">City:</label>
+            <input v-model="address.city" class="px-2 py-1 rounded text-black" type="text">
+          </div>
+          <div class="flex-col flex gap-1 w-full">
+            <label for="">State:</label>
+            <select class="px-2 py-1 rounded text-black">
+              <option selected disabled>Illinois</option>
+            </select>
+          </div>
+          <div class="flex-col flex gap-1 w-full">
+            <label for="">Zipcode</label>
+            <input v-model="address.zipcode" class="px-2 py-1 rounded text-black" type="text">
+          </div>
+        </div>
+        <button v-if="selectedDate && selectedService && selectedCar !== '' && address.zipcode"
+                class="flex justify-center items-center bg-vivid-red text-white px-4 py-2 rounded hover:bg-red-600"
+                @click="submitAppointment">
+          <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+          </svg>
+          <span>{{ isLoading ? "Please wait" : "Proceed" }}</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
 </template>

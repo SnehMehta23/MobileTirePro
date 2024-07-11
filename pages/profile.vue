@@ -40,10 +40,11 @@
             </span>
           </div>
           <div>
+            <UserApts v-if="activeTab == 'Appointments'"/>
             <!-- Placeholder for tab content -->
             <!--            <p>{{ activeTab }}</p>-->
-            <div class="text-xl">{{ selectedCar?.year }} {{ selectedCar?.make }} {{ selectedCar?.model }}</div>
           </div>
+          <div class="text-xl">{{ selectedCar?.year }} {{ selectedCar?.make }} {{ selectedCar?.model }}</div>
         </div>
 
         <!-- Tire Info Section -->
@@ -84,8 +85,9 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import UserApts from "~/components/userApts.vue";
 
-const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs"]
+const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs", "Appointments"]
 const activeTab = ref('All')
 
 definePageMeta({
