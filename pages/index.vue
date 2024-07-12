@@ -14,13 +14,18 @@ export default {
         },
         {
           id: 2,
-          src: '/images/hyundai.webp',
-          alt: 'Hyundai'
+          src: '/images/tesla.webp',
+          alt: 'Tesla'
         },
         {
           id: 3,
           src: '/images/classicCar.webp',
           alt: 'Classic Car'
+        },
+        {
+          id: 4,
+          src: '/images/hyundai.webp',
+          alt: 'Hyundai'
         },
       ]
     }

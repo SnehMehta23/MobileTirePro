@@ -23,7 +23,9 @@ const address = reactive({
 const services = [{ name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00' },
 { name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00' },
 { name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00' },
-{ name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00' }]
+{ name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00' },
+{ name: "Seasonal Changeover (Tires Only)", price: '$200.00', descriptor: 'Storage included for both' },
+{ name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '$100.00', descriptor: 'Storage included for both' }]
 
 
 watch(date, async (newDate, oldDate) => {
@@ -144,7 +146,7 @@ function setTimeOnDate(date: Date, timeString: string) {
             selectedService = service.name
             price = service.price
           }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-2/3 dark:text-white text-center"
-            v-for="service in services">{{ service.name }} {{ service.price }}
+            v-for="service in services">{{ service.name }} {{ service.price }} {{ service.descriptor }}
           </div>
         </div>
         <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
@@ -153,7 +155,7 @@ function setTimeOnDate(date: Date, timeString: string) {
               <option value="" disabled selected>Select a Vehicle</option>
               <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{
                 cars.model
-              }}
+                }}
               </option>
             </select>
           </div>
