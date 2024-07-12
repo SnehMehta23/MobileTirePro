@@ -24,6 +24,7 @@
     "nuxt-mongoose": "^1.0.6",
     "nuxt-vue3-google-signin": "^0.0.11",
     "nuxt3-leaflet": "^1.0.13",
+    "square": "^37.1.0",
     "typescript": "^5.4.5",
     "v-calendar": "^3.1.2",
     "vue": "^3.4.21",

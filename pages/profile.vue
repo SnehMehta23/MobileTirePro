@@ -87,15 +87,17 @@
 import {ref} from 'vue'
 import UserApts from "~/components/userApts.vue";
 
-const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs", "Appointments"]
-const activeTab = ref('All')
 
 definePageMeta({
   middleware: 'auth'
 })
 
-const isOpen = ref(false)
 
+
+
+const tabNavContent = ["All", "Maintenance", "Upgrades", "Repairs", "Appointments"]
+const activeTab = ref('All')
+const isOpen = ref(false)
 const user = ref('')
 const cars = ref('')
 const selectedCar = ref('')
@@ -122,9 +124,6 @@ const refreshAll = async () => {
   }
 
 }
-
-console.log(carData)
-
 user.value = data.value;
 cars.value = carData.value;
 if (cars.value) {
@@ -133,9 +132,9 @@ if (cars.value) {
 
 watch(carData.value, async (newCars, oldCars) => {
   if (newCars) {
-    console.log(newCars)
     cars.value = newCars.value
   }
 })
 
 </script>
+
