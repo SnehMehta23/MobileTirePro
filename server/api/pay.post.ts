@@ -17,18 +17,15 @@ const {paymentsApi} = new Client({
 
 
 export default defineEventHandler(async (event) => {
-    const {locationId, sourceId} = await readBody(event);
+    const {locationId, sourceId, amountMoney} = await readBody(event);
+
 
     try {
         const {result} = await paymentsApi.createPayment({
             locationId,
             sourceId,
             idempotencyKey: randomUUID(),
-            amountMoney: {
-                //@ts-ignore
-                amount: 100,
-                currency: "USD",
-            },
+            amountMoney
         });
         return result;
     } catch (error) {

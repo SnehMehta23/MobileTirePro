@@ -7,7 +7,6 @@ export default defineEventHandler(async (event) => {
         const email = await getAuth(event);
         const user = await userSchema.findOne({email}).select('-password')
         const carList: any = user?.cars;
-        console.log(carList)
         let res: any = [];
         for (const id of carList) {
             let car = await carSchema.findById(id)

@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import {useNuxtApp} from "#app";
+
 export default defineNuxtConfig({
+
     devtools: {enabled: true},
     app: {
         head: {
@@ -52,7 +55,19 @@ export default defineNuxtConfig({
         './modules/auth.module',
         '@nuxtjs/color-mode',
         'nuxt-vue3-google-signin',
-
+        ['nuxt-mail', {
+            message:{
+              to: 'rafsant345@gmail.com'
+            },
+            smtp: {
+                host: "smtp.gmail.com",
+                port: 587,
+                auth: {
+                    user: 'noreplymobiletirepro@gmail.com',
+                    pass: 'fnxi ghcq dknc bxdg',
+                },
+            },
+        }], ,
     ],
     tailwindcss: {
         configPath: '~/tailwind.config.js',

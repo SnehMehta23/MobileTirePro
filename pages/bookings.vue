@@ -2,6 +2,9 @@
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 
+definePageMeta({
+  middleware: 'auth'
+})
 
 const date = ref('');
 const available = ref('')
@@ -13,6 +16,7 @@ const isLoading = ref(false)
 const price = ref('')
 const showConfirmation = ref(false)
 const TPMAmount = ref(0)
+const mail = useMail();
 
 
 const route = useRoute();
@@ -28,8 +32,8 @@ const services = [{name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.
   {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00'},
   {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00'},
   {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00'},
-  {name: "Seasonal Changeover (Tires Only)", price: '$200.00', descriptor: 'Storage included for both'},
-  {name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '$100.00', descriptor: 'Storage included for both'}]
+  {name: "Seasonal Changeover (Tires Only)", price: '200.00', descriptor: 'Storage included for both'},
+  {name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '100.00', descriptor: 'Storage included for both'}]
 
 
 watch(date, async (newDate, oldDate) => {
@@ -43,7 +47,7 @@ watch(date, async (newDate, oldDate) => {
 
 })
 
-const {data: carData, refresh} = await useFetch('/api/car/list', {
+const {data: carData} = await useLazyFetch('/api/car/list', {
   method: 'GET'
 })
 
@@ -64,7 +68,7 @@ async function check() {
 
 async function submitAppointment() {
   try {
-    const data = $fetch('/api/apts/create', {
+    const data = await $fetch('/api/apts/create', {
       method: 'POST',
       body: {
         appointmentDate: setTimeOnDate(date.value, selectedDate.value),
@@ -75,6 +79,7 @@ async function submitAppointment() {
     })
     if (await data == "OK") {
       showConfirmation.value = true
+
     }
   } catch (e: any) {
     console.error(e.message)
@@ -151,7 +156,8 @@ const computedPrice = computed(() => {
         <div v-if="!selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
           <VueDatePicker v-model="date"/>
-          <div v-if="available" class="dark:text-white">Available times
+          <div v-if="date && !available" class="dark:text-white"> Loading...</div>
+          <div v-if="date && available" class="dark:text-white">Available times
           </div>
           <div class="grid grid-cols-4 gap-2" v-if="available">
             <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">
@@ -192,7 +198,7 @@ const computedPrice = computed(() => {
             <div class="flex justify-center items-center gap-4">
               <input v-model="TPMAmount" type="range" min="0" max="4">
               <span>Quantity: {{ TPMAmount }}</span>
-              <span>${{TPMAmount * 45}}.00</span>
+              <span>${{ TPMAmount * 45 }}.00</span>
             </div>
           </div>
           <div class="flex flex-col justify-start items-start w-full dark:text-white gap-2">
@@ -224,10 +230,13 @@ const computedPrice = computed(() => {
         </div>
         <div v-if="isCheckout" class="dark:text-white flex justify-start items-middle flex-col text-xl w-full">
           <div>
-            Date: {{ date }}{{ selectedDate }}
+            Date: {{ parseAndFormatDate(`${date}${selectedDate}`)}}
           </div>
           <div>
             Selected Service: {{ selectedService }}
+          </div>
+          <div>
+            TPM installation: {{TPMAmount}}
           </div>
           <div>
             Car: {{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}

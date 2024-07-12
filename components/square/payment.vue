@@ -11,8 +11,8 @@ const {price} = defineProps(['price'])
 
 const emit = defineEmits(['payment'])
 
-const appId = 'sandbox-sq0idb-2IrtLpJE_wYWee2XqXJx1A';
-const locationId = 'L5TYMTK1GRZGC';
+const appId = 'sandbox-sq0idb-kSqCFhDPPZCfcIm56q8bWQ';
+const locationId = 'LHM72HAD1BSB2';
 let card;
 let paymentStatus = ref("");
 let loading = ref(false);
@@ -89,6 +89,10 @@ const handlePaymentMethodSubmission = async () => {
     body: {
       locationId,
       sourceId: token,
+      amountMoney: {
+        amount: (parseInt(price) * 100).toString(),
+        currency: "USD"
+      }
     },
   });
   if (!error.value) {
@@ -111,10 +115,15 @@ const handleGooglePaySubmission = async (googlePlay) => {
       body: {
         locationId,
         sourceId: token,
+        amountMoney: {
+          amount: (parseInt(price) * 100).toString(),
+          currency: "USD"
+        }
+
       },
     });
     if (!error.value) {
-      paymentStatus.value = "Payment completed";
+      paymentStatus.value = "Payment completed, Booking appointment please wait...";
       emit('payment')
 
     } else {
