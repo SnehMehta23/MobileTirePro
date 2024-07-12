@@ -16,8 +16,6 @@ export default defineEventHandler(async (event) => {
                 pass: "fnxi ghcq dknc bxdg",
             },
         });
-
-
         const {carId, service, appointmentDate, address} = await readBody(event);
         const email = await getAuth(event)
         const user = await userSchema.findOne({email}).select('-password')
@@ -44,7 +42,11 @@ export default defineEventHandler(async (event) => {
         return 'OK'
 
 
-    } catch (e) {
-
+    } catch (e: any) {
+        console.error(e.message)
+        throw createError({
+            statusMessage: e.message,
+            statusCode: 400
+        })
     }
 })
