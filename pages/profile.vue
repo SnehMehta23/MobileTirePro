@@ -109,10 +109,10 @@ const user = ref('')
 const cars = ref('')
 const selectedCar = ref('')
 
-const {data, status} = await useLazyFetch('/api/user/profile', {})
+const {data, status} = await useLazyFetch('/api/user/profile', {server: false})
 
 const {status: carStatus, data: carData, refresh} = await useLazyFetch('/api/car/list', {
-  method: 'GET'
+  server: false
 })
 
 const refreshAll = async () => {
