@@ -6,7 +6,6 @@ export const aptsSchema = defineMongooseModel({
         //@ts-ignore
         appointmentDate: {
             type: 'Date',
-            unique: true
         },
         //@ts-ignore
         carId: {
