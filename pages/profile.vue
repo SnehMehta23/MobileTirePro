@@ -40,7 +40,7 @@
             </span>
           </div>
           <div>
-            <UserApts v-if="activeTab == 'Appointments'" />
+            <UserApts v-if="activeTab == 'Appointments'" :car="selectedCar._id" />
             <!-- Placeholder for tab content -->
             <!--            <p>{{ activeTab }}</p>-->
           </div>
