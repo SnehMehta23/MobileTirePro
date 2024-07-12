@@ -16,11 +16,11 @@ export default defineEventHandler(async (event) => {
                 pass: "fnxi ghcq dknc bxdg",
             },
         });
-        const {carId, service, appointmentDate, address} = await readBody(event);
+        const {carId, service, appointmentDate, address, phone} = await readBody(event);
         const email = await getAuth(event)
         const user = await userSchema.findOne({email}).select('-password')
         const car = await carSchema.findById(carId)
-        const apt = new aptsSchema({carId, service, appointmentDate, address, userId: user?._id})
+        const apt = new aptsSchema({carId, service, appointmentDate, address, phone, userId: user?._id})
         await apt.save()
         await userSchema.findByIdAndUpdate(user?._id, {$push: {apts: apt._id}})
 
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
             from: '', // sender address
             to: "rafsant345@gmail.com", // list of receivers
             subject: "New Appointment", // Subject line
-            text: `Your got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model}`
+            text: `Your got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone}`
             // html: "`<p>Your got a new appointment.</p> <p>${service}</p><p>${address}</p> <p>${car?.year} ${car?.make} ${car?.model}</p>`", // html body
         });
 

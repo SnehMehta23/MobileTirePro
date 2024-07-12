@@ -35,6 +35,9 @@ export const aptsSchema = defineMongooseModel({
         address: {
             type: 'string'
         },
+        phone:{
+          type: 'string'
+        },
         //@ts-ignore
         status: {
             type: 'string',

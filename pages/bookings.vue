@@ -28,6 +28,7 @@ const address = reactive({
   zipcode: '',
   State: 'IL'
 })
+const phone = ref('')
 
 const services = [{name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00'},
   {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00'},
@@ -75,7 +76,8 @@ async function submitAppointment() {
         appointmentDate: setTimeOnDate(date.value, selectedDate.value),
         carId: selectedCar.value,
         service: selectedService.value,
-        address: `${address.street} ${address.city} ${address.State} ${address.zipcode}`
+        address: `${address.street} ${address.city} ${address.State} ${address.zipcode}`,
+        phone: phone.value
       }
     });
     if (await data == "OK") {
@@ -221,6 +223,10 @@ const computedPrice = computed(() => {
               <label for="">Zip code: </label>
               <input v-model="address.zipcode" class="px-2 py-1 rounded text-black" type="text">
             </div>
+            <div class="flex-col flex gap-1 w-full">
+              <label for="">Contact phone: </label>
+              <input v-model="phone" class="px-2 py-1 rounded text-black" type="text">
+            </div>
             <div class="w-full flex gap-5 ">
               <button>Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar"
@@ -229,21 +235,21 @@ const computedPrice = computed(() => {
             </div>
           </div>
         </div>
-        <div v-if="isCheckout" class="dark:text-white flex justify-start items-middle flex-col text-xl w-full">
+        <div v-if="isCheckout" class="dark:text-white flex justify-start items-middle flex-col text-xl w-full gap-2">
           <div>
-            Date: {{ parseAndFormatDate(`${date}${selectedDate}`)}}
+            <span class=font-bold>Date:</span> {{ parseAndFormatDate(`${date}${selectedDate}`) }}
           </div>
           <div>
-            Selected Service: {{ selectedService }}
+            <span class="font-bold">Selected Service:</span> {{ selectedService }}
           </div>
           <div>
-            TPM installation: {{TPMAmount}}
+            <span class="font-bold">TPM installation:</span> {{ TPMAmount }}
           </div>
           <div>
-            Car: {{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}
+            <span class="font-bold">Car:</span> {{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}
           </div>
           <div>
-            Service Address: {{ address.street }} {{ address.city }} {{ address.State }} {{ address.zipcode }}
+            <span class="font-bold">Service Address:</span> {{ address.street }} {{ address.city }} {{ address.State }} {{ address.zipcode }}
           </div>
           <SquarePayment :price="computedPrice" @payment="submitAppointment"/>
         </div>
@@ -252,9 +258,9 @@ const computedPrice = computed(() => {
         <div class="dark:text-white text-2xl">
           Appointment booked!
         </div>
-        <NuxtLink to="/profile">
+        <NuxtLink to="/">
           <div class="cursor-pointer">
-            <div class="bg-vivid-red px-3 py-3 rounded text-white hover:bg-red-700"> Return to your profile</div>
+            <div class="bg-vivid-red px-3 py-3 rounded text-white hover:bg-red-700"> Return Home</div>
           </div>
         </NuxtLink>
 
