@@ -153,7 +153,7 @@ function setTimeOnDate(date: Date, timeString: string) {
               <option value="" disabled selected>Select a Vehicle</option>
               <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{
                 cars.model
-                }}
+              }}
               </option>
             </select>
           </div>
@@ -218,7 +218,78 @@ function setTimeOnDate(date: Date, timeString: string) {
           temperatures under 20 degrees.</p>
       </div>
     </div>
+
+
   </div>
+  <!--  <section class="w-full h-full flex justify-center items-center">-->
+  <!--    <div class="w-1/4 flex justify-center items-center border-vivid-red border rounded px-5 py-5">-->
+  <!--      <div class="flex w-3/4 flex-col justify-center items-center gap-3">-->
+  <!--        <VueDatePicker v-model="date"/>-->
+
+
+  <!--        <div class="dark:text-white">-->
+  <!--          {{date}}-->
+  <!--          <div v-if="available" class="dark:text-white">Available times</div>-->
+  <!--          <div class="grid grid-cols-4 gap-2" v-if="available">-->
+  <!--            <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">-->
+  <!--              <div @click="selectedDate = key" v-if="value"-->
+  <!--                   :class="['bg-vivid-red px-3 py-2 text-white rounded cursor-pointer hover:bg-red-700', {['bg-red-700'] : selectedDate == key}]">-->
+  <!--                {{ key }}-->
+  <!--              </div>-->
+  <!--            </template>-->
+  <!--          </div>-->
+  <!--        </div>-->
+
+  <!--        <div v-if="selectedDate" class="flex flex-col gap-3 justify-center items-center">-->
+  <!--          <div class="dark:text-white">{{date}} {{selectedDate}}</div>-->
+  <!--          <div class="dark:text-white">Services</div>-->
+  <!--          <div @click="selectedService = service"-->
+  <!--               :class="['bg-vivid-red px-3 py-1 text-white rounded cursor-pointer hover:bg-red-700', {['bg-red-700'] : selectedService == service}]"-->
+  <!--               v-for="service in services">{{ service }}-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <div v-if="selectedService">-->
+  <!--          <select class="px-3 py-2 rounded w-[15rem]" v-if="carData" v-model="selectedCar">-->
+  <!--            <option value="" disabled selected>Select a Vehicle</option>-->
+  <!--            <option v-for="cars in carData" :value="cars._id">{{ cars.year }} {{ cars.make }} {{ cars.model }}</option>-->
+  <!--          </select>-->
+  <!--        </div>-->
+  <!--        <div v-if="selectedService" class="flex flex-col justify-start items-start w-full dark:text-white gap-2">-->
+  <!--          <div class="flex-col flex gap-1 w-full">-->
+  <!--            <label for="">Street Address:</label>-->
+  <!--            <input v-model="address.street" class="px-2 py-1 rounded text-black" type="text">-->
+  <!--          </div>-->
+  <!--          <div class="flex-col flex gap-1 w-full">-->
+  <!--            <label for="">City:</label>-->
+  <!--            <input v-model="address.city" class="px-2 py-1 rounded text-black" type="text">-->
+  <!--          </div>-->
+  <!--          <div class="flex-col flex gap-1 w-full">-->
+  <!--            <label for="">State:</label>-->
+  <!--            <select class="px-2 py-1 rounded text-black">-->
+  <!--              <option selected disabled>Illinois</option>-->
+  <!--            </select>-->
+  <!--          </div>-->
+  <!--          <div class="flex-col flex gap-1 w-full">-->
+  <!--            <label for="">Zipcode</label>-->
+  <!--            <input v-model="address.zipcode" class="px-2 py-1 rounded text-black" type="text">-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <button v-if="selectedDate && selectedService && selectedCar !== '' && address.zipcode"-->
+  <!--                class="flex justify-center items-center bg-vivid-red text-white px-4 py-2 rounded hover:bg-red-600"-->
+  <!--                @click="submitAppointment">-->
+  <!--          <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"-->
+  <!--               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">-->
+  <!--            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>-->
+  <!--            <path class="opacity-75" fill="currentColor"-->
+  <!--                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">-->
+  <!--            </path>-->
+  <!--          </svg>-->
+  <!--          <span>{{ isLoading ? "Please wait" : "Proceed" }}</span>-->
+  <!--        </button>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
+
 </template>
 
 
