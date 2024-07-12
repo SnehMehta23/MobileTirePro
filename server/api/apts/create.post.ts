@@ -2,6 +2,7 @@ import {userSchema} from "~/server/models/user.schema";
 import {aptsSchema} from "~/server/models/apts.schema";
 //@ts-ignore
 import nodemailer from "nodemailer";
+import {format} from "date-fns";
 
 export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig(event)
@@ -28,14 +29,14 @@ export default defineEventHandler(async (event) => {
             from: '', // sender address
             to: email, // list of receivers
             subject: "Mobile Tire Pro - Appointment confirmed", // Subject line
-            text: "test", // plain text body
-            html: "<b>Your appointment has been booked.</b>", // html body
+            text: `Your appointment has been received, we will be in contact with you shortly \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone} \n ${format(appointmentDate, 'PPpp')}`, // plain text body
+            //html: "<b>Your appointment has been booked.</b>", // html body
         });
         const info = await transporter.sendMail({
             from: '', // sender address
-            to: "rafsant345@gmail.com", // list of receivers
+            to: "mobiletireprollc@gmail.com", // list of receivers
             subject: "New Appointment", // Subject line
-            text: `Your got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone}`
+            text: `Your got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone} \n ${format(appointmentDate, 'PPpp')}`
             // html: "`<p>Your got a new appointment.</p> <p>${service}</p><p>${address}</p> <p>${car?.year} ${car?.make} ${car?.model}</p>`", // html body
         });
 
