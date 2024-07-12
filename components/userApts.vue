@@ -22,23 +22,23 @@ function formatISODate(isoString) {
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto p-4" v-if="data">
-    <h2 class="text-3xl font-bold mb-6">Appointment History</h2>
-    <div class="space-y-4">
-      <div v-for="apt in data.data" class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-        <div class="bg-blue-600 text-white p-4">
-          <h3 class="text-xl font-semibold">
+  <div class="w-full max-w-3xl mx-auto" v-if="data">
+    <h2 class="text-2xl font-bold mb-4">Appointment History</h2>
+    <div class="space-y-3">
+      <div v-for="apt in data.data" class="bg-white rounded-md shadow-sm overflow-hidden border border-gray-200">
+        <div class="bg-vivid-red text-white p-3">
+          <h3 class="text-lg font-semibold">
             {{ apt.service }} - {{ apt.carId?.year }} {{ apt.carId?.make }} {{ apt.carId?.model }}
           </h3>
         </div>
-        <div class="p-4 space-y-3">
-          <div class="text-gray-600">
+        <div class="p-3 space-y-2">
+          <div class="text-gray-700">
             <span class="font-medium">Date:</span> {{ formatISODate(apt.appointmentDate) }}
           </div>
-          <div class="text-gray-600">
+          <div class="text-gray-700">
             <span class="font-medium">Location:</span> {{ apt.address }}
           </div>
-          <div class="mt-2">
+          <div>
             <span class="px-2 py-1 rounded-full text-sm font-medium" :class="{
               'bg-yellow-100 text-yellow-800': apt.status === 'Pending',
               'bg-green-100 text-green-800': apt.status === 'Completed',
