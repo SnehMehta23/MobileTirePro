@@ -25,8 +25,14 @@ export const aptsSchema = defineMongooseModel({
                 '4 Tire installation (Large SUV/Truck/EV)',
                 "4 Tire installation (Sedan/Coupe/Small SUV)"]
         },
-        address:{
-          type: 'string'
+        //@ts-ignore
+        tpm: {
+            type: 'number',
+            default: 0
+
+        },
+        address: {
+            type: 'string'
         },
         //@ts-ignore
         status: {
