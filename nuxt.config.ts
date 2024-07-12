@@ -9,7 +9,7 @@ export default defineNuxtConfig({
             title: "Book Your Mobile Tire Service | Mobile Tire Pro",
             script: [
                 // Square Web Payments SDK
-                {src: "https://sandbox.web.squarecdn.com/v1/square.js"},
+                {src: "https://web.squarecdn.com/v1/square.js"},
             ],
             link: [
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -55,20 +55,16 @@ export default defineNuxtConfig({
         './modules/auth.module',
         '@nuxtjs/color-mode',
         'nuxt-vue3-google-signin',
-        ['nuxt-mail', {
-            message:{
-              to: 'rafsant345@gmail.com'
-            },
-            smtp: {
-                host: "smtp.gmail.com",
-                port: 587,
-                auth: {
-                    user: 'noreplymobiletirepro@gmail.com',
-                    pass: 'fnxi ghcq dknc bxdg',
-                },
-            },
-        }], ,
+
     ],
+    runtimeConfig: {
+        accessToken: '',
+        pass: '',
+        public: {
+            squareAppId: '',
+            locationId: ''
+        }
+    },
     tailwindcss: {
         configPath: '~/tailwind.config.js',
         exposeConfig: true,

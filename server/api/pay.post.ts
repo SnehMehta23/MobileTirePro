@@ -7,14 +7,15 @@ BigInt.prototype.toJSON = function () {
 };
 
 
+const config = useRuntimeConfig();
+
 // noinspection JSDeprecatedSymbols
 const {paymentsApi} = new Client({
     //@ts-ignore
-    accessToken: "EAAAl2qnDH7fnkk16sjrV1ojlKkSGPGha1bJv8_j6yR08smnJsKPHx2vrfz83Q2Y",
+    accessToken: config.accessToken,
     //@ts-ignore
-    environment: "sandbox",
+    environment: "production",
 });
-
 
 export default defineEventHandler(async (event) => {
     const {locationId, sourceId, amountMoney} = await readBody(event);

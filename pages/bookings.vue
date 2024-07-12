@@ -17,7 +17,6 @@ const isLoading = ref(false)
 const price = ref('')
 const showConfirmation = ref(false)
 const TPMAmount = ref(0)
-const mail = useMail();
 
 
 const route = useRoute();

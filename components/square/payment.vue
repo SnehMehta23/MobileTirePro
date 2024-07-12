@@ -11,11 +11,13 @@ const {price} = defineProps(['price'])
 
 const emit = defineEmits(['payment'])
 
-const appId = 'sandbox-sq0idb-kSqCFhDPPZCfcIm56q8bWQ';
-const locationId = 'LHM72HAD1BSB2';
+const config = useRuntimeConfig();
+const appId = config.public.squareAppId//'sandbox-sq0idb-kSqCFhDPPZCfcIm56q8bWQ';
+const locationId = config.public.locationId //'LHM72HAD1BSB2';
 let card;
 let paymentStatus = ref("");
 let loading = ref(false);
+
 
 function buildPaymentRequest(payments) {
   return payments.paymentRequest({

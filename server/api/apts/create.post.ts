@@ -4,7 +4,7 @@ import {aptsSchema} from "~/server/models/apts.schema";
 import nodemailer from "nodemailer";
 
 export default defineEventHandler(async (event) => {
-
+    const config = useRuntimeConfig(event)
 
     try {
         const transporter = nodemailer.createTransport({
@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
             secure: false, // Use `true` for port 465, `false` for all other ports
             auth: {
                 user: "noreplymobiletirepro@gmail.com",
-                pass: "fnxi ghcq dknc bxdg",
+                pass: config.pass,
             },
         });
         const {carId, service, appointmentDate, address, phone} = await readBody(event);
