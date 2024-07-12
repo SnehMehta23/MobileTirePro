@@ -12,6 +12,8 @@ const isCheckout = ref(false)
 const isLoading = ref(false)
 const price = ref('')
 const showConfirmation = ref(false)
+const TPMAmount = ref(0)
+
 
 const route = useRoute();
 
@@ -121,6 +123,24 @@ function setTimeOnDate(date: Date, timeString: string) {
 //   console.log(response);
 // }
 
+const filteredServices = computed(() => {
+  if (route.query.car) {
+    return services.filter(service =>
+        service.name.toLowerCase().includes(route.query.car.toLowerCase())
+    );
+  } else {
+    return services;
+  }
+})
+
+const computedPrice = computed(() => {
+  if (TPMAmount.value) {
+    return price.value = (parseInt(price.value) + (TPMAmount.value * 45)).toString();
+  } else {
+    return price.value
+  }
+})
+
 
 </script>
 
@@ -144,12 +164,12 @@ function setTimeOnDate(date: Date, timeString: string) {
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
           <div class="dark:text-white">Services</div>
-          <template v-for="service in services">
+          <template v-for="service in filteredServices">
             <div @click="() => {
             selectedService = service.name
             price = service.price
           }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-2/3 dark:text-white text-center"
-                 v-if="service.name.toLowerCase().includes(route.query.car)"> {{ service.name }}
+            > {{ service.name }}
               {{ service.price }} {{ service.descriptor }}
             </div>
           </template>
@@ -164,6 +184,16 @@ function setTimeOnDate(date: Date, timeString: string) {
                 }}
               </option>
             </select>
+          </div>
+          <div class="my-3 dark:text-white">
+            <div class="dark:text-white">
+              Do you need a TPM sensor installation? We recommend changing all of them at once.
+            </div>
+            <div class="flex justify-center items-center gap-4">
+              <input v-model="TPMAmount" type="range" min="0" max="4">
+              <span>Quantity: {{ TPMAmount }}</span>
+              <span>${{TPMAmount * 45}}.00</span>
+            </div>
           </div>
           <div class="flex flex-col justify-start items-start w-full dark:text-white gap-2">
             <div class="flex-col flex gap-1 w-full">
@@ -205,7 +235,7 @@ function setTimeOnDate(date: Date, timeString: string) {
           <div>
             Service Address: {{ address.street }} {{ address.city }} {{ address.State }} {{ address.zipcode }}
           </div>
-          <SquarePayment :price="price" @payment="submitAppointment"/>
+          <SquarePayment :price="computedPrice" @payment="submitAppointment"/>
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">
