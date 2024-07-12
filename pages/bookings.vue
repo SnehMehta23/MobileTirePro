@@ -209,16 +209,14 @@ function setTimeOnDate(date: Date, timeString: string) {
             <div class="bg-vivid-red px-3 py-3 rounded text-white hover:bg-red-700"> Return to your profile</div>
           </div>
         </NuxtLink>
-      </div>
-    </div>
 
-    <div class="items-center">
-      <p class="text-gray-400 text-sm">Please be advised that our service is weather based. We cannot work in
-        heavy rain,
-        heavy
-        snow
-        fall, or in
-        temperatures under 20 degrees.</p>
+        <p class="text-gray-400 text-sm">Please be advised that our service is weather based. We cannot work in
+          heavy rain,
+          heavy
+          snow
+          fall, or in
+          temperatures under 20 degrees.</p>
+      </div>
     </div>
 
 
