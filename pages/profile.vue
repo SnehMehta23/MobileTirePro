@@ -8,7 +8,7 @@
         <div class="flex items-center mb-4">
           <div class="relative rounded-full overflow-hidden w-12 h-12 border-2 border-vivid-red mr-4">
             <img class="absolute inset-0 w-full h-full object-cover"
-                 :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
+              :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
           </div>
           <div class="space-x-2">
             <select class="px-2 py-1 rounded-md bg-gray-00 hover:bg-red-100" v-model="selectedCar" name="cars">
@@ -30,21 +30,20 @@
 
         <!-- History of Service -->
         <div class="mb-8">
-          <h3 class="text-lg font-semibold mb-2">[Vehicle Service History]</h3>
+          <h3 class="text-lg font-semibold mb-2">Vehicle Service History</h3>
           <div
-              class="flex space-x-4 mb-4 p-2 bg-light-gray bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light">
+            class="flex space-x-4 mb-4 p-2 bg-light-gray bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light">
             <span v-for="content in tabNavContent" :key="content" @click="activeTab = content"
-                  class="cursor-pointer transition duration-300"
-                  :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
+              class="cursor-pointer transition duration-300"
+              :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
               {{ content }}
             </span>
           </div>
           <div>
-            <UserApts v-if="activeTab == 'Appointments'"/>
+            <UserApts v-if="activeTab == 'Appointments'" />
             <!-- Placeholder for tab content -->
             <!--            <p>{{ activeTab }}</p>-->
           </div>
-          <div class="text-xl">{{ selectedCar?.year }} {{ selectedCar?.make }} {{ selectedCar?.model }}</div>
         </div>
 
         <!-- Tire Info Section -->
@@ -80,11 +79,11 @@
       </div>
     </section>
   </div>
-  <CarModal v-if="isOpen" @close="isOpen = false" @refresh="refreshAll"/>
+  <CarModal v-if="isOpen" @close="isOpen = false" @refresh="refreshAll" />
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
 import UserApts from "~/components/userApts.vue";
 
 
@@ -102,14 +101,14 @@ const user = ref('')
 const cars = ref('')
 const selectedCar = ref('')
 
-const {data} = await useFetch('/api/user/profile', {
+const { data } = await useFetch('/api/user/profile', {
   method: 'GET',
-  onResponse({request, response}) {
+  onResponse({ request, response }) {
     // user.value = response._data
   }
 })
 
-const {data: carData, refresh} = await useFetch('/api/car/list', {
+const { data: carData, refresh } = await useFetch('/api/car/list', {
   method: 'GET'
 })
 
@@ -137,4 +136,3 @@ watch(carData.value, async (newCars, oldCars) => {
 })
 
 </script>
-
