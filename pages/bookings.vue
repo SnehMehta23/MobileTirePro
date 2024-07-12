@@ -20,10 +20,10 @@ const address = reactive({
   State: 'IL'
 })
 
-const services = [{name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00'},
-  {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00'},
-  {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00'},
-  {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00'}]
+const services = [{ name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00' },
+{ name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00' },
+{ name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00' },
+{ name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00' }]
 
 
 watch(date, async (newDate, oldDate) => {
@@ -37,7 +37,7 @@ watch(date, async (newDate, oldDate) => {
 
 })
 
-const {data: carData, refresh} = await useFetch('/api/car/list', {
+const { data: carData, refresh } = await useFetch('/api/car/list', {
   method: 'GET'
 })
 
@@ -126,13 +126,13 @@ function setTimeOnDate(date: Date, timeString: string) {
       <div v-if="!showConfirmation" class=" flex justify-center items-center flex-col gap-3">
         <div v-if="!selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
-          <VueDatePicker v-model="date"/>
+          <VueDatePicker v-model="date" />
           <div v-if="available" class="dark:text-white">Available times
           </div>
           <div class="grid grid-cols-4 gap-2" v-if="available">
             <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">
               <div @click="selectedDate = key" v-if="value"
-                   :class="['bg-vivid-red px-3 py-2 text-white rounded cursor-pointer hover:bg-red-700', {['bg-red-700'] : selectedDate == key}]">
+                :class="['bg-vivid-red px-3 py-2 text-white rounded cursor-pointer hover:bg-red-700', { ['bg-red-700']: selectedDate == key }]">
                 {{ key }}
               </div>
             </template>
@@ -140,10 +140,11 @@ function setTimeOnDate(date: Date, timeString: string) {
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
           <div class="dark:text-white">Services</div>
-          <div @click="() => {selectedService = service.name
-          price = service.price}"
-               class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-2/3 dark:text-white text-center"
-               v-for="service in services">{{ service.name }} {{ service.price }}
+          <div @click="() => {
+            selectedService = service.name
+            price = service.price
+          }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-2/3 dark:text-white text-center"
+            v-for="service in services">{{ service.name }} {{ service.price }}
           </div>
         </div>
         <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
@@ -151,8 +152,8 @@ function setTimeOnDate(date: Date, timeString: string) {
             <select class="px-3 py-2 rounded w-[15rem]" v-if="carData" v-model="selectedCar">
               <option value="" disabled selected>Select a Vehicle</option>
               <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{
-                  cars.model
-                }}
+                cars.model
+              }}
               </option>
             </select>
           </div>
@@ -177,8 +178,8 @@ function setTimeOnDate(date: Date, timeString: string) {
             </div>
             <div class="w-full flex gap-5 ">
               <button>Return</button>
-              <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar  "
-                      @click="isCheckout = true">Proceed to checkout
+              <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar"
+                @click="isCheckout = true">Proceed to checkout
               </button>
             </div>
           </div>
@@ -196,7 +197,7 @@ function setTimeOnDate(date: Date, timeString: string) {
           <div>
             Service Address: {{ address.street }} {{ address.city }} {{ address.State }} {{ address.zipcode }}
           </div>
-          <SquarePayment :price="price" @payment="submitAppointment"/>
+          <SquarePayment :price="price" @payment="submitAppointment" />
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">
@@ -209,6 +210,15 @@ function setTimeOnDate(date: Date, timeString: string) {
           </div>
         </NuxtLink>
       </div>
+    </div>
+
+    <div class="items-center">
+      <p class="text-gray-400 text-sm">Please be advised that our service is weather based. We cannot work in
+        heavy rain,
+        heavy
+        snow
+        fall, or in
+        temperatures under 20 degrees.</p>
     </div>
 
 
