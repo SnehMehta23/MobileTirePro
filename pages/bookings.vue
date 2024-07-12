@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
+import moment from "moment-timezone";
 
 definePageMeta({
   middleware: 'auth'
@@ -76,13 +77,12 @@ async function submitAppointment() {
         service: selectedService.value,
         address: `${address.street} ${address.city} ${address.State} ${address.zipcode}`
       }
-    })
+    });
     if (await data == "OK") {
-      showConfirmation.value = true
-
+      showConfirmation.value = true;
     }
   } catch (e: any) {
-    console.error(e.message)
+    console.error(e.message);
   }
 }
 
@@ -110,8 +110,9 @@ function setTimeOnDate(date: Date, timeString: string) {
   // Set hours, minutes, seconds, and milliseconds to the new Date object
   newDate.setHours(hour, 0, 0, 0);
 
-  // Return the new date object in ISO format
-  return newDate.toISOString();
+  // Convert the new date to CST and return the ISO string
+  const cstDate = moment.tz(newDate, 'America/Chicago');
+  return cstDate.toISOString();
 }
 
 // async function callValidateAddress() {

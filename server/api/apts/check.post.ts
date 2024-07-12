@@ -1,9 +1,10 @@
-// server/api/appointments/checkAvailability.ts
-import { defineEventHandler, readBody } from 'h3';
+import {defineEventHandler, readBody} from 'h3';
+import moment from 'moment-timezone';
+
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event);
-    const { day } = body;
+    const {day} = body;
 
     if (!day) {
         return {
@@ -13,17 +14,16 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // Parse the date from the request body
-        const targetDate = new Date(day);
-        targetDate.setMinutes(0, 0, 0); // Set minutes and seconds to zero
+        // Parse the date from the request body and convert to CST
+        const targetDate = moment.tz(day, 'America/Chicago').startOf('day');
 
         // Determine if the day is a weekday or weekend
-        const isWeekend = targetDate.getDay() === 0 || targetDate.getDay() === 6; // 0: Sunday, 6: Saturday
+        const isWeekend = targetDate.day() === 0 || targetDate.day() === 6; // 0: Sunday, 6: Saturday
 
         // Define the target hours based on weekday or weekend
         let targetHours;
         if (isWeekend) {
-            targetHours = Array.from({ length: 10 }, (_, i) => i + 7); // 7 AM to 4 PM
+            targetHours = Array.from({length: 10}, (_, i) => i + 7); // 7 AM to 4 PM
         } else {
             targetHours = [16, 17]; // 4 PM to 5 PM
         }
@@ -33,22 +33,20 @@ export default defineEventHandler(async (event) => {
             const period = hour < 12 ? 'AM' : 'PM';
             const hourFormatted = hour <= 12 ? hour : hour - 12;
             const key = `${hourFormatted}${period}`;
+            //@ts-ignore
             acc[key] = true;
             return acc;
         }, {});
 
         // Loop through each target hour and check if there's an appointment
         for (const hour of targetHours) {
-            const startOfHour = new Date(targetDate);
-            startOfHour.setHours(hour);
-
-            const endOfHour = new Date(startOfHour);
-            endOfHour.setMinutes(59, 59, 999); // Set to the end of the hour
+            const startOfHour = targetDate.clone().hour(hour).minute(0).second(0).millisecond(0);
+            const endOfHour = startOfHour.clone().minute(59).second(59).millisecond(999);
 
             const appointment = await aptsSchema.findOne({
                 appointmentDate: {
-                    $gte: startOfHour,
-                    $lte: endOfHour,
+                    $gte: startOfHour.toDate(),
+                    $lte: endOfHour.toDate(),
                 },
             });
 
@@ -56,6 +54,7 @@ export default defineEventHandler(async (event) => {
                 const period = hour < 12 ? 'AM' : 'PM';
                 const hourFormatted = hour <= 12 ? hour : hour - 12;
                 const key = `${hourFormatted}${period}`;
+                //@ts-ignore
                 availability[key] = false;
             }
         }
@@ -67,6 +66,7 @@ export default defineEventHandler(async (event) => {
     } catch (error) {
         return {
             status: 'error',
+            //@ts-ignore
             message: error.message,
         };
     }
