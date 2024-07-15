@@ -43,14 +43,16 @@
     <!-- Mobile menu -->
     <div v-if="mobileMenuOpen" class="lg:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        <a v-for="link in links" :key="link.to" :href="link.to"
+        <NuxtLink @clìck="mobileMenuOpen = false" v-for="link in links" :key="link.to" :to="link.to"
           class="block px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">{{
             link.label
-          }}</a>
-        <button
-          class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
-          Book Now
-        </button>
+          }}</NuxtLink>
+        <NuxtLink @clìck="mobileMenuOpen = false" to="/bookings">
+          <button
+              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+            Book Now
+          </button>
+        </NuxtLink>
       </div>
     </div>
   </nav>

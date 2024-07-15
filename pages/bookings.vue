@@ -152,14 +152,14 @@ const computedPrice = computed(() => {
 </script>
 
 <template>
-  <div class="h-full w-full flex justify-center items-center mt-20">
-    <div class="border-vivid-red border rounded w-1/3 px-4 py-4">
-      <div v-if="!showConfirmation" class=" flex justify-center items-center flex-col gap-3">
-        <div v-if="!selectedDate">
+  <div class="h-screen md:h-full  w-full flex justify-center items-center md:mt-20">
+    <div class="border-vivid-red  border rounded  md:w-1/3 px-4 py-4">
+      <div v-if="!showConfirmation" class=" flex justify-center items-center flex-col gap-3 w-full ">
+        <div class="w-full p-2" v-if="!selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
           <VueDatePicker v-model="date"/>
-          <div v-if="date && !available" class="dark:text-white"> Loading...</div>
-          <div v-if="date && available" class="dark:text-white">Available times
+          <div v-if="date && !available" class="dark:text-white text-center"> Loading...</div>
+          <div v-if="date && available" class="dark:text-white text-center">Available times
           </div>
           <div class="grid grid-cols-4 gap-2" v-if="available">
             <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">
@@ -171,12 +171,12 @@ const computedPrice = computed(() => {
           </div>
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
-          <div class="dark:text-white">Services</div>
+          <div class="dark:text-white text-xl">Services</div>
           <template v-for="service in filteredServices">
             <div @click="() => {
             selectedService = service.name
             price = service.price
-          }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-2/3 dark:text-white text-center"
+          }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-3/4 md:w-2/3 text-white text-center"
             > {{ service.name }}
               {{ service.price }} {{ service.descriptor }}
             </div>
@@ -185,7 +185,7 @@ const computedPrice = computed(() => {
         </div>
         <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
           <div>
-            <select class="px-3 py-2 rounded w-[15rem]" v-if="carData" v-model="selectedCar">
+            <select class="px-3 py-2 rounded md:w-[15rem]" v-if="carData" v-model="selectedCar">
               <option value="" disabled selected>Select a Vehicle</option>
               <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{
                   cars.model
@@ -194,7 +194,7 @@ const computedPrice = computed(() => {
             </select>
           </div>
           <div class="my-3 dark:text-white">
-            <div class="dark:text-white">
+            <div class="dark:text-white px-4">
               Do you need a TPM sensor installation? We recommend changing all of them at once.
             </div>
             <div class="flex justify-center items-center gap-4">
@@ -203,14 +203,14 @@ const computedPrice = computed(() => {
               <span>${{ TPMAmount * 45 }}.00</span>
             </div>
           </div>
-          <div class="flex flex-col justify-start items-start w-full dark:text-white gap-2">
+          <div class="flex flex-col justify-start items-start w-full dark:text-white gap-2 px-4">
             <div class="flex-col flex gap-1 w-full">
               <label for="">Street Address:</label>
-              <input v-model="address.street" class="px-2 py-1 rounded text-black" type="text">
+              <input v-model="address.street" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">City:</label>
-              <input v-model="address.city" class="px-2 py-1 rounded text-black" type="text">
+              <input v-model="address.city" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">State:</label>
@@ -220,11 +220,11 @@ const computedPrice = computed(() => {
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">Zip code: </label>
-              <input v-model="address.zipcode" class="px-2 py-1 rounded text-black" type="text">
+              <input v-model="address.zipcode" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">Contact phone: </label>
-              <input v-model="phone" class="px-2 py-1 rounded text-black" type="text">
+              <input v-model="phone" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="w-full flex gap-5 ">
               <button>Return</button>
@@ -248,7 +248,8 @@ const computedPrice = computed(() => {
             <span class="font-bold">Car:</span> {{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}
           </div>
           <div>
-            <span class="font-bold">Service Address:</span> {{ address.street }} {{ address.city }} {{ address.State }} {{ address.zipcode }}
+            <span class="font-bold">Service Address:</span> {{ address.street }} {{ address.city }} {{ address.State }}
+            {{ address.zipcode }}
           </div>
           <SquarePayment :price="computedPrice" @payment="submitAppointment"/>
         </div>
