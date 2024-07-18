@@ -1,13 +1,12 @@
-import {defineEventHandler, readBody} from 'h3';
+import { defineEventHandler, readBody } from 'h3';
 import moment from 'moment-timezone';
 
 function generateDateObjects() {
     const intervals = [];
-    const now = new Date();
+    const now = moment().tz('America/Chicago').toDate();
 
     for (let i = 0; i < 7; i++) {
-        const currentDate = new Date(now);
-        currentDate.setDate(now.getDate() + i);
+        const currentDate = moment(now).tz('America/Chicago').add(i, 'days').toDate();
         const dayOfWeek = currentDate.getDay();
 
         let startHour, endHour;
@@ -20,8 +19,12 @@ function generateDateObjects() {
         }
 
         for (let hour = startHour; hour < endHour; hour++) {
-            const dateObject = new Date(currentDate);
-            dateObject.setHours(hour, 0, 0, 0);
+            const dateObject = moment(currentDate).tz('America/Chicago').set({
+                hour: hour,
+                minute: 0,
+                second: 0,
+                millisecond: 0
+            }).toDate();
             intervals.push(dateObject);
         }
     }
@@ -39,7 +42,7 @@ export default defineEventHandler(async (event) => {
 
         // Loop through each date object and check if there's an appointment
         for (const dateObject of dateObjects) {
-            const dayKey = moment(dateObject).format('MM-DD-YYYY');
+            const dayKey = moment(dateObject).tz('America/Chicago').format('MM-DD-YYYY');
 
             if (!availabilityMap[dayKey]) {
                 availabilityMap[dayKey] = [];
@@ -60,7 +63,7 @@ export default defineEventHandler(async (event) => {
             }
         }
 
-        return availabilityMap
+        return availabilityMap;
     } catch (error) {
         return {
             status: 'error',
