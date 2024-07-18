@@ -26,8 +26,9 @@
           </NuxtLink>
           <LightDarkToggle />
         </div>
-        <div class="lg:hidden flex items-center">
+        <div class="lg:hidden flex items-center space-x-3">
           <!-- Mobile menu button -->
+          <LightDarkToggle />
           <button @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu Button"
             class="text-slate-gray dark:text-gray-400 hover:text-charcoal-gray dark:hover:text-white focus:outline-none">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
