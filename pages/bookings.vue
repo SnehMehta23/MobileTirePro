@@ -149,7 +149,7 @@ const computedPrice = computed(() => {
 
 <template>
   <div class="h-fit md:h-full  w-full flex justify-center items-center md:mt-20">
-    <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded  md:w-1/3 px-4 py-4">
+    <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded  md:w-2/3 lg:w-1/3 px-4 py-4">
       <div v-if="!showConfirmation" class=" flex justify-center items-center flex-col gap-3 w-full ">
         <div v-if="datesStatus === 'pending' "> Loading...</div>
         <div class="w-full p-2" v-else-if="datesStatus === 'success' && !selectedDate">
