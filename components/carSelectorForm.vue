@@ -41,7 +41,7 @@
           Check Quote
         </button> -->
         <NuxtLink to="/bookings"
-          class="px-6 py-2 text-sm bg-vivid-red text-white rounded-full hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+          class="px-6 py-2 text-sm bg-vivid-red text-white rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
           Check Quote
         </NuxtLink>
       </div>

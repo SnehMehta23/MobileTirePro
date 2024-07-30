@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import vehicleTypeSquare from "~/components/vehicleTypeSquare.vue"
+import promoBanner from "./promoBanner.vue";
 
 const colorMode = useColorMode()
 </script>
 
 <template>
-  <!-- Promotional Banner -->
-  <div class="w-full bg-vivid-red text-white text-center py-2 font-bold">
-    First 10 customers who need 4 tires installed get 25% off their service
-  </div>
-
+  <PromoBanner />
   <section
-      class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
+    class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
     <div class="space-y-2 items-center flex flex-col p-4 sm:p-8 2xl:p-12">
       <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-lato dark:text-white">Tire Service at Your
         Doorstep</h1>
@@ -20,26 +17,26 @@ const colorMode = useColorMode()
         installation right to you!
       </p>
       <p
-          class="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-kumbh text-slate-600 dark:text-slate-400 max-w-full sm:max-w-[750px] 2xl:max-w-[1000px]">
+        class="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-kumbh text-slate-600 dark:text-slate-400 max-w-full sm:max-w-[750px] 2xl:max-w-[1000px]">
         Save time and stress with our mobile tire service. Whether you're at home or work we don't compromise on
         quality of service. Book your appointment with ease! Start by choosing your vehicle type
       </p>
       <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-4 2xl:gap-6">
         <NuxtLink to="/bookings?car=sedan">
           <vehicleTypeSquare vehicleType="Sedan"
-                             :imageUrl="colorMode.value === 'light' ? '/images/icons/sedan.webp' : '/images/icons/sedanwhite.webp'"/>
+            :imageUrl="colorMode.value === 'light' ? '/images/icons/sedan.webp' : '/images/icons/sedanwhite.webp'" />
         </NuxtLink>
         <NuxtLink to="/bookings?car=suv">
           <vehicleTypeSquare vehicleType="SUV"
-                             :imageUrl="colorMode.value === 'light' ? '/images/icons/SUV.webp' : '/images/icons/SUVwhite.webp'"/>
+            :imageUrl="colorMode.value === 'light' ? '/images/icons/SUV.webp' : '/images/icons/SUVwhite.webp'" />
         </NuxtLink>
         <NuxtLink to="/bookings?car=truck">
           <vehicleTypeSquare vehicleType="Truck"
-                             :imageUrl="colorMode.value === 'light' ? '/images/icons/pickuptruck.webp' : '/images/icons/pickuptruckwhite.webp'"/>
+            :imageUrl="colorMode.value === 'light' ? '/images/icons/pickuptruck.webp' : '/images/icons/pickuptruckwhite.webp'" />
         </NuxtLink>
         <NuxtLink to="/bookings?car=ev">
           <vehicleTypeSquare vehicleType="EV"
-                             :imageUrl="colorMode.value === 'light' ? '/images/icons/electriccar.webp' : '/images/icons/electriccarwhite.webp'"/>
+            :imageUrl="colorMode.value === 'light' ? '/images/icons/electriccar.webp' : '/images/icons/electriccarwhite.webp'" />
         </NuxtLink>
       </div>
     </div>

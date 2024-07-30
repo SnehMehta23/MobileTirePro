@@ -2,7 +2,7 @@
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 import moment from "moment-timezone";
-import {format} from "date-fns";
+import { format } from "date-fns";
 
 definePageMeta({
   middleware: 'auth'
@@ -30,12 +30,12 @@ const address = reactive({
 })
 const phone = ref('')
 
-const services = [{name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00'},
-  {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00'},
-  {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00'},
-  {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00'},
-  {name: "Seasonal Changeover (Tires Only)", price: '200.00', descriptor: 'Storage included for both'},
-  {name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '100.00', descriptor: 'Storage included for both'}]
+const services = [{ name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00' },
+{ name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00' },
+{ name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00' },
+{ name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00' },
+{ name: "Seasonal Changeover (Tires Only)", price: '200.00', descriptor: 'Storage included' },
+{ name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '100.00', descriptor: 'Storage included' }]
 
 
 watch(date, async (newDate, oldDate) => {
@@ -49,7 +49,7 @@ watch(date, async (newDate, oldDate) => {
 
 })
 
-const {data: carData} = await useLazyFetch('/api/car/list', {
+const { data: carData } = await useLazyFetch('/api/car/list', {
   method: 'GET'
 })
 
@@ -57,7 +57,7 @@ if (carData) {
 
 }
 
-const {data: datesData, status: datesStatus} = await useLazyFetch('/api/apts/check', {ssr: false})
+const { data: datesData, status: datesStatus } = await useLazyFetch('/api/apts/check', { ssr: false })
 watch(datesData, (newDates) => {
   console.log(newDates)
 })
@@ -129,7 +129,7 @@ function setTimeOnDate(date: Date, timeString: string) {
 const filteredServices = computed(() => {
   if (route.query.car) {
     return services.filter(service =>
-        service.name.toLowerCase().includes(route.query.car.toLowerCase())
+      service.name.toLowerCase().includes(route.query.car.toLowerCase())
     );
   } else {
     return services;
@@ -151,19 +151,18 @@ const computedPrice = computed(() => {
   <div class="h-fit md:h-full  w-full flex justify-center items-center md:mt-20">
     <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded  md:w-2/3 lg:w-1/3 px-4 py-4">
       <div v-if="!showConfirmation" class=" flex justify-center items-center flex-col gap-3 w-full ">
-        <div v-if="datesStatus === 'pending' "> Loading...</div>
+        <div v-if="datesStatus === 'pending'"> Loading...</div>
         <div class="w-full p-2" v-else-if="datesStatus === 'success' && !selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
           <div class="flex flex-col justify-center items-center gap-4">
-            <template v-for="([key,value], index) in Object.entries(datesData)">
-              <div
-                  v-if="datesData[key].length !== 0" class="text-vivid-red text-xl">
+            <template v-for="([key, value], index) in Object.entries(datesData)">
+              <div v-if="datesData[key].length !== 0" class="text-vivid-red text-xl">
                 {{ format(key, 'PPPP') }}
-                <hr/>
+                <hr />
                 <div class="grid grid-cols-3 mt-4 gap-2">
                   <div @click="selectedDate = x"
-                       class="text-sm bg-vivid-red/80 font-light text-white rounded-md text-center px-2 py-4 hover:bg-red-900 cursor-pointer"
-                       v-for="x in datesData[key]">
+                    class="text-sm bg-vivid-red/80 font-light text-white rounded-md text-center px-2 py-4 hover:bg-red-900 cursor-pointer"
+                    v-for="x in datesData[key]">
                     {{ format(x, 'pp') }}
                   </div>
                 </div>
@@ -187,10 +186,10 @@ const computedPrice = computed(() => {
           <div class="dark:text-white text-xl">Services</div>
           <template v-for="service in filteredServices">
             <div @click="() => {
-            selectedService = service.name
-            price = service.price
-          }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-3/4 md:w-2/3 text-white text-center"
-            > {{ service.name }}
+              selectedService = service.name
+              price = service.price
+            }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-3/4 md:w-2/3 text-white text-center"> {{
+              service.name }}
               {{ service.price }} {{ service.descriptor }}
             </div>
           </template>
@@ -201,8 +200,8 @@ const computedPrice = computed(() => {
             <select class="px-3 py-2 rounded md:w-[15rem]" v-if="carData" v-model="selectedCar">
               <option value="" disabled selected>Select a Vehicle</option>
               <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{
-                  cars.model
-                }}
+                cars.model
+              }}
               </option>
             </select>
           </div>
@@ -220,12 +219,12 @@ const computedPrice = computed(() => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Street Address:</label>
               <input v-model="address.street"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">City:</label>
               <input v-model="address.city"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">State:</label>
@@ -236,17 +235,17 @@ const computedPrice = computed(() => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Zip code: </label>
               <input v-model="address.zipcode"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">Contact phone: </label>
               <input v-model="phone" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900"
-                     type="text">
+                type="text">
             </div>
             <div class="w-full flex gap-5 ">
               <button>Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar"
-                      @click="isCheckout = true">Proceed to checkout
+                @click="isCheckout = true">Proceed to checkout
               </button>
             </div>
           </div>
@@ -268,7 +267,7 @@ const computedPrice = computed(() => {
             <span class="font-bold">Service Address:</span> {{ address.street }} {{ address.city }} {{ address.State }}
             {{ address.zipcode }}
           </div>
-          <SquarePayment :price="computedPrice" @payment="submitAppointment"/>
+          <SquarePayment :price="computedPrice" @payment="submitAppointment" />
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">

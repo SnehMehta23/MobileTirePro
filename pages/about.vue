@@ -1,4 +1,5 @@
 <template>
+    <PromoBanner />
     <div id="history-section"
         class="rounded-lg relative overflow-hidden mt-6 md:mt-12 md:mx-auto mb-8 md:mb-16 min-h-[600px] text-dark-charcoal max-w-7xl px-4 sm:px-6 lg:px-8 py-4 md:py-2">
         <div class="flex flex-col md:flex-row">
