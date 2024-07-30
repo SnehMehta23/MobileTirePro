@@ -19,9 +19,17 @@
           <span @click="handleLogout" v-if="isLogged"
             class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log
             out</span>
-          <NuxtLink to="/bookings"
-            class="bg-vivid-red text-pale-gray px-4 py-2 rounded-full hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
-            Book Now
+          <NuxtLink @click="closeMobileMenu" to="/tires">
+            <button
+              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+              Order Tires
+            </button>
+          </NuxtLink>
+          <NuxtLink @click="closeMobileMenu" to="/bookings">
+            <button
+              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+              Schedule
+            </button>
           </NuxtLink>
           <LightDarkToggle />
         </div>
@@ -59,10 +67,16 @@
             class="block px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white cursor-pointer">
             Log out
           </a>
+          <NuxtLink @click="closeMobileMenu" to="/example">
+            <button
+              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+              Order Tires
+            </button>
+          </NuxtLink>
           <NuxtLink @click="closeMobileMenu" to="/bookings">
             <button
               class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
-              Book Now
+              Schedule
             </button>
           </NuxtLink>
         </div>

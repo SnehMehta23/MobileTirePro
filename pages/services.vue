@@ -1,4 +1,5 @@
 <template>
+    <PromoBanner />
     <div class="dark:bg-deep-charcoal">
         <HeroSectionWithImageLeft />
         <div class="max-w-7xl mx-auto dark:bg-gray-900">
