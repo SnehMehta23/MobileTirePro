@@ -150,7 +150,7 @@ const computedPrice = computed(() => {
 <template>
   <div class="h-fit md:h-full  w-full flex justify-center items-center md:mt-20">
     <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded  md:w-2/3 lg:w-1/3 px-4 py-4">
-      <div v-show="!showConfirmation" class=" flex justify-center items-center flex-col gap-3 w-full ">
+      <div class=" flex justify-center items-center flex-col gap-3 w-full ">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
         <div class="w-full p-2" v-else-if="datesStatus === 'success' && !selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
@@ -169,18 +169,6 @@ const computedPrice = computed(() => {
               </div>
             </template>
           </div>
-          <!--          <VueDatePicker v-model="date"/>-->
-          <!--          <div v-if="date && !available" class="dark:text-white text-center"> Loading...</div>-->
-          <!--          <div v-if="date && available" class="dark:text-white text-center">Available times-->
-          <!--          </div>-->
-          <!--          <div class="grid grid-cols-4 gap-2" v-if="available">-->
-          <!--            <template v-for="([key, value], index) in Object.entries(available.data)" :key="index">-->
-          <!--              <div @click="selectedDate = key" v-if="value"-->
-          <!--                   :class="['bg-vivid-red px-3 py-2 text-white rounded cursor-pointer hover:bg-red-700', { ['bg-red-700']: selectedDate == key }]">-->
-          <!--                {{ key }}-->
-          <!--              </div>-->
-          <!--            </template>-->
-          <!--          </div>-->
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
           <div class="dark:text-white text-xl">Services</div>
