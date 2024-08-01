@@ -27,9 +27,8 @@
     <div
         class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard v-for="service in services" :key="service.title" :service="service"
-                ctaText="Click here to visit Tire Rack"
-                ctaLink="https://www.tirerack.com/content/tirerack/desktop/en/homepage.html" />
+            <ServiceCard v-for="service in servicesWithCTA" :key="service.title" :service="service"
+                :ctaText="service.ctaText" :ctaLink="service.ctaLink" />
             <ServiceCard v-for="serviceWithoutCTA in servicesWithoutCTA" :key="serviceWithoutCTA.title"
                 :service="serviceWithoutCTA" />
         </div>
@@ -37,14 +36,16 @@
 </template>
 
 <script setup lang="ts">
-import adBannerRandom from '~/components/adBannerRandom.vue';
+import AdBannerRandom from '~/components/adBannerRandom.vue';
 import ServiceCard from '~/components/servicesCard.vue'
 
-const services = [
+const servicesWithCTA = [
     {
         title: 'Find Your Tire',
         description: "Click the promotional banner above or the link below to browse Tire Rack's website and find the perfect tires for your vehicle.",
-        icon: '/images/icons/tireIcon.svg'
+        icon: '/images/icons/tireIcon.svg',
+        ctaText: "Click here to visit Tire Rack",
+        ctaLink: "https://www.anrdoezrs.net/click-101219214-10377982"
     },
 ];
 
@@ -86,6 +87,13 @@ const adBanners = [
         altText: 'Goodyear: Get Up to $100 Back*',
         scriptSource: 'https://www.anrdoezrs.net/placeholder-55178278?target=_top&mouseover=N'
     },
-    // Add more banner objects as needed
+    {
+        adLink: 'https://www.anrdoezrs.net/click-101219214-10377982',
+        imageSource: 'https://www.ftjcfx.com/image-101219214-10377982',
+        width: 468,
+        height: 60,
+        altText: 'Tire Rack',
+        scriptSource: 'https://www.kqzyfj.com/placeholder-55218810?target=_top&mouseover=N'
+    }
 ];
 </script>

@@ -3,7 +3,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <NuxtLink to="/" class="flex items-center">
-          <img src="/images/logos/logo_img2.webp" alt="Mobile Tire Pro Logo" class="h-[5rem] md:h-[7rem] lg:h-36 w-auto min-w-[48px] mr-2">
+          <img src="/images/logos/logo_img2.webp" alt="Mobile Tire Pro Logo"
+            class="h-[5rem] md:h-[7rem] lg:h-36 w-auto min-w-[48px] mr-2">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
           <NuxtLink v-for="link in links" :key="link.to" :to="link.to"
@@ -19,9 +20,9 @@
           <span @click="handleLogout" v-if="isLogged"
             class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log
             out</span>
-          <NuxtLink @click="closeMobileMenu" to="/tires">
+          <NuxtLink @click="closeMobileMenu" to="/tires" class="mr-2">
             <button
-              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+              class="w-full text-left bg-crimson-red text-pale-gray px-3 py-2 rounded-md hover:bg-vivid-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
               Order Tires
             </button>
           </NuxtLink>
@@ -67,18 +68,20 @@
             class="block px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white cursor-pointer">
             Log out
           </a>
-          <NuxtLink @click="closeMobileMenu" to="/example">
-            <button
-              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
-              Order Tires
-            </button>
-          </NuxtLink>
-          <NuxtLink @click="closeMobileMenu" to="/bookings">
-            <button
-              class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
-              Schedule
-            </button>
-          </NuxtLink>
+          <div class="space-y-2">
+            <NuxtLink @click="closeMobileMenu" to="/example" class="block mb-2">
+              <button
+                class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+                Order Tires
+              </button>
+            </NuxtLink>
+            <NuxtLink @click="closeMobileMenu" to="/bookings">
+              <button
+                class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
+                Schedule
+              </button>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </transition>
@@ -130,24 +133,21 @@ const links = [
 watch(mobileMenuOpen, (newVal) => {
   if (newVal) {
     document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '17px';
   } else {
     document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
   }
 });
 </script>
 
 <style scoped>
 .mobile-menu-overlay {
-  position: fixed;
-  top: 64px;
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 0;
   background-color: rgba(255, 255, 255, 0.99);
   z-index: 40;
-  overflow-y: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .dark .mobile-menu-overlay {
