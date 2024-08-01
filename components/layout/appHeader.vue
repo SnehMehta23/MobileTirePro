@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <NuxtLink to="/" class="flex items-center">
-          <img src="/images/logos/logo_img2.webp" alt="Mobile Tire Pro Logo" class="h-36 w-auto min-w-[48px] mr-2">
+          <img src="/images/logos/logo_img2.webp" alt="Mobile Tire Pro Logo" class="h-[5rem] md:h-[7rem] lg:h-36 w-auto min-w-[48px] mr-2">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
           <NuxtLink v-for="link in links" :key="link.to" :to="link.to"
