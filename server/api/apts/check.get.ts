@@ -9,8 +9,11 @@ function generateDateObjects() {
         const currentDate = moment(now).tz('America/Chicago').add(i, 'days').toDate();
         const dayOfWeek = currentDate.getDay();
 
+        // Skip Sunday (day 0)
+        if (dayOfWeek === 0) continue;
+
         let startHour, endHour;
-        if (dayOfWeek === 0 || dayOfWeek === 6) { // Weekend (Saturday or Sunday)
+        if (dayOfWeek === 6) { // Saturday
             startHour = 7;
             endHour = 16;
         } else { // Weekday (Monday to Friday)
