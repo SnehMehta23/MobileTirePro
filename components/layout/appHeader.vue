@@ -7,18 +7,25 @@
             class="h-[5rem] md:h-[7rem] lg:h-36 w-auto min-w-[48px] mr-2">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
-          <NuxtLink v-for="link in links" :key="link.to" :to="link.to"
-            class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">
+          <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="text-charcoal-gray font-bold no-underline
+            hover:underline
+            underline-offset-8
+            decoration-vivid-red decoration-4
+            py-2 dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">
             {{ link.label }}
           </NuxtLink>
-          <NuxtLink to="/login" v-if="!isLogged"
-            class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log in
+          <NuxtLink to="/login" v-if="!isLogged" class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white font-bold no-underline
+            hover:underline
+            underline-offset-8
+            decoration-vivid-red decoration-4">Log in
           </NuxtLink>
           <NuxtLink v-if="isLogged"
             class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white" to="/profile">
             Profile</NuxtLink>
-          <span @click="handleLogout" v-if="isLogged"
-            class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">Log
+          <span @click="handleLogout" v-if="isLogged" class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white font-bold no-underline
+            hover:underline
+            underline-offset-8
+            decoration-vivid-red decoration-4">Log
             out</span>
           <NuxtLink @click="closeMobileMenu" to="/tires" class="mr-2">
             <button
@@ -69,7 +76,7 @@
             Log out
           </a>
           <div class="space-y-2">
-            <NuxtLink @click="closeMobileMenu" to="/example" class="block mb-2">
+            <NuxtLink @click="closeMobileMenu" to="/tires" class="block mb-2">
               <button
                 class="w-full text-left bg-vivid-red text-pale-gray px-3 py-2 rounded-md hover:bg-crimson-red transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2">
                 Order Tires

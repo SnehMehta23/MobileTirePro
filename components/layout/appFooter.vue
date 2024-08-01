@@ -24,7 +24,7 @@
             <div>
               <h4 class="font-semibold mb-2">Contact Us:</h4>
               <ul class="flex flex-col">
-                <a class="hover:underline cursor-pointer" href="tel:815-355-1437">(815)355-1437</a>
+                <a class="hover:underline cursor-pointer" href="tel:815-355-1437">(815) 355-1437</a>
                 <a href="mailto:mobiletireprollc@gmail.com">mobiletireprollc@gmail.com</a>
               </ul>
             </div>
