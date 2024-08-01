@@ -6,17 +6,19 @@
     <section
         class="flex justify-center gap-20 mt-2 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-5xl 2xl:px-12 2xl:max-w-8xl">
         <div class="space-y-4 items-center flex flex-col p-4 sm:p-8 2xl:p-12">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-lato dark:text-white">Order Your Tires and
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-lato font-bold dark:text-white">Order Your
+                Tires and
                 Schedule Installation with Mobile Tire Pro</h1>
             <h2
                 class="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-kumbh text-vivid-red bg-pale-red rounded-md p-2">
                 Mobile Tire
                 Pro is proud
                 to
-                be an affiliate of Tire Rack!</h2>
+                be an affiliate of &nbsp; Tire Rack!</h2>
 
             <div class="flex flex-col items-center justify-center mb-4 2xl:mb-6 text-dark-charcoal">
-                <p class="text-3xl 2xl:text-5xl dark:text-white">We've teamed up with Tire Rack to offer you an
+                <p class="sm:text-3xl text-xl 2xl:text-5xl dark:text-white">We've teamed up with Tire Rack to offer you
+                    an
                     excellent selection of tires at competitive prices. <span class="text-vivid-red">Here's how it
                         works:</span>
                 </p>
@@ -26,7 +28,7 @@
 
     <div
         class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
             <ServiceCard v-for="service in servicesWithCTA" :key="service.title" :service="service"
                 :ctaText="service.ctaText" :ctaLink="service.ctaLink" />
             <ServiceCard v-for="serviceWithoutCTA in servicesWithoutCTA" :key="serviceWithoutCTA.title"
