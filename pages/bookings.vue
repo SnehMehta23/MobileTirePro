@@ -62,6 +62,7 @@ watch(datesData, (newDates) => {
   console.log(newDates)
 })
 
+console.log(await datesData)
 
 async function submitAppointment() {
   try {
@@ -157,7 +158,7 @@ const computedPrice = computed(() => {
             <div class="flex flex-col justify-center items-center gap-4">
               <template v-for="([key, value], index) in Object.entries(datesData)">
                 <div v-if="datesData[key].length !== 0" class="text-vivid-red text-xl">
-                  {{ moment(key, 'YYYY-MM-DD').format('dddd, MMMM Do YYYY') }}
+                  {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
                   <hr />
                   <div class="grid grid-cols-3 mt-4 gap-2">
                     <div @click="selectedDate = x"
