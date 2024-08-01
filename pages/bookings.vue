@@ -13,10 +13,11 @@ const selectedService = ref('')
 const selectedCar = ref('')
 const isCheckout = ref(false)
 const carList = ref('')
-
+const dateList = ref('')
 const price = ref('')
 const showConfirmation = ref(false)
 const TPMAmount = ref(0)
+const isLoading = ref(false)
 
 
 const route = useRoute();
@@ -44,12 +45,18 @@ const services = [{name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.
 
 onMounted(async () => {
   try {
+    isLoading.value = true
+    const datesData = await $fetch('/api/apts/check')
+    dateList.value = datesData
     const carData = await $fetch('/api/car/list')
     carList.value = carData
-    console.log(carList.value)
+    isLoading.value = false
+
   } catch (error) {
     console.error(error)
   }
+
+
 
 })
 
@@ -133,11 +140,11 @@ const computedPrice = computed(() => {
   <div class="h-fit md:h-full  w-full flex justify-center items-center md:mt-20">
     <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded  md:w-2/3 lg:w-1/3 px-4 py-4">
       <div class=" flex justify-center items-center flex-col gap-3 w-full ">
-        <div v-if="datesStatus === 'pending'"> Loading...</div>
-        <div class="w-full p-2" v-else-if="datesStatus === 'success' && !selectedDate">
+        <div v-if="isLoading"> Loading...</div>
+        <div class="w-full p-2" v-else-if="!isLoading && !selectedDate">
           <div class="dark:text-white text-center mb-2">Choose a date</div>
           <div class="flex flex-col justify-center items-center gap-4">
-            <template v-for="([key, value], index) in Object.entries(datesData)">
+            <template v-for="([key, value], index) in Object.entries(dateList)">
               <div v-if="datesData[key].length !== 0" class="text-vivid-red text-xl">
                 {{ format(key, 'PPPP') }}
                 <hr/>
