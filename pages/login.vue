@@ -89,4 +89,3 @@ const sendCredentialsToBackend = async (credentials: any) => {
   </div>
 </template>
 
-<style scoped></style>
