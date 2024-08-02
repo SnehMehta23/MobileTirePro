@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import '@vuepic/vue-datepicker/dist/main.css'
 import moment from "moment-timezone";
-definePageMeta({
-  middleware: 'auth'
-})
+// definePageMeta({
+//   middleware: 'auth'
+// })
 
 const date = ref('');
 const available = ref('')
@@ -33,16 +33,16 @@ const address = reactive({
 const phone = ref('')
 
 const services = [
-  {name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00', time: '60 mins'},
-  {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00', time: '60 mins'},
-  {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00', time: '90 mins'},
-  {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00', time: '90 mins'},
-  {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '90 mins'},
+  {name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00', time: '60-90'},
+  {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00', time: '90-150'},
+  {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00', time: '45-75'},
+  {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00', time: '75-120'},
+  {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120'},
   {
     name: "Seasonal Changeover Tire & Wheel Assemblies",
     price: '100.00',
     descriptor: 'Storage included',
-    time: '90 mins'
+    time: '30-60'
   }
 ]
 
@@ -125,8 +125,8 @@ const getServicePrice = (serviceName: string) => {
 </script>
 
 <template>
-  <div class="h-fit md:h-full w-full flex justify-center items-center md:mt-20">
-    <div class="border-blue-500 dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-4 py-4">
+  <div class="h-fit md:h-full w-full flex justify-center items-center md:mt-20 mb-8">
+    <div class="border-blue-500 dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-1 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
@@ -150,12 +150,12 @@ const getServicePrice = (serviceName: string) => {
           </div>
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
-          <div class="dark:text-white text-xl">Services</div>
+          <div class="dark:text-white text-2xl font-bold">Services</div>
 
           <!-- Section Titles -->
           <template v-for="serviceType in ['Large SUV/Truck/EV', 'Sedan/Coupe/Small SUV','Seasonal Changeover']">
             <div
-                :class="['dark:text-white text-lg text-left w-full font-bold', {'mt-4': serviceType !== 'Large SUV / Truck / EV'}]">
+                :class="['dark:text-white text-lg text-center w-full font-bold', {'mt-4': serviceType !== 'Large SUV / Truck / EV'}]">
               {{ serviceType }}
             </div>
 
@@ -164,7 +164,10 @@ const getServicePrice = (serviceName: string) => {
               <div v-if="service.name.includes(serviceType.split(' ')[0])"
                    @click="() => { selectedService = service.name; price = service.price }"
                    class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-2/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
-                <div class="px-2 py-3 max-h-full bg-blue-500 ">{{ service.time }}</div>
+                <div class="px-2 py-3 max-h-full bg-blue-500 ">
+                  <div>{{ service.time }}</div>
+                  <div>Mins</div>
+                </div>
                 <div class="dark:text-white text-black">
                   {{ service.name.replace(`(${serviceType})`, '').replace('Seasonal Changeover ', '') }}
                   <div class="text-sm">{{ service.descriptor }}</div>
