@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 import moment from "moment-timezone";
-import { format, parse, parseISO } from "date-fns";
-
 definePageMeta({
   middleware: 'auth'
 })
@@ -18,6 +15,12 @@ const isLoading = ref(false)
 const price = ref('')
 const showConfirmation = ref(false)
 const TPMAmount = ref(0)
+const discount = {
+  active: true,
+  until: '09/01/2024',
+  amount: 0.25,
+  services: ['2 Tire installation (Large SUV/Truck/EV)', '2 Tire installation (Sedan/Coupe/Small SUV)', '4 Tire installation (Large SUV/Truck/EV)', "4 Tire installation (Sedan/Coupe/Small SUV)"]
+};
 
 const route = useRoute();
 
@@ -30,12 +33,17 @@ const address = reactive({
 const phone = ref('')
 
 const services = [
-  { name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00' },
-  { name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00' },
-  { name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00' },
-  { name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00' },
-  { name: "Seasonal Changeover (Tires Only)", price: '200.00', descriptor: 'Storage included' },
-  { name: "Seasonal Changeover (Tire & Wheel Assemblies)", price: '100.00', descriptor: 'Storage included' }
+  {name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00', time: '60 mins'},
+  {name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00', time: '60 mins'},
+  {name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00', time: '90 mins'},
+  {name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00', time: '90 mins'},
+  {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '90 mins'},
+  {
+    name: "Seasonal Changeover Tire & Wheel Assemblies",
+    price: '100.00',
+    descriptor: 'Storage included',
+    time: '90 mins'
+  }
 ]
 
 watch(date, async (newDate, oldDate) => {
@@ -48,11 +56,11 @@ watch(date, async (newDate, oldDate) => {
   }
 })
 
-const { data: carData } = await useLazyFetch('/api/car/list', {
+const {data: carData} = await useLazyFetch('/api/car/list', {
   method: 'GET'
 })
 
-const { data: datesData, status: datesStatus } = await useLazyFetch('/api/apts/check', { ssr: false })
+const {data: datesData, status: datesStatus} = await useLazyFetch('/api/apts/check', {ssr: false})
 watch(datesData, (newDates) => {
   console.log(newDates)
 })
@@ -80,7 +88,7 @@ async function submitAppointment() {
 const filteredServices = computed(() => {
   if (route.query.car) {
     return services.filter(service =>
-      service.name.toLowerCase().includes(route.query.car.toLowerCase())
+        service.name.toLowerCase().includes(route.query.car.toLowerCase())
     );
   } else {
     return services;
@@ -88,12 +96,23 @@ const filteredServices = computed(() => {
 })
 
 const computedPrice = computed(() => {
+  let totalPrice = parseInt(price.value);
+
+  // If TPMAmount is defined, add the additional cost to the total price
   if (TPMAmount.value) {
-    return price.value = (parseInt(price.value) + (TPMAmount.value * 45)).toString();
-  } else {
-    return price.value
+    totalPrice += TPMAmount.value * 45;
   }
-})
+
+  // Check if the discount is active and the selected service is eligible
+  const today = new Date();
+  const discountUntil = new Date(discount.until);
+
+  if (discount.active && today <= discountUntil && discount.services.includes(selectedService.value)) {
+    totalPrice *= (1 - discount.amount);  // Apply the discount
+  }
+
+  return totalPrice.toString();
+});
 
 const formatDate = (date: string) => {
   return moment(date).format('dddd, MMMM Do YYYY, h:mm A')
@@ -107,22 +126,22 @@ const getServicePrice = (serviceName: string) => {
 
 <template>
   <div class="h-fit md:h-full w-full flex justify-center items-center md:mt-20">
-    <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-4 py-4">
+    <div class="border-blue-500 dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-4 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
-          v-if="datesStatus === 'success' && !selectedDate">
+             v-if="datesStatus === 'success' && !selectedDate">
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
           <div class="space-y-6">
             <template v-for="([key, value], index) in Object.entries(datesData)" :key="key">
               <div v-if="datesData[key].length !== 0"
-                class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+                   class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
                 <h3 class="text-lg font-semibold text-vivid-red mb-3">
                   {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
                 </h3>
                 <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
                   <button v-for="x in datesData[key]" :key="x" @click="selectedDate = x"
-                    class="text-sm bg-vivid-red/80 text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
+                          class="text-sm text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
                     {{ moment(x).format('h:mm A') }}
                   </button>
                 </div>
@@ -132,15 +151,30 @@ const getServicePrice = (serviceName: string) => {
         </div>
         <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
           <div class="dark:text-white text-xl">Services</div>
-          <template v-for="service in filteredServices">
-            <div @click="() => {
-              selectedService = service.name
-              price = service.price
-            }" class="bg-vivid-red hover:bg-red-900 px-4 py-2 rounded w-3/4 md:w-2/3 text-white text-center">
-              {{ service.name }}
-              {{ service.price }} {{ service.descriptor }}
+
+          <!-- Section Titles -->
+          <template v-for="serviceType in ['Large SUV/Truck/EV', 'Sedan/Coupe/Small SUV','Seasonal Changeover']">
+            <div
+                :class="['dark:text-white text-lg text-left w-full font-bold', {'mt-4': serviceType !== 'Large SUV / Truck / EV'}]">
+              {{ serviceType }}
             </div>
+
+            <!-- Services List -->
+            <template v-for="service in filteredServices" :key="service.name">
+              <div v-if="service.name.includes(serviceType.split(' ')[0])"
+                   @click="() => { selectedService = service.name; price = service.price }"
+                   class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-2/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
+                <div class="px-2 py-3 max-h-full bg-blue-500 ">{{ service.time }}</div>
+                <div class="dark:text-white text-black">
+                  {{ service.name.replace(`(${serviceType})`, '').replace('Seasonal Changeover ', '') }}
+                  <div class="text-sm">{{ service.descriptor }}</div>
+                </div>
+                <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 dark:text-sm">${{ service.price }}</div>
+              </div>
+            </template>
           </template>
+
+
         </div>
         <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
           <div>
@@ -164,12 +198,12 @@ const getServicePrice = (serviceName: string) => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Street Address:</label>
               <input v-model="address.street"
-                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">City:</label>
               <input v-model="address.city"
-                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">State:</label>
@@ -180,17 +214,17 @@ const getServicePrice = (serviceName: string) => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Zip code: </label>
               <input v-model="address.zipcode"
-                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">Contact phone: </label>
               <input v-model="phone" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900"
-                type="text">
+                     type="text">
             </div>
             <div class="w-full flex gap-5 ">
               <button>Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar"
-                @click="isCheckout = true">Proceed to checkout
+                      @click="isCheckout = true">Proceed to checkout
               </button>
             </div>
           </div>
@@ -213,17 +247,23 @@ const getServicePrice = (serviceName: string) => {
               <span class="font-bold">Car:</span> {{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}
             </div>
             <div class="mb-4">
-              <span class="font-bold">Service Address:</span> {{ address.street }}, {{ address.city }}, {{ address.State
+              <span class="font-bold">Service Address:</span> {{ address.street }}, {{ address.city }}, {{
+                address.State
               }} {{
-                address.zipcode }}
+                address.zipcode
+              }}
             </div>
-            <hr class="my-4 border-gray-300 dark:border-gray-600" />
+            <hr class="my-4 border-gray-300 dark:border-gray-600"/>
+            <div v-if="discount.active" class="text-xl font-bold flex justify-between items-center">
+              <span>Discount applied: {{ discount.amount * 100 }}%</span>
+              <span>-${{ (price * discount.amount) }}</span>
+            </div>
             <div class="text-xl font-bold flex justify-between items-center">
               <span>Total:</span>
               <span>${{ computedPrice }}</span>
             </div>
           </div>
-          <SquarePayment :price="computedPrice" @payment="submitAppointment" />
+          <SquarePayment :price="computedPrice" @payment="submitAppointment"/>
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">
