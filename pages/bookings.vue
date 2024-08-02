@@ -110,19 +110,21 @@ const getServicePrice = (serviceName: string) => {
     <div class="border-vivid-red bg-gray-900/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-4 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
-        <div class="w-full p-2" v-else-if="datesStatus === 'success' && !selectedDate">
-          <div class="dark:text-white text-center mb-2">Choose a date</div>
-          <div class="flex flex-col justify-center items-center gap-4">
-            <template v-for="([key, value], index) in Object.entries(datesData)">
-              <div v-if="datesData[key].length !== 0" class="text-vivid-red text-xl">
-                {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
-                <hr />
-                <div class="grid grid-cols-3 mt-4 gap-2">
-                  <div @click="selectedDate = x"
-                    class="text-sm bg-vivid-red/80 font-light text-white rounded-md text-center px-2 py-4 hover:bg-red-900 cursor-pointer"
-                    v-for="x in datesData[key]">
+        <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
+          v-if="datesStatus === 'success' && !selectedDate">
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
+          <div class="space-y-6">
+            <template v-for="([key, value], index) in Object.entries(datesData)" :key="key">
+              <div v-if="datesData[key].length !== 0"
+                class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+                <h3 class="text-lg font-semibold text-vivid-red mb-3">
+                  {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
+                </h3>
+                <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
+                  <button v-for="x in datesData[key]" :key="x" @click="selectedDate = x"
+                    class="text-sm bg-vivid-red/80 text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
                     {{ moment(x).format('h:mm A') }}
-                  </div>
+                  </button>
                 </div>
               </div>
             </template>
