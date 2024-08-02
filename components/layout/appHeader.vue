@@ -7,7 +7,7 @@
             class="h-[5rem] md:h-[7rem] lg:h-36 w-auto min-w-[48px] mr-2">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
-          <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="text-charcoal-gray font-bold no-underline
+          <NuxtLink @click="trackNavigation(link.label)" v-for="link in links" :key="link.to" :to="link.to" class="text-charcoal-gray font-bold no-underline
             hover:underline
             underline-offset-8
             decoration-vivid-red decoration-4
@@ -97,12 +97,26 @@
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onBeforeMount, watch } from 'vue';
 import { useFetch } from '#app';
 
 const mobileMenuOpen = ref(false);
 const isLogged = ref(false);
+
+const $gtm = useGTM();
+
+interface Link {
+  to: string;
+  label: string;
+}
+
+const trackNavigation = (navigationLink: string) => {
+  $gtm.trackEvent({
+    event: 'navigation',
+    navigationLink
+  });
+};
 
 onBeforeMount(async () => {
   const { data } = await useFetch('/api/auth/test', {
@@ -133,7 +147,7 @@ const handleLogoutAndClose = async () => {
   closeMobileMenu();
 };
 
-const links = [
+const links: Link[] = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
