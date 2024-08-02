@@ -2,6 +2,15 @@
 import CarSelectorForm from './carSelectorForm.vue'
 import ServiceCard from './servicesCard.vue'
 
+const $gtm = useGTM()
+
+const trackServiceClick = (serviceTitle: string) => {
+  $gtm.trackEvent({
+    event: 'service_availability_check',
+    serviceTitle: serviceTitle
+  })
+}
+
 const services = [
   {
     title: 'Professional Tire Installation',
@@ -68,7 +77,7 @@ const services = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <ServiceCard v-for="service in services" :key="service.title" :service="service" ctaText="Check Availability"
-        ctaLink="/bookings" />
+        ctaLink="/bookings" @cta-click="trackServiceClick(service.title)" />
     </div>
   </div>
 </template>
