@@ -19,8 +19,10 @@
             underline-offset-8
             decoration-vivid-red decoration-4">Log in
           </NuxtLink>
-          <NuxtLink v-if="isLogged"
-            class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white" to="/profile">
+          <NuxtLink v-if="isLogged" class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white font-bold no-underline
+            hover:underline
+            underline-offset-8
+            decoration-vivid-red decoration-4" to="/profile">
             Profile</NuxtLink>
           <span @click="handleLogout" v-if="isLogged" class="cursor-pointer text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white font-bold no-underline
             hover:underline
