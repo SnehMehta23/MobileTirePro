@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import '@vuepic/vue-datepicker/dist/main.css'
 import moment from "moment-timezone";
-// definePageMeta({
-//   middleware: 'auth'
-// })
+definePageMeta({
+  middleware: 'auth'
+})
 
 const date = ref('');
 const available = ref('')
