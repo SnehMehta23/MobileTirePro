@@ -122,8 +122,10 @@ onBeforeMount(async () => {
   const { data } = await useFetch('/api/auth/test', {
     onResponse({ response }) {
       isLogged.value = !!response._data.token;
+
     }
   });
+
 });
 
 const handleLogout = async () => {
