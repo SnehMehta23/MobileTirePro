@@ -72,11 +72,6 @@ async function signIn() {
               class="bg-gray-50 px-2 shadow-sm border-2 rounded-md py-2 border-slate-300 focus:outline-none focus:border-red-300"
               type="text" />
           </div>
-          <div class="flex flex-col">
-            <input v-model="state.phone" placeholder="Phone Number"
-              class="bg-gray-50 px-2 shadow-sm border-2 rounded-md py-2 border-slate-300 focus:outline-none focus:border-red-300"
-              type="text" />
-          </div>
           <div class="flex gap-20">
             <input v-model="state.password" placeholder="Password"
               class="bg-gray-50 px-2 shadow-sm border-2 rounded-md py-2 border-slate-300 focus:outline-none focus:border-red-300"
