@@ -135,7 +135,7 @@ const getServicePrice = (serviceName: string) => {
 
 <template>
   <div class="h-fit md:h-full w-full flex justify-center items-center md:mt-20 mb-8">
-    <div class="border-blue-500 dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-1 py-4">
+    <div class="dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-1 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
@@ -242,7 +242,7 @@ const getServicePrice = (serviceName: string) => {
           </div>
         </div>
         <div v-if="isCheckout" class="dark:text-white flex justify-start items-middle flex-col w-full gap-2">
-          <h2 class="text-2xl font-bold mb-4 text-center">Order Summary</h2>
+          <h2 class="text-2xl font-bold mb-2 text-center">Order Summary</h2>
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div class="mb-4">
               <span class="font-bold">Date:</span> {{ formatDate(selectedDate) }}

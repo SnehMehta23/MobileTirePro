@@ -8,6 +8,19 @@ export default defineNuxtConfig({
         head: {
             title: "Book Your Mobile Tire Service | Mobile Tire Pro",
             script: [
+                {
+                    type: 'application/ld+json',
+                    innerHTML: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mobile Tire Pro",
+                        "url": "https://www.mobiletirepro.net",
+                        "logo": "https://www.mobiletirepro.net/images/logos/MTP_PNG.png",
+                        "sameAs": [
+                            "https://www.facebook.com/profile.php?id=61560018959670"
+                        ]
+                    })
+                },
                 // Square Web Payments SDK
                 {src: "https://web.squarecdn.com/v1/square.js"},
             ],
