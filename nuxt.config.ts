@@ -9,6 +9,21 @@ export default defineNuxtConfig({
             title: "Book Your Mobile Tire Service | Mobile Tire Pro",
             script: [
                 {
+                    async: true,
+                    src: "https://www.googletagmanager.com/gtag/js?id=G-60F22QVQTB",
+                },
+                {
+                    innerHTML: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag() {
+                        dataLayer.push(arguments);
+                      }
+                      gtag("js", new Date());
+                      gtag("config", "G-60F22QVQTB");
+                    `,
+                    type: 'text/javascript',
+                },
+                {
                     type: 'application/ld+json',
                     innerHTML: JSON.stringify({
                         "@context": "https://schema.org",
