@@ -24,6 +24,21 @@ export default defineNuxtConfig({
                     type: 'text/javascript',
                 },
                 {
+                    async: true,
+                    src: "https://www.googletagmanager.com/gtag/js?id=G-YVVT9JK3Z4",
+                },
+                {
+                    innerHTML: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag() {
+                        dataLayer.push(arguments);
+                      }
+                      gtag("js", new Date());
+                      gtag("config", "G-YVVT9JK3Z4");
+                    `,
+                    type: 'text/javascript',
+                },
+                {
                     type: 'application/ld+json',
                     innerHTML: JSON.stringify({
                         "@context": "https://schema.org",
