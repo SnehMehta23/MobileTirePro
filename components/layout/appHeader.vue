@@ -4,7 +4,7 @@
       <div class="flex justify-between h-16">
         <NuxtLink to="/" class="flex items-center">
           <img src="/images/logos/MTP_PNG.png" alt="Mobile Tire Pro Logo"
-            class="h-[15rem] md:h-[20rem] w-auto min-w-[48px] mr-2">
+            class="w-[15rem] h-1/2 min-w-[48px] mr-2 object-cover">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
           <NuxtLink @click="trackNavigation(link.label)" v-for="link in links" :key="link.to" :to="link.to" class="text-charcoal-gray font-bold no-underline
@@ -153,6 +153,7 @@ const links: Link[] = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/fleet-services', label: 'Fleet Services' }
 ];
 
 watch(mobileMenuOpen, (newVal) => {
