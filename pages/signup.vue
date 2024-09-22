@@ -55,7 +55,7 @@ async function signIn() {
     <div
       class="shadow-xl bg-gray-50 rounded-lg px-5 py-2.5 space-y-4 h-fit w-fit flex justify-center items-center flex-col">
       <div class=" font-semibold text-2xl">
-        Sign in
+        Sign Up
       </div>
       <div class="text-xl text-red-500" v-if="errorMessage.triggered">
         {{ errorMessage.message }}
