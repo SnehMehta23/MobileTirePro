@@ -229,7 +229,7 @@ const getServicePrice = (serviceName: string) => {
         <!-- Service Selection -->
         <div v-if="selectedRimSize && selectedTireCount && !selectedService"
           class="flex flex-col justify-center items-center w-full gap-3">
-          <div class="dark:text-white text-2xl font-bold">Your Service</div>
+          <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
           <div v-for="service in filteredServices" :key="service.name"
             @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); }"
             class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
