@@ -88,6 +88,6 @@ const canSubmit = computed(() => {
 })
 
 const handleSubmit = () => {
-  console.log('Selected:', formData)
+  //  todo
 }
 </script>

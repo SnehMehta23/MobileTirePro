@@ -26,7 +26,7 @@ async function login() {
     }
   })
   if ((await user)) {
-    console.log(user)
+    // console.log(user)
     reloadNuxtApp();
   }
 }
@@ -45,7 +45,7 @@ const sendCredentialsToBackend = async (credentials: any) => {
     }
   })
   if ((await user)) {
-    console.log(user)
+    // console.log(user)
     reloadNuxtApp()
   }
 }
@@ -62,7 +62,11 @@ const sendCredentialsToBackend = async (credentials: any) => {
       </div>
 
       <div class="w-full md:w-1/2 p-8">
-        <div class="text-2xl font-semibold mb-6 flex items-center space-x-2.5"><div>Login</div> <span class="hover:underline text-vivid-red text-sm text-center"><NuxtLink to="/signup">  - New user? Click here!</NuxtLink></span></div>
+        <div class="text-2xl font-semibold mb-6 flex items-center space-x-2.5">
+          <div>Login</div> <span class="hover:underline text-vivid-red text-sm text-center">
+            <NuxtLink to="/signup"> - New user? Click here!</NuxtLink>
+          </span>
+        </div>
         <form>
           <div class="space-y-6">
             <div class="flex flex-col">

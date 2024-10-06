@@ -85,7 +85,7 @@ watch(date, async (newDate, oldDate) => {
     selectedCar.value = ''
     selectedService.value = ''
     await check();
-    console.log(available.value)
+    // console.log(available.value)
   }
 })
 
@@ -95,7 +95,7 @@ const { data: carData } = await useLazyFetch('/api/car/list', {
 
 const { data: datesData, status: datesStatus } = await useLazyFetch('/api/apts/check', { ssr: false })
 watch(datesData, (newDates) => {
-  console.log(newDates)
+  // console.log(newDates)
 })
 
 async function submitAppointment() {

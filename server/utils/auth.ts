@@ -3,7 +3,7 @@ import {_useSession} from "~/server/utils/session";
 
 export async function setAuth(event: H3Event, email: string) {
     const token = await createJWT(email)
-    console.log(token)
+    // console.log(token)
     //@ts-ignore
     return await _useSession(event, token, email)
 }
