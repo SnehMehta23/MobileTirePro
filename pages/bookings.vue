@@ -19,16 +19,45 @@ const available = ref('')
 const selectedDate = ref('')
 const selectedService = ref('')
 const selectedCar = ref('')
+const selectedRimSize = ref('')
+const selectedTireCount = ref('')
 const isCheckout = ref(false)
 const isLoading = ref(false)
 const price = ref('')
 const showConfirmation = ref(false)
 const TPMAmount = ref(0)
+const showRimSizeTooltip = ref(false)
 const discount = {
   active: true,
   until: '09/01/2024',
   amount: 0.25,
-  services: ['2 Tire installation (Large SUV/Truck/EV)', '2 Tire installation (Sedan/Coupe/Small SUV)', '4 Tire installation (Large SUV/Truck/EV)', "4 Tire installation (Sedan/Coupe/Small SUV)"]
+  services: [
+    '2 Tire installation (12-18" Rims)',
+    '2 Tire installation (19-22" Rims)',
+    '4 Tire installation (12-18" Rims)',
+    '4 Tire installation (19-22" Rims)'
+  ]
+};
+
+let hideTooltipTimer = null;
+
+const showTooltip = () => {
+  clearTimeout(hideTooltipTimer);
+  showRimSizeTooltip.value = true;
+};
+
+const startHideTooltip = () => {
+  hideTooltipTimer = setTimeout(() => {
+    showRimSizeTooltip.value = false;
+  }, 300); // 300ms delay before hiding
+};
+
+const cancelHideTooltip = () => {
+  clearTimeout(hideTooltipTimer);
+};
+
+const hideTooltip = () => {
+  showRimSizeTooltip.value = false;
 };
 
 const route = useRoute();
@@ -42,18 +71,13 @@ const address = reactive({
 const phone = ref('')
 
 const services = [
-  { name: '2 Tire installation (Large SUV/Truck/EV)', price: '95.00', time: '60-90' },
-  { name: '2 Tire installation (Sedan/Coupe/Small SUV)', price: '80.00', time: '90-150' },
-  { name: '4 Tire installation (Large SUV/Truck/EV)', price: '175.00', time: '45-75' },
-  { name: "4 Tire installation (Sedan/Coupe/Small SUV)", price: '150.00', time: '75-120' },
+  { name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: '12-18', tireCount: '2' },
+  { name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: '19-22', tireCount: '2' },
+  { name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '75-90', rimSize: '12-18', tireCount: '4' },
+  { name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: '19-22', tireCount: '4' },
   { name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120' },
-  {
-    name: "Seasonal Changeover Tire & Wheel Assemblies",
-    price: '100.00',
-    descriptor: 'Storage included',
-    time: '30-60'
-  }
-]
+  { name: "Seasonal Changeover Tire & Wheel Assemblies", price: '100.00', descriptor: 'Storage included', time: '30-60' }
+];
 
 watch(date, async (newDate, oldDate) => {
   if (newDate) {
@@ -95,29 +119,23 @@ async function submitAppointment() {
 }
 
 const filteredServices = computed(() => {
-  if (route.query.car) {
-    return services.filter(service =>
-      service.name.toLowerCase().includes(route.query.car.toLowerCase())
-    );
-  } else {
-    return services;
-  }
-})
+  return services.filter(service =>
+    service.rimSize === selectedRimSize.value && service.tireCount === selectedTireCount.value
+  );
+});
 
 const computedPrice = computed(() => {
   let totalPrice = parseInt(price.value);
 
-  // If TPMAmount is defined, add the additional cost to the total price
   if (TPMAmount.value) {
     totalPrice += TPMAmount.value * 45;
   }
 
-  // Check if the discount is active and the selected service is eligible
   const today = new Date();
   const discountUntil = new Date(discount.until);
 
   if (discount.active && today <= discountUntil && discount.services.includes(selectedService.value)) {
-    totalPrice *= (1 - discount.amount);  // Apply the discount
+    totalPrice *= (1 - discount.amount);
   }
 
   return totalPrice.toString();
@@ -131,6 +149,8 @@ const getServicePrice = (serviceName: string) => {
   const service = services.find(s => s.name === serviceName)
   return service ? service.price : '0.00'
 }
+
+
 </script>
 
 <template>
@@ -138,6 +158,8 @@ const getServicePrice = (serviceName: string) => {
     <div class="dark:bg-gray-900/10 bg-gray-400/10 md:border-2 rounded md:w-2/3 lg:w-1/3 px-1 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div v-if="datesStatus === 'pending'"> Loading...</div>
+
+        <!-- Date Selection -->
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
           v-if="datesStatus === 'success' && !selectedDate">
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
@@ -158,36 +180,72 @@ const getServicePrice = (serviceName: string) => {
             </template>
           </div>
         </div>
-        <div v-if="!selectedService && selectedDate" class="flex flex-col justify-center items-center w-full gap-3">
-          <div class="dark:text-white text-2xl font-bold">Services</div>
 
-          <!-- Section Titles -->
-          <template v-for="serviceType in ['Large SUV/Truck/EV', 'Sedan/Coupe/Small SUV', 'Seasonal Changeover']">
-            <div
-              :class="['dark:text-white text-lg text-center w-full font-bold', { 'mt-4': serviceType !== 'Large SUV / Truck / EV' }]">
-              {{ serviceType }}
-            </div>
+        <!-- Rim Size and Tire Count Selection -->
+        <div v-if="selectedDate && !selectedService" class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select Rim Size and Tire Count
+          </h2>
 
-            <!-- Services List -->
-            <template v-for="service in filteredServices" :key="service.name">
-              <div v-if="service.name.includes(serviceType.split(' ')[0])"
-                @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); }"
-                class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-2/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
-                <div class="px-2 py-3 max-h-full bg-blue-500 ">
-                  <div>{{ service.time }}</div>
-                  <div>Mins</div>
+          <div class="mb-4">
+            <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2" for="rimSize">
+              Rim Size
+              <span class="ml-2 text-blue-500 cursor-pointer relative inline-block hover:underline"
+                @mouseenter="showTooltip" @mouseleave="startHideTooltip">
+                Don't know your rim size?
+                <div v-if="showRimSizeTooltip" @mouseenter="cancelHideTooltip" @mouseleave="hideTooltip"
+                  class="absolute z-10 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-lg w-64 text-sm bottom-full left-1/2 transform -translate-x-1/2 mb-2">
+                  <div class="relative">
+                    <a href="#" class="text-blue-500 hover:underline">Tire size can be found in two places: on the door
+                      placard
+                      inside the driver's door or directly on the tire (e.g., 205/55/R16).</a>
+                    <div
+                      class="absolute w-3 h-3 bg-white dark:bg-gray-700 transform rotate-45 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
+                    </div>
+                  </div>
                 </div>
-                <div class="dark:text-white text-black">
-                  {{ service.name.replace(`(${serviceType})`, '').replace('Seasonal Changeover ', '') }}
-                  <div class="text-sm">{{ service.descriptor }}</div>
-                </div>
-                <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 dark:text-sm">${{ service.price }}</div>
-              </div>
-            </template>
-          </template>
+              </span>
+            </label>
+            <select v-model="selectedRimSize"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <option value="" disabled selected>Select rim size</option>
+              <option value="12-18">12-18 inches</option>
+              <option value="19-22">19-22 inches</option>
+            </select>
+          </div>
 
-
+          <div class="mb-4">
+            <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2" for="tireCount">
+              Number of Tires
+            </label>
+            <select v-model="selectedTireCount"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <option value="" disabled selected>Select number of tires</option>
+              <option value="2">2 Tires</option>
+              <option value="4">4 Tires</option>
+            </select>
+          </div>
         </div>
+
+        <!-- Service Selection -->
+        <div v-if="selectedRimSize && selectedTireCount && !selectedService"
+          class="flex flex-col justify-center items-center w-full gap-3">
+          <div class="dark:text-white text-2xl font-bold">Your Service</div>
+          <div v-for="service in filteredServices" :key="service.name"
+            @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); }"
+            class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
+            <div class="px-2 py-3 max-h-full bg-blue-500 ">
+              <div>{{ service.time }}</div>
+              <div>Mins</div>
+            </div>
+            <div class="dark:text-white text-black">
+              {{ service.name }}
+              <div class="text-sm">{{ service.descriptor }}</div>
+            </div>
+            <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 dark:text-sm">${{ service.price }}</div>
+          </div>
+        </div>
+
+        <!-- Car Selection and Additional Info -->
         <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
           <div>
             <select class="px-3 py-2 rounded md:w-[15rem]" v-if="carData" v-model="selectedCar">
@@ -234,7 +292,7 @@ const getServicePrice = (serviceName: string) => {
                 type="text">
             </div>
             <div class="w-full flex gap-5 ">
-              <button>Return</button>
+              <button @click="selectedService = ''; selectedRimSize = ''; selectedTireCount = '';">Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode && selectedCar"
                 @click="isCheckout = true">Proceed to checkout
               </button>
