@@ -28,6 +28,11 @@ const saveQuote = () => {
   navigateTo('/login')
 }
 
+const saveQuoteAndLeave = () => {
+  store.saveQuote(address, selectedService.value, TPMAmount.value, phone.value, selectedDate.value, price.value)
+  navigateTo('/login')
+}
+
 const fillQuote = () => {
   selectedDate.value = store.date
   selectedService.value = store.service
@@ -194,7 +199,8 @@ const getServicePrice = (serviceName: string) => {
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
              v-if="datesStatus === 'success' && !selectedDate">
           <div @click="fillQuote" v-if="isQuoteSaved"
-               class="w-full bg-vivid-red text-white rounded p-2 text-md flex justify-center items-center mb-2">Want to
+               class="w-full bg-vivid-red cursor-pointer text-white rounded p-2 text-md flex justify-center items-center mb-2">
+            Want to
             use your saved Quote?
           </div>
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
@@ -380,17 +386,17 @@ const getServicePrice = (serviceName: string) => {
               <span>${{ computedPrice }}</span>
             </div>
           </div>
-          <div v-if="!isLoggedIn" class="w-full flex flex-col justify-center items-center gap-2">
+          <div v-if="!isLoggedIn" class="w-full cursor-pointer flex flex-col justify-center items-center gap-2">
             <div class="w-full">
               <button @click="saveQuote">
                 Login / Sign Up to continue with this quote
               </button>
             </div>
-            <div class="w-full">
-              <button> Save Quote</button>
+            <div class="cursor-pointer w-full">
+              <button @click="saveQuoteAndLeave">Save Quote</button>
             </div>
           </div>
-                    <SquarePayment v-if="isLoggedIn" :price="computedPrice" @payment="submitAppointment" />
+          <SquarePayment v-if="isLoggedIn" :price="computedPrice" @payment="submitAppointment"/>
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">
