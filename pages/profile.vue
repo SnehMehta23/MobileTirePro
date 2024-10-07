@@ -131,7 +131,12 @@ const selectedCar = ref('')
 const { data, status } = await useLazyFetch('/api/user/profile', { server: false })
 
 const { status: carStatus, data: carData, refresh } = await useLazyFetch('/api/car/list', {
-  server: false
+  server: false,
+  onResponse({response}) {
+    if(response._data.length == 0){
+      isOpen.value = true;
+    }
+  }
 })
 
 const refreshAll = async () => {
@@ -151,6 +156,9 @@ if (cars.value) {
 watch(carData, async (newCars, oldCars) => {
   if (newCars) {
     selectedCar.value = newCars[newCars.length - 1]
+  }
+  else if(newCars.length === 0 ){
+    isOpen.value = true;
   }
 })
 

@@ -324,10 +324,7 @@ async function login() {
       }
     })
     if(user?.loggedIn){
-      reloadNuxtApp({
-        path: "/",
-        ttl: 1000, // default 10000
-      });
+      window.location.href = '/'
     }
   } catch (e) {
     console.error(e.message)
