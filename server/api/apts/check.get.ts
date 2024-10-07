@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
         // Generate date objects for the next 7 days
         const dateObjects = generateDateObjects();
 
-        // Create a map to store availability status for each day
+        // Create a map to stores availability status for each day
         const availabilityMap = {};
 
         // Loop through each date object and check if there's an appointment

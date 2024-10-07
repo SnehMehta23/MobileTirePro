@@ -6,8 +6,8 @@ import mongoose from "mongoose";
 export default defineEventHandler(async (event) => {
 
     try {
-        const {make, model, year, tires} = await readBody(event);
-        const email = await getAuth(event)
+        const {make, model, year, tires, userEmail} = await readBody(event);
+        const email = userEmail ? userEmail : await getAuth(event);
         const user = await userSchema.findOne({email}).select('-password')
         const newCar = new carSchema({make, model, year, tires, owner: user?._id})
         await newCar.save()

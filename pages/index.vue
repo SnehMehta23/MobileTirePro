@@ -14,7 +14,7 @@ function shuffleArray(array) {
 const reviews = [
   {
     rating: "5",
-    review: "No need to wait at a store or drop your car off, they come to your house!!! What a great experience! Brenden was an excellent communicator from start to finish. He worked with us to select the tires we needed for our vehicle. Mobile Tire Pro showed right up to our house, on time, we’re quiet, clean and efficient. The tires are high quality, affordable and the service was awesome! Would highly recommend this company",
+    review: "No need to wait at a stores or drop your car off, they come to your house!!! What a great experience! Brenden was an excellent communicator from start to finish. He worked with us to select the tires we needed for our vehicle. Mobile Tire Pro showed right up to our house, on time, we’re quiet, clean and efficient. The tires are high quality, affordable and the service was awesome! Would highly recommend this company",
     name: "Jonathan",
     link: "https://g.co/kgs/PFva4sx", // Optional if you want to link something
   },
