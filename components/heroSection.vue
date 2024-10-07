@@ -18,7 +18,7 @@ const trackVehicleSelection = (vehicleType: string) => {
   <section
     class="flex justify-center gap-20 mt-8 text-center mx-auto text-dark-charcoal px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:px-12 2xl:max-w-8xl">
     <div class="space-y-2 items-center flex flex-col p-4 sm:p-8 2xl:p-12">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-lato dark:text-white">Tire Service at Your
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-lato dark:text-white">Tire Installation at Your
         Doorstep</h1>
       <p class="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-kumbh text-vivid-red">Skip the tire shop hassle.
         We bring expert tire

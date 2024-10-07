@@ -5,14 +5,14 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
             const {data} = await useFetch('/api/auth/test', {
                 method: 'GET'
             })
-            console.log(data.value) // This should log the response data directly
+            // console.log(data.value) // This should log the response data directly
             return data.value
         } catch (e) {
             console.error(e)
         }
     }
     if (!await isAuthenticated()) {
-        console.log('triggered middleware')
+        // console.log('triggered middleware')
         return navigateTo('/login')
     }
 

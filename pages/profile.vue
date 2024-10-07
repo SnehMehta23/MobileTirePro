@@ -12,30 +12,29 @@
           <div class="flex justify-start items-center mb-4 w-full">
             <div class="hidden md:flex relative rounded-full overflow-hidden w-12 h-12 border-2 border-vivid-red mr-4">
               <img class="absolute inset-0 w-full h-full object-cover"
-                   :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
+                :src="user.picture ? user.picture : 'https://placeholder.com/64x64'" alt="Profile Picture">
             </div>
             <div class="space-x-2 flex flex-col md:flex-row justify-center items-center gap-2 w-full">
               <select
-                  class="text-center dark:bg-gray-900 dark:border dark:border-gray-950 text-black dark:text-white px-2 py-1 rounded-md bg-gray-00 hover:bg-red-100"
-                  v-model="selectedCar"
-                  name="cars">
+                class="text-center dark:bg-gray-900 dark:border dark:border-gray-950 text-black dark:text-white px-2 py-1 rounded-md bg-gray-00 hover:bg-red-100"
+                v-model="selectedCar" name="cars">
                 <option class="" :value="carData[index]" v-for="(data, index) in carData">{{ data?.model }} {{
-                    data?.year
-                  }}
+                  data?.year
+                }}
                 </option>
               </select>
               <div class="w-full md:flex md:space-x-2 flex-col md:flex-row">
                 <span class="hidden md:flex bg-pale-red dark:bg-red-800 px-2 py-1 rounded">{{
-                    selectedCar?.year
-                  }}</span>
+                  selectedCar?.year
+                }}</span>
                 <span class="hidden md:flex bg-pale-red dark:bg-red-800 px-2 py-1 rounded">{{
-                    selectedCar?.make
-                  }}</span>
+                  selectedCar?.make
+                }}</span>
                 <span class="hidden md:flex bg-pale-red dark:bg-red-800 px-2 py-1 rounded">{{
-                    selectedCar?.model
-                  }}</span>
+                  selectedCar?.model
+                }}</span>
                 <button @click="isOpen = true"
-                        class="px-1 py-1 bg-vivid-red dark:bg-gray-900 dark:border dark:border-gray-950 rounded-md text-white hover:bg-red-400 md:w-auto w-full">
+                  class="px-1 py-1 bg-vivid-red dark:bg-gray-900 dark:border dark:border-gray-950 rounded-md text-white hover:bg-red-400 md:w-auto w-full">
                   +
                   Add
                   New Car
@@ -55,20 +54,20 @@
           <div class="mb-8">
             <h3 class="text-lg font-semibold mb-2">Vehicle Service History</h3>
             <div
-                class="hidden md:flex space-x-4 mb-4 p-2 bg-light-gray dark:bg-gray-900/80 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light dark:border-gray-950">
-            <span v-for="content in tabNavContent" :key="content" @click="activeTab = content"
-                  class="cursor-pointer transition duration-300"
-                  :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
-              {{ content }}
-            </span>
+              class="hidden md:flex space-x-4 mb-4 p-2 bg-light-gray dark:bg-gray-900/80 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-md border border-cool-gray-light dark:border-gray-950">
+              <span v-for="content in tabNavContent" :key="content" @click="activeTab = content"
+                class="cursor-pointer transition duration-300"
+                :class="{ 'text-vivid-red font-semibold': activeTab === content, 'hover:text-crimson-red': activeTab !== content }">
+                {{ content }}
+              </span>
             </div>
             <select
-                class="md:hidden w-full text-center py-2 rounded bg-red-200 dark:bg-gray-900 dark:border dark:border-vivid-red"
-                v-model="activeTab">
+              class="md:hidden w-full text-center py-2 rounded bg-red-200 dark:bg-gray-900 dark:border dark:border-vivid-red"
+              v-model="activeTab">
               <option :value="content" v-for="content in tabNavContent">{{ content }}</option>
             </select>
             <div>
-              <UserApts v-if="activeTab == 'Appointments'" :car="selectedCar._id"/>
+              <UserApts v-if="activeTab == 'Appointments'" :car="selectedCar._id" />
               <!-- Placeholder for tab content -->
               <!--            <p>{{ activeTab }}</p>-->
             </div>
@@ -109,11 +108,11 @@
       </section>
     </div>
   </div>
-  <CarModal v-if="isOpen" @close="isOpen = false" @refresh="refreshAll"/>
+  <CarModal v-if="isOpen" @close="isOpen = false" @refresh="refreshAll" />
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
 import UserApts from "~/components/userApts.vue";
 
 
@@ -129,10 +128,15 @@ const user = ref('')
 const cars = ref('')
 const selectedCar = ref('')
 
-const {data, status} = await useLazyFetch('/api/user/profile', {server: false})
+const { data, status } = await useLazyFetch('/api/user/profile', { server: false })
 
-const {status: carStatus, data: carData, refresh} = await useLazyFetch('/api/car/list', {
-  server: false
+const { status: carStatus, data: carData, refresh } = await useLazyFetch('/api/car/list', {
+  server: false,
+  onResponse({response}) {
+    if(response._data.length == 0){
+      isOpen.value = true;
+    }
+  }
 })
 
 const refreshAll = async () => {
@@ -141,7 +145,7 @@ const refreshAll = async () => {
     await refresh();
     await refreshNuxtData();
   } catch (e) {
-    console.log(e)
+    // console.log(e)
   }
 }
 
@@ -152,6 +156,9 @@ if (cars.value) {
 watch(carData, async (newCars, oldCars) => {
   if (newCars) {
     selectedCar.value = newCars[newCars.length - 1]
+  }
+  else if(newCars.length === 0 ){
+    isOpen.value = true;
   }
 })
 

@@ -90,16 +90,7 @@ export default defineNuxtConfig({
             ],
         },
     },
-    modules: [
-        "@nuxtjs/tailwindcss",
-        "@nuxtjs/google-fonts",
-        "nuxt3-leaflet",
-        "nuxt-mongoose",
-        './modules/auth.module',
-        '@nuxtjs/color-mode',
-        'nuxt-vue3-google-signin',
-
-    ],
+    modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt3-leaflet", "nuxt-mongoose", './modules/auth.module', '@nuxtjs/color-mode', 'nuxt-vue3-google-signin', "@pinia/nuxt", 'pinia-plugin-persistedstate/nuxt'],
     runtimeConfig: {
         accessToken: '',
         pass: '',
