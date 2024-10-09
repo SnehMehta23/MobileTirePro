@@ -104,7 +104,9 @@ const phone = ref('')
 const services = [
   {name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: '12-18', tireCount: '2'},
   {name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: '19-22', tireCount: '2'},
-  {name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '75-90', rimSize: '12-18', tireCount: '4'},
+  {name: '3 Tire installation (12-18" Rims)', price: '125.00', time: '75-90', rimSize: '12-18', tireCount: '3'},
+  {name: '3 Tire installation (19-22" Rims)', price: '150.00', time: '60-75', rimSize: '19-22', tireCount: '3'},
+  {name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '90-120', rimSize: '12-18', tireCount: '4'},
   {name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: '19-22', tireCount: '4'},
   {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120'},
   {name: "Seasonal Changeover Tire & Wheel Assemblies", price: '100.00', descriptor: 'Storage included', time: '30-60'}
@@ -243,11 +245,12 @@ const nextStep = () => {
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
               <option value="" disabled selected>Select number of tires</option>
               <option value="2">2 Tires</option>
+              <option value="3">3 Tires</option>
               <option value="4">4 Tires</option>
             </select>
           </div>
           <!-- Service Selection -->
-          <div
+          <div v-if="selectedTireCount && selectedRimSize"
               class="flex flex-col justify-center items-center w-full gap-3">
             <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
             <div v-for="service in filteredServices" :key="service.name"
