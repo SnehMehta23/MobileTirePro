@@ -40,7 +40,7 @@ const fillQuote = () => {
   phone.value = store.phone
   address.value = store.address
   price.value = store.price
-  isCheckout.value = true
+  currentStep.value = 6
 }
 
 const isQuoteSaved = ref(false)
@@ -185,6 +185,11 @@ const getServicePrice = (serviceName: string) => {
   return service ? service.price : '0.00'
 }
 
+const currentStep = ref(1)
+
+const nextStep = () => {
+  currentStep.value++;
+}
 
 </script>
 
@@ -193,37 +198,13 @@ const getServicePrice = (serviceName: string) => {
   <div class="h-fit md:h-full w-full flex justify-center items-center md:mt-20 mb-8">
     <div class="dark:bg-gray-900/10 bg-gray-400/10  rounded md:w-2/3 lg:w-1/3 px-1 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
-        <div v-if="datesStatus === 'pending'"> Loading...</div>
-
-        <!-- Date Selection -->
-        <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
-             v-if="datesStatus === 'success' && !selectedDate">
-          <div @click="fillQuote" v-if="isQuoteSaved"
-               class="w-full bg-vivid-red cursor-pointer text-white rounded p-2 text-md flex justify-center items-center mb-2">
-            Want to
-            use your saved Quote?
-          </div>
-          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
-          <div class="space-y-6">
-            <template v-for="([key, value], index) in Object.entries(datesData)" :key="key">
-              <div v-if="datesData[key].length !== 0"
-                   class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
-                <h3 class="text-lg font-semibold text-vivid-red mb-3">
-                  {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
-                </h3>
-                <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
-                  <button v-for="x in datesData[key]" :key="x" @click="selectedDate = x"
-                          class="text-sm text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
-                    {{ moment(x).format('h:mm A') }}
-                  </button>
-                </div>
-              </div>
-            </template>
-          </div>
+        <div @click="fillQuote" v-if="isQuoteSaved"
+             class="w-full bg-vivid-red cursor-pointer text-white rounded p-2 text-md flex justify-center items-center mb-2">
+          Want to
+          use your saved Quote?
         </div>
-
         <!-- Rim Size and Tire Count Selection -->
-        <div v-if="selectedDate && !selectedService" class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div v-if="currentStep === 1" class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select Rim Size and Tire Count
           </h2>
 
@@ -265,45 +246,79 @@ const getServicePrice = (serviceName: string) => {
               <option value="4">4 Tires</option>
             </select>
           </div>
+          <!-- Service Selection -->
+          <div
+              class="flex flex-col justify-center items-center w-full gap-3">
+            <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
+            <div v-for="service in filteredServices" :key="service.name"
+                 @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); nextStep() }"
+                 class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
+              <div class="px-2 py-3 max-h-full bg-blue-500 ">
+                <div>{{ service.time }}</div>
+                <div>Mins</div>
+              </div>
+              <div class="dark:text-white text-black">
+                {{ service.name }}
+                <div class="text-sm">{{ service.descriptor }}</div>
+              </div>
+              <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 dark:text-sm">${{ service.price }}</div>
+            </div>
+          </div>
         </div>
+        <div v-if="datesStatus === 'pending' && currentStep === 2"> Loading...</div>
 
-        <!-- Service Selection -->
-        <div v-if="selectedRimSize && selectedTireCount && !selectedService"
-             class="flex flex-col justify-center items-center w-full gap-3">
-          <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
-          <div v-for="service in filteredServices" :key="service.name"
-               @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); }"
-               class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
-            <div class="px-2 py-3 max-h-full bg-blue-500 ">
-              <div>{{ service.time }}</div>
-              <div>Mins</div>
-            </div>
-            <div class="dark:text-white text-black">
-              {{ service.name }}
-              <div class="text-sm">{{ service.descriptor }}</div>
-            </div>
-            <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 dark:text-sm">${{ service.price }}</div>
+        <!-- Date Selection -->
+        <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
+             v-if="datesStatus === 'success' && currentStep === 2">
+
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
+          <div class="space-y-6">
+            <template v-for="([key, value], index) in Object.entries(datesData)" :key="key">
+              <div v-if="datesData[key].length !== 0"
+                   class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+                <h3 class="text-lg font-semibold text-vivid-red mb-3">
+                  {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
+                </h3>
+                <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
+                  <button v-for="x in datesData[key]" :key="x" @click="() => {selectedDate = x; nextStep()}"
+                          class="text-sm text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
+                    {{ moment(x).format('h:mm A') }}
+                  </button>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
 
-        <!-- Car Selection and Additional Info -->
-        <div class="w-full flex flex-col justify-center items-center" v-if="selectedService && !isCheckout">
-          <div>
-            <select class="px-3 py-2 rounded md:w-[15rem]" v-if="carData" v-model="selectedCar">
-              <option value="" disabled selected>Select a Vehicle</option>
-              <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{ cars.model }}</option>
-            </select>
-          </div>
-          <div class="my-3 dark:text-white">
-            <div class="dark:text-white px-4">
-              If your vehicle is 7 years or older, it's recommended to replace your TPMS sensors. Would you like to have
-              them replaced with your service?
+
+        <div v-if="currentStep === 3">
+          <div class="my-3 bg-gray-900 p-4 rounded dark:text-white space-y-4 ">
+            <div class="dark:text-white px-4 space-y-4 mb-4 ">
+              <div>
+                If your vehicle is <span class="text-vivid-red">7 years or older</span>, it's recommended to replace
+                your TPMS sensors.
+              </div>
+              <div>
+                Would you like to have
+                them replaced with your service?
+              </div>
             </div>
             <div class="flex justify-center items-center gap-4">
               <input v-model="TPMAmount" type="range" min="0" max="4">
               <span>Quantity: {{ TPMAmount }}</span>
               <span>${{ TPMAmount * 45 }}.00</span>
             </div>
+            <button @click.prevent="nextStep" class="bg-vivid-red"> Continue </button>
+          </div>
+        </div>
+
+        <!-- Car Selection and Additional Info -->
+        <div class="w-full flex flex-col justify-center items-center bg-gray-900 p-4 rounded " v-if="currentStep === 4">
+          <div>
+            <select class="px-3 py-2 rounded md:w-[15rem]" v-if="carData" v-model="selectedCar">
+              <option value="" disabled selected>Select a Vehicle</option>
+              <option v-for="cars in carData" :value="cars">{{ cars.year }} {{ cars.make }} {{ cars.model }}</option>
+            </select>
           </div>
           <div class="flex flex-col justify-start items-start w-full dark:text-white gap-2 px-4">
             <div class="flex-col flex gap-1 w-full">
@@ -335,12 +350,12 @@ const getServicePrice = (serviceName: string) => {
             <div class="w-full flex gap-5 ">
               <button @click="selectedService = ''; selectedRimSize = ''; selectedTireCount = '';">Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode"
-                      @click="isCheckout = true">Proceed to checkout
+                      @click="nextStep">Proceed to checkout
               </button>
             </div>
           </div>
         </div>
-        <div v-if="isCheckout" class="dark:text-white flex justify-start items-middle flex-col w-full gap-2">
+        <div v-if="currentStep === 5" class="dark:text-white flex justify-start items-middle flex-col w-full gap-2">
           <h2 class="text-2xl font-bold mb-2 text-center">Order Summary</h2>
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div class="mb-4">
