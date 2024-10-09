@@ -102,12 +102,14 @@ const address = ref({
 const phone = ref('')
 
 const services = [
-  {name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: '12-18', tireCount: '2'},
-  {name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: '19-22', tireCount: '2'},
-  {name: '3 Tire installation (12-18" Rims)', price: '125.00', time: '75-90', rimSize: '12-18', tireCount: '3'},
-  {name: '3 Tire installation (19-22" Rims)', price: '150.00', time: '60-75', rimSize: '19-22', tireCount: '3'},
-  {name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '90-120', rimSize: '12-18', tireCount: '4'},
-  {name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: '19-22', tireCount: '4'},
+  {name: '1 Tire installation (12-18" Rims)', price: '50.00', time: '30', rimSize: [12, 18], tireCount: '1'},
+  {name: '1 Tire installation (19-22" Rims)', price: '50.00', time: '30', rimSize: [19, 22], tireCount: '1'},
+  {name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: [12, 18], tireCount: '2'},
+  {name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: [19, 22], tireCount: '2'},
+  {name: '3 Tire installation (12-18" Rims)', price: '125.00', time: '75-90', rimSize: [12, 18], tireCount: '3'},
+  {name: '3 Tire installation (19-22" Rims)', price: '150.00', time: '60-75', rimSize: [19, 22], tireCount: '3'},
+  {name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '90-120', rimSize: [12, 18], tireCount: '4'},
+  {name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: [19, 22], tireCount: '4'},
   {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120'},
   {name: "Seasonal Changeover Tire & Wheel Assemblies", price: '100.00', descriptor: 'Storage included', time: '30-60'}
 ];
@@ -156,10 +158,14 @@ async function submitAppointment() {
 }
 
 const filteredServices = computed(() => {
-  return services.filter(service =>
-      service.rimSize === selectedRimSize.value && service.tireCount === selectedTireCount.value
-  );
+  return services.filter(service => {
+    if (!service.rimSize) return false; // Skip services without rimSize
+    const [minRim, maxRim] = service.rimSize;
+    return selectedRimSize.value >= minRim && selectedRimSize.value <= maxRim &&
+        service.tireCount === selectedTireCount.value;
+  });
 });
+
 
 const computedPrice = computed(() => {
   let totalPrice = parseInt(price.value);
@@ -193,6 +199,7 @@ const nextStep = () => {
   currentStep.value++;
 }
 
+
 </script>
 
 <template>
@@ -207,7 +214,7 @@ const nextStep = () => {
         </div>
         <!-- Rim Size and Tire Count Selection -->
         <div v-if="currentStep === 1" class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select Rim Size and Tire Count
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select your rim size and the amount of tire you need replaced
           </h2>
 
           <div class="mb-4">
@@ -232,8 +239,18 @@ const nextStep = () => {
             <select v-model="selectedRimSize"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
               <option value="" disabled selected>Select rim size</option>
-              <option value="12-18">12-18 inches</option>
-              <option value="19-22">19-22 inches</option>
+              <option value="12">12 inches</option>
+              <option value="13">13 inches</option>
+              <option value="14">14 inches</option>
+              <option value="15">15 inches</option>
+              <option value="16">16 inches</option>
+              <option value="17">17 inches</option>
+              <option value="18">18 inches</option>
+              <option value="19">19 inches</option>
+              <option value="20">20 inches</option>
+              <option value="21">21 inches</option>
+              <option value="22">22 inches</option>
+
             </select>
           </div>
 
@@ -244,6 +261,7 @@ const nextStep = () => {
             <select v-model="selectedTireCount"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
               <option value="" disabled selected>Select number of tires</option>
+              <option value="1">1 Tire</option>
               <option value="2">2 Tires</option>
               <option value="3">3 Tires</option>
               <option value="4">4 Tires</option>
@@ -251,7 +269,7 @@ const nextStep = () => {
           </div>
           <!-- Service Selection -->
           <div v-if="selectedTireCount && selectedRimSize"
-              class="flex flex-col justify-center items-center w-full gap-3">
+               class="flex flex-col justify-center items-center w-full gap-3">
             <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
             <div v-for="service in filteredServices" :key="service.name"
                  @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); nextStep() }"
@@ -311,7 +329,7 @@ const nextStep = () => {
               <span>Quantity: {{ TPMAmount }}</span>
               <span>${{ TPMAmount * 45 }}.00</span>
             </div>
-            <button @click.prevent="nextStep" class="bg-vivid-red"> Continue </button>
+            <button @click.prevent="nextStep" class="bg-vivid-red"> Continue</button>
           </div>
         </div>
 
