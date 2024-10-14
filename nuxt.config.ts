@@ -1,94 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {useNuxtApp} from "#app";
+import { analyticsConfig } from './config/analytics'
+import { schemaConfig } from './config/schema'
+import { metaConfig } from './config/meta'
+import { socialMetaConfig } from './config/social-meta'
+import { externalScriptsConfig } from './config/external-scripts'
 
 export default defineNuxtConfig({
 
     devtools: {enabled: true},
     app: {
         head: {
-            title: "Book Your Mobile Tire Service | Mobile Tire Pro",
-            script: [
-                {
-                    async: true,
-                    src: "https://www.googletagmanager.com/gtag/js?id=G-60F22QVQTB",
-                },
-                {
-                    innerHTML: `
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag() {
-                        dataLayer.push(arguments);
-                      }
-                      gtag("js", new Date());
-                      gtag("config", "G-60F22QVQTB");
-                    `,
-                    type: 'text/javascript',
-                },
-                {
-                    async: true,
-                    src: "https://www.googletagmanager.com/gtag/js?id=G-YVVT9JK3Z4",
-                },
-                {
-                    innerHTML: `
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag() {
-                        dataLayer.push(arguments);
-                      }
-                      gtag("js", new Date());
-                      gtag("config", "G-YVVT9JK3Z4");
-                    `,
-                    type: 'text/javascript',
-                },
-                {
-                    type: 'application/ld+json',
-                    innerHTML: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "name": "Mobile Tire Pro",
-                        "url": "https://www.mobiletirepro.net",
-                        "logo": "https://www.mobiletirepro.net/images/logos/MTP_PNG.png",
-                        "sameAs": [
-                            "https://www.facebook.com/profile.php?id=61560018959670"
-                        ]
-                    })
-                },
-                // Square Web Payments SDK
-                {src: "https://web.squarecdn.com/v1/square.js"},
-            ],
-            link: [
-                {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-                {rel: 'canonical', href: 'https://www.mobiletirepro.net/'}
-            ],
-            meta: [
-                {charset: "utf-8"},
-                {name: "viewport", content: "width=device-width, initial-scale=1.0"},
-                {
-                    name: "description",
-                    content: "Mobile Tire Pro LLC: Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service. Available weekdays 4-5pm and Saturdays 7:30am-5pm. Book online or call for professional, efficient service at your location. Competitive pricing with special offers for new customers. Experience hassle-free tire installation with Mobile Tire Pro."
-                },
-                {
-                    name: "keywords",
-                    content: "Mobile tire installation,On-site tire service,New tire fitting,TPMS service,At-home tire installation,EV tire service,Same-day tire installation,Professional mobile tire service"
-                },
-                // Open Graph / Facebook
-                {property: "og:type", content: "website"},
-                {property: "og:url", content: "https://mobiletirepro.net/"},
-                {property: "og:title", content: "Book Your Mobile Tire Service | Mobile Tire Pro"},
-                {
-                    property: "og:description",
-                    content: "Mobile Tire Pro LLC: Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service."
-                },
-                {property: "og:image", content: "/images/meta_img.webp"},
-                // Twitter
-                {name: "twitter:card", content: "summary_large_image"},
-                {name: "twitter:url", content: "https://mobiletirepro.net/"},
-                {name: "twitter:title", content: "Mobile Tire Installation | Mobile Tire Pro"},
-                {
-                    name: "twitter:description",
-                    content: "Mobile Tire Pro LLC: Expert mobile tire installation service for sedans, SUVs, trucks, and EVs. We come to you for convenient, on-site new tire fitting and TPMS service."
-                },
-                {name: "twitter:image", content: "/images/meta_img.webp"},
-            ],
-        },
+          title: metaConfig.title,
+          link: metaConfig.link,
+          meta: [
+            ...metaConfig.meta,
+            ...socialMetaConfig.meta
+          ],
+          script: [
+            ...analyticsConfig.googleAnalytics,
+            ...schemaConfig.script,
+            ...externalScriptsConfig.script
+          ],
+        }
     },
     modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt3-leaflet", "nuxt-mongoose", './modules/auth.module', '@nuxtjs/color-mode', 'nuxt-vue3-google-signin', "@pinia/nuxt", 'pinia-plugin-persistedstate/nuxt'],
     runtimeConfig: {

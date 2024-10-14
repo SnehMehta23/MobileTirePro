@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import '@vuepic/vue-datepicker/dist/main.css'
 import moment from "moment-timezone";
-import {useQuoteStore} from "~/stores/store";
+import { useQuoteStore } from "~/stores/store";
 
 
 const $gtm = useGTM();
@@ -86,8 +86,8 @@ const hideTooltip = () => {
 
 const isLoggedIn = ref(false)
 
-const {data} = useLazyFetch('/api/auth/test', {
-  onResponse({response}) {
+const { data } = useLazyFetch('/api/auth/test', {
+  onResponse({ response }) {
     response._data.token ? isLoggedIn.value = true : isLoggedIn.value = false
   }
 })
@@ -102,16 +102,16 @@ const address = ref({
 const phone = ref('')
 
 const services = [
-  {name: '1 Tire installation (12-18" Rims)', price: '50.00', time: '30', rimSize: [12, 18], tireCount: '1'},
-  {name: '1 Tire installation (19-22" Rims)', price: '50.00', time: '30', rimSize: [19, 22], tireCount: '1'},
-  {name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: [12, 18], tireCount: '2'},
-  {name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: [19, 22], tireCount: '2'},
-  {name: '3 Tire installation (12-18" Rims)', price: '125.00', time: '75-90', rimSize: [12, 18], tireCount: '3'},
-  {name: '3 Tire installation (19-22" Rims)', price: '150.00', time: '60-75', rimSize: [19, 22], tireCount: '3'},
-  {name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '90-120', rimSize: [12, 18], tireCount: '4'},
-  {name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: [19, 22], tireCount: '4'},
-  {name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120'},
-  {name: "Seasonal Changeover Tire & Wheel Assemblies", price: '100.00', descriptor: 'Storage included', time: '30-60'}
+  { name: '1 Tire installation (12-18" Rims)', price: '50.00', time: '30', rimSize: [12, 18], tireCount: '1' },
+  { name: '1 Tire installation (19-22" Rims)', price: '50.00', time: '30', rimSize: [19, 22], tireCount: '1' },
+  { name: '2 Tire installation (12-18" Rims)', price: '80.00', time: '45-60', rimSize: [12, 18], tireCount: '2' },
+  { name: '2 Tire installation (19-22" Rims)', price: '95.00', time: '60-75', rimSize: [19, 22], tireCount: '2' },
+  { name: '3 Tire installation (12-18" Rims)', price: '125.00', time: '75-90', rimSize: [12, 18], tireCount: '3' },
+  { name: '3 Tire installation (19-22" Rims)', price: '150.00', time: '60-75', rimSize: [19, 22], tireCount: '3' },
+  { name: '4 Tire installation (12-18" Rims)', price: '150.00', time: '90-120', rimSize: [12, 18], tireCount: '4' },
+  { name: '4 Tire installation (19-22" Rims)', price: '175.00', time: '90-120', rimSize: [19, 22], tireCount: '4' },
+  { name: "Seasonal Changeover Tires Only", price: '200.00', descriptor: 'Storage included', time: '75-120' },
+  { name: "Seasonal Changeover Tire & Wheel Assemblies", price: '100.00', descriptor: 'Storage included', time: '30-60' }
 ];
 
 watch(date, async (newDate, oldDate) => {
@@ -125,14 +125,14 @@ watch(date, async (newDate, oldDate) => {
 })
 
 const selectedCar = ref('')
-const {data: carData} = await useLazyFetch('/api/car/list', {
+const { data: carData } = await useLazyFetch('/api/car/list', {
   method: 'GET',
-  onResponse({response}) {
+  onResponse({ response }) {
     selectedCar.value = response._data[0]
   }
 })
 
-const {data: datesData, status: datesStatus} = await useLazyFetch('/api/apts/check', {ssr: false})
+const { data: datesData, status: datesStatus } = await useLazyFetch('/api/apts/check', { ssr: false })
 watch(datesData, (newDates) => {
   // console.log(newDates)
 })
@@ -162,7 +162,7 @@ const filteredServices = computed(() => {
     if (!service.rimSize) return false; // Skip services without rimSize
     const [minRim, maxRim] = service.rimSize;
     return selectedRimSize.value >= minRim && selectedRimSize.value <= maxRim &&
-        service.tireCount === selectedTireCount.value;
+      service.tireCount === selectedTireCount.value;
   });
 });
 
@@ -208,36 +208,37 @@ const nextStep = () => {
     <div class="dark:bg-gray-900/10 bg-gray-400/10  rounded md:w-2/3 lg:w-1/3 px-1 py-4">
       <div class="flex justify-center items-center flex-col gap-3 w-full">
         <div @click="fillQuote" v-if="isQuoteSaved"
-             class="w-full bg-vivid-red cursor-pointer text-white rounded p-2 text-md flex justify-center items-center mb-2">
+          class="w-full bg-vivid-red cursor-pointer text-white rounded p-2 text-md flex justify-center items-center mb-2">
           Want to
           use your saved Quote?
         </div>
         <!-- Rim Size and Tire Count Selection -->
         <div v-if="currentStep === 1" class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select your rim size and the amount of tire you need replaced
+          <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Select your rim size and the
+            amount of tire you need replaced
           </h2>
 
           <div class="mb-4">
             <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2" for="rimSize">
               Rim Size
               <span class="ml-2 text-blue-500 cursor-pointer relative inline-block hover:underline"
-                    @mouseenter="showTooltip" @mouseleave="startHideTooltip">
+                @mouseenter="showTooltip" @mouseleave="startHideTooltip">
                 Don't know your rim size?
                 <div v-if="showRimSizeTooltip" @mouseenter="cancelHideTooltip" @mouseleave="hideTooltip"
-                     class="absolute z-10 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-lg w-64 text-sm bottom-full left-1/2 transform -translate-x-1/2 mb-2">
+                  class="absolute z-10 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-lg w-64 text-sm bottom-full left-1/2 transform -translate-x-1/2 mb-2">
                   <div class="relative">
                     <a href="#" class="text-blue-500 hover:underline">Tire size can be found in two places: on the door
                       placard
                       inside the driver's door or directly on the tire (e.g., 205/55/R16).</a>
                     <div
-                        class="absolute w-3 h-3 bg-white dark:bg-gray-700 transform rotate-45 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
+                      class="absolute w-3 h-3 bg-white dark:bg-gray-700 transform rotate-45 left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
                     </div>
                   </div>
                 </div>
               </span>
             </label>
             <select v-model="selectedRimSize"
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
               <option value="" disabled selected>Select rim size</option>
               <option value="12">12 inches</option>
               <option value="13">13 inches</option>
@@ -259,7 +260,7 @@ const nextStep = () => {
               Number of Tires
             </label>
             <select v-model="selectedTireCount"
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
               <option value="" disabled selected>Select number of tires</option>
               <option value="1">1 Tire</option>
               <option value="2">2 Tires</option>
@@ -269,11 +270,11 @@ const nextStep = () => {
           </div>
           <!-- Service Selection -->
           <div v-if="selectedTireCount && selectedRimSize"
-               class="flex flex-col justify-center items-center w-full gap-3">
+            class="flex flex-col justify-center items-center w-full gap-3">
             <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
             <div v-for="service in filteredServices" :key="service.name"
-                 @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); nextStep() }"
-                 class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
+              @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); nextStep() }"
+              class="border border-blue-500 hover:bg-gray-300 cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-md">
               <div class="px-2 py-3 max-h-full bg-blue-500 ">
                 <div>{{ service.time }}</div>
                 <div>Mins</div>
@@ -290,19 +291,19 @@ const nextStep = () => {
 
         <!-- Date Selection -->
         <div class="w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md"
-             v-if="datesStatus === 'success' && currentStep === 2">
+          v-if="datesStatus === 'success' && currentStep === 2">
 
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Choose a date</h2>
           <div class="space-y-6">
             <template v-for="([key, value], index) in Object.entries(datesData)" :key="key">
               <div v-if="datesData[key].length !== 0"
-                   class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+                class="pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
                 <h3 class="text-lg font-semibold text-vivid-red mb-3">
                   {{ moment(key, 'MM-DD-YYYY').format('dddd, MMMM Do YYYY') }}
                 </h3>
                 <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
-                  <button v-for="x in datesData[key]" :key="x" @click="() => {selectedDate = x; nextStep()}"
-                          class="text-sm text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
+                  <button v-for="x in datesData[key]" :key="x" @click="() => { selectedDate = x; nextStep() }"
+                    class="text-sm text-white rounded-md text-center px-2 py-2 hover:bg-red-900 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
                     {{ moment(x).format('h:mm A') }}
                   </button>
                 </div>
@@ -313,7 +314,7 @@ const nextStep = () => {
 
 
         <div v-if="currentStep === 3">
-          <div class="my-3 bg-gray-900 p-4 rounded dark:text-white space-y-4 ">
+          <div class="my-3 p-4 rounded dark:text-white space-y-4 ">
             <div class="dark:text-white px-4 space-y-4 mb-4 ">
               <div>
                 If your vehicle is <span class="text-vivid-red">7 years or older</span>, it's recommended to replace
@@ -345,12 +346,12 @@ const nextStep = () => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Street Address:</label>
               <input v-model="address.street"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">City:</label>
               <input v-model="address.city"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">State:</label>
@@ -361,17 +362,18 @@ const nextStep = () => {
             <div class="flex-col flex gap-1 w-full">
               <label for="">Zip code: </label>
               <input v-model="address.zipcode"
-                     class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
+                class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900" type="text">
             </div>
             <div class="flex-col flex gap-1 w-full">
               <label for="">Contact phone: </label>
               <input v-model="phone" class="px-2 py-1 rounded text-black bg-red-50 shadow-sm border border-gray-900"
-                     type="text">
+                type="text">
             </div>
             <div class="w-full flex gap-5 ">
               <button @click="selectedService = ''; selectedRimSize = ''; selectedTireCount = '';">Return</button>
               <button v-if="address.zipcode && address.city && address.street && address.zipcode"
-                      @click="nextStep">Proceed to checkout
+                @click="nextStep">Proceed to
+                checkout
               </button>
             </div>
           </div>
@@ -394,7 +396,7 @@ const nextStep = () => {
               <span class="font-bold">Car:</span>
               <div>
                 <select class="bg-vivid-red px-3 py-2 rounded md:w-[15rem] font-bold" v-if="carData"
-                        v-model="selectedCar">
+                  v-model="selectedCar">
                   <option :value="selectedCar">{{ selectedCar.year }} {{ selectedCar.make }} {{ selectedCar.model }}
                   </option>
                   <template v-for="cars in carData">
@@ -412,7 +414,7 @@ const nextStep = () => {
                 address.zipcode
               }}
             </div>
-            <hr class="my-4 border-gray-300 dark:border-gray-600"/>
+            <hr class="my-4 border-gray-300 dark:border-gray-600" />
             <div v-if="discount.active" class="text-xl font-bold flex justify-between items-center">
               <span>Discount applied: {{ discount.amount * 100 }}%</span>
               <span>-${{ (price * discount.amount) }}</span>
@@ -432,7 +434,7 @@ const nextStep = () => {
               <button @click="saveQuoteAndLeave">Save Quote</button>
             </div>
           </div>
-          <SquarePayment v-if="isLoggedIn" :price="computedPrice" @payment="submitAppointment"/>
+          <SquarePayment v-if="isLoggedIn" :price="computedPrice" @payment="submitAppointment" />
         </div>
       </div>
       <div v-if="showConfirmation" class="flex flex-col justify-center items-center gap-4">

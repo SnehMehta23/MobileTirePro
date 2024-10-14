@@ -44,21 +44,26 @@ export default {
       carImages: [
         {
           id: 1,
+          src: '/images/rivianEV.webp',
+          alt: 'Rivian Truck'
+        },
+        {
+          id: 2,
           src: '/images/jeep.webp',
           alt: 'Jeep'
         },
         {
-          id: 2,
+          id: 3,
           src: '/images/tesla.webp',
           alt: 'Tesla'
         },
         {
-          id: 3,
+          id: 4,
           src: '/images/classicCar.webp',
           alt: 'Classic Car'
         },
         {
-          id: 4,
+          id: 5,
           src: '/images/hyundai.webp',
           alt: 'Hyundai'
         },
