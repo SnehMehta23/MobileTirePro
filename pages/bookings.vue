@@ -87,6 +87,7 @@ const hideTooltip = () => {
 const isLoggedIn = ref(false)
 
 const {data} = useLazyFetch('/api/auth/test', {
+  server: false,
   onResponse({response}) {
     response._data.token ? isLoggedIn.value = true : isLoggedIn.value = false
   }
