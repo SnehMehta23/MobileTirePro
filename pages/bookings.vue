@@ -164,7 +164,7 @@ async function submitAppointment() {
 
 const filteredServices = computed(() => {
   return services.value?.filter(service => {
-    return service.rims?.min <= selectedRimSize.value && service.rims?.max >= selectedRimSize.value && selectedTireCount.value == service.tireCount || service.rims == undefined && service.tireCount == undefined
+    return service.rims?.min <= selectedRimSize.value && service.rims?.max >= selectedRimSize.value && selectedTireCount.value == service.tireCount || service.rims == undefined && service.tireCount == undefined || service.tireCount == undefined
   });
 });
 
