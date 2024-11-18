@@ -287,7 +287,7 @@ const nextStep = () => {
                class="flex flex-col justify-center items-center w-full gap-3">
             <div class="dark:text-white text-2xl font-bold">Your Service Option</div>
             <div v-for="service in filteredServices" :key="service.name"
-                 @click="() => { selectedService = service.name; price = service.price; serviceSelectionTracking(service.name); nextStep() }"
+                 @click="() => { selectedService = service.name; price = service.discounts[0] ? service.price - (service.price * service.discounts[0]?.percentage / 100) : service.price; serviceSelectionTracking(service.name); nextStep() }"
                  class="border border-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700  cursor-pointer rounded md:w-3/3 text-white text-center flex w-full justify-between gap-2 items-center hover:shadow-lg dark:hover:shadow-black/70 hover:shadow-blue-500/40 ">
               <div class="px-2 py-3 max-h-full font-semibold dark:text-white text-blue-500 text-sm">
                 <div>{{ service.time }}</div>
@@ -297,7 +297,7 @@ const nextStep = () => {
                 {{ service.name }}
                 <div class="text-sm">{{ service.descriptor }}</div>
               </div>
-              <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 font-bold dark:text-gray-400">${{ service.price }}</div>
+              <div class="px-2 py-3 dark:text-blue-300/70 text-gray-600 font-bold dark:text-gray-400">${{ service.discounts[0] ? service.price - (service.price * service.discounts[0]?.percentage / 100) : service.price}}</div>
             </div>
           </div>
         </div>

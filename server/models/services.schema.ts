@@ -1,4 +1,5 @@
 import {defineMongooseModel} from "#nuxt/mongoose";
+import {discountSchema} from "~/server/models/discount.schema";
 
 export const servicesSchema = defineMongooseModel({
     name: 'Service',
@@ -20,6 +21,10 @@ export const servicesSchema = defineMongooseModel({
         },
         time: {
             type: 'string'
-        }
+        },
+        discounts: [{
+            type: 'ObjectId',
+            ref: discountSchema
+        }]
     }
-})
+});
