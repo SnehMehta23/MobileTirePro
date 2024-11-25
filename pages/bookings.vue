@@ -150,7 +150,7 @@ async function submitAppointment() {
         appointmentDate: selectedDate.value,
         carId: selectedCar.value,
         service: selectedService.value,
-        address: `${address.street} ${address.city} ${address.State} ${address.zipcode}`,
+        address: `${address.value.street} ${address.value.city} ${address.value.State} ${address.value.zipcode}`,
         phone: phone.value
       }
     });
