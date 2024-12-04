@@ -16,6 +16,10 @@ const services = [
     title: 'Professional Tire Installation',
     description: 'Backed by 8 years of industry experience and training, we offer a professional tire installation & balancing service to ensure safety and quality.',
     icon: '/images/icons/tireIcon.svg'
+  }, {
+    title: 'Professional Tire Repair',
+    description: 'At Mobile Tire Pro, we specialize in safe and reliable tire repairs to get you back on the road with peace of mind. We use high quality materials and a precise process to ensure that your tire is repaired to the highest safety standards. Please note that we do not offer roadside assistance; for tire repairs your vehicle must be in a safe location such as a driveway, garage, or public parking lot.',
+    icon: '/images/icons/tireIcon.svg'
   },
   {
     title: 'TPMS Sensor Installation and Recalibration',
@@ -37,20 +41,20 @@ const services = [
       <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between h-full">
         <div class="hidden lg:block lg:w-7/12">
           <img
-            src="/images/isometric-car-repair-horizontal-banner-with-serviceman-making-tire-service-vector-illustration.webp"
-            alt="Tire Service Technician Illustration" class="w-full h-auto">
+              src="/images/isometric-car-repair-horizontal-banner-with-serviceman-making-tire-service-vector-illustration.webp"
+              alt="Tire Service Technician Illustration" class="w-full h-auto">
         </div>
         <div
-          class="w-full lg:w-7/12 text-center lg:text-left lg:pl-8 p-6 lg:p-0 bg-black bg-opacity-30 lg:bg-transparent rounded-lg lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+            class="w-full lg:w-7/12 text-center lg:text-left lg:pl-8 p-6 lg:p-0 bg-black bg-opacity-30 lg:bg-transparent rounded-lg lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2">
           <h1
-            class="text-3xl dark:text-white lg:text-5xl font-bold text-white mb-4 text-shadow lg:text-gray-800 lg:text-shadow-none">
+              class="text-3xl dark:text-white lg:text-5xl font-bold text-white mb-4 text-shadow lg:text-gray-800 lg:text-shadow-none">
             Expert Tire Care, Wherever You Are
           </h1>
           <p
-            class="text-lg dark:text-white lg:text-xl text-gray-100 lg:text-gray-600 mb-6 text-shadow lg:text-shadow-none">
+              class="text-lg dark:text-white lg:text-xl text-gray-100 lg:text-gray-600 mb-6 text-shadow lg:text-shadow-none">
             Professional tire services delivered to your driveway, garage, or public parking lot
           </p>
-          <CarSelectorForm />
+          <CarSelectorForm/>
         </div>
       </div>
     </div>
@@ -58,7 +62,7 @@ const services = [
 
   <div class="container mx-auto px-4 py-12">
     <div
-      class="bg-gradient-to-r from-pale-red to-vivid-red dark:from-gray-900 dark:to-vivid-red rounded-lg shadow-lg p-8 mb-12">
+        class="bg-gradient-to-r from-pale-red to-vivid-red dark:from-gray-900 dark:to-vivid-red rounded-lg shadow-lg p-8 mb-12">
       <div class="flex flex-col lg:flex-row justify-between items-center">
         <div class="lg:w-2/3 mb-6 lg:mb-0">
           <h2 class="text-3xl font-bold text-dark-charcoal dark:text-white mb-2">Comprehensive Tire Solutions for Every
@@ -77,7 +81,7 @@ const services = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <ServiceCard v-for="service in services" :key="service.title" :service="service" ctaText="Check Availability"
-        ctaLink="/bookings" @cta-click="trackServiceClick(service.title)" />
+                   ctaLink="/bookings" @cta-click="trackServiceClick(service.title)"/>
     </div>
   </div>
 </template>
