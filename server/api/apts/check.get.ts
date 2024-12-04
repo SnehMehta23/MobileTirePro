@@ -17,8 +17,8 @@ function generateDateObjects() {
             startHour = 7;
             endHour = 16;
         } else { // Weekday (Monday to Friday)
-            startHour = 16;
-            endHour = 18;
+            startHour = 17;
+            endHour = 17;
         }
 
         for (let hour = startHour; hour < endHour; hour++) {
