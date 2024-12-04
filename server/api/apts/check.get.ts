@@ -10,10 +10,8 @@ function generateDateObjects() {
         const dayOfWeek = currentDate.getDay();
 
         // Skip Sunday (day 0)
-        if (dayOfWeek === 0) continue;
-
         let startHour, endHour;
-        if (dayOfWeek === 6) { // Saturday
+        if (dayOfWeek === 6 || dayOfWeek === 0) { // Saturday
             startHour = 7;
             endHour = 16;
         } else { // Weekday (Monday to Friday)
