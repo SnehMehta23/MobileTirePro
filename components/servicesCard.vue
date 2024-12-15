@@ -7,12 +7,13 @@
             <h3 class="text-xl font-bold text-gray-800 dark:text-white">{{ service.title }}</h3>
         </div>
         <p class="text-gray-600 mb-6 dark:text-white flex-grow">{{ service.description }}</p>
-        <NuxtLink @click="handleCtaClick" v-if="ctaText && ctaLink" :to="ctaLink"
+        <NuxtLink @click="handleCtaClick" v-if="service.ctaText || ctaText" :to="ctaLink"
             class="bg-vivid-red text-white font-bold py-2 px-6 rounded-md hover:bg-crimson-red self-start mt-auto transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-vivid-red focus:ring-offset-2 inline-block no-underline">
-            {{ ctaText }}
+            {{ service.ctaText || ctaText }}
         </NuxtLink>
     </div>
 </template>
+
 
 <script setup lang="ts">
 const emit = defineEmits(['cta-click'])
@@ -26,8 +27,9 @@ defineProps<{
         title: string;
         description: string;
         icon: string;
+        ctaText?: string;
     };
-    ctaText?: string;
+    ctaText?: string;  // Fallback CTA text
     ctaLink?: string;
 }>()
 </script>

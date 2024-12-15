@@ -3,7 +3,7 @@
     <div class="flex rounded-2xl overflow-hidden shadow-xl max-w-[800px]">
       <!-- Left side image -->
       <div class="relative w-[350px] hidden md:block">
-        <img src="/public/images/signupImage.png" alt="Mechanic" class="object-cover w-full h-full"/>
+        <img src="/public/images/signupImage.png" alt="Mechanic" class="object-cover w-full h-full" />
         <div class="absolute inset-0 bg-red-400/40"></div>
       </div>
 
@@ -11,14 +11,14 @@
       <div class="w-full md:w-[400px] p-6 bg-white">
         <!-- Logo and progress indicator -->
         <div class="flex flex-col items-center mb-4">
-          <img src="/public/images/icons/racing.webp" alt="Racing logo" class="w-8 h-8 mb-3"/>
+          <img src="/public/images/icons/racing.webp" alt="Racing logo" class="w-8 h-8 mb-3" />
           <div class="flex gap-2">
             <div class="w-10 h-1 rounded transition-all duration-300"
-                 :class="[currentStep >= 1 ? 'bg-red-500' : 'bg-gray-200']"></div>
+              :class="[currentStep >= 1 ? 'bg-red-500' : 'bg-gray-200']"></div>
             <div class="w-10 h-1 rounded transition-all duration-300"
-                 :class="[currentStep >= 2 ? 'bg-red-500' : 'bg-gray-200']"></div>
+              :class="[currentStep >= 2 ? 'bg-red-500' : 'bg-gray-200']"></div>
             <div class="w-10 h-1 rounded transition-all duration-300"
-                 :class="[currentStep === 3 ? 'bg-red-500' : 'bg-gray-200']"></div>
+              :class="[currentStep === 3 ? 'bg-red-500' : 'bg-gray-200']"></div>
           </div>
         </div>
 
@@ -35,23 +35,23 @@
               <div>
                 <label class="block text-sm text-gray-600 mb-1">Name*</label>
                 <input v-model="formData.name" type="text" placeholder="Enter your name"
-                       class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm"/>
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm" />
               </div>
 
               <div>
                 <label class="block text-sm text-gray-600 mb-1">Email*</label>
                 <input v-model="formData.email" type="email" placeholder="Enter your email"
-                       class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm"/>
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm" />
               </div>
 
               <div>
                 <label class="block text-sm text-gray-600 mb-1">Password*</label>
                 <input v-model="formData.password" type="password" placeholder="Choose a password"
-                       class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm"/>
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm" />
               </div>
 
               <button @click.prevent="signUp"
-                      class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm">
+                class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm">
                 Continue
               </button>
 
@@ -64,7 +64,7 @@
                 </div>
               </div>
 
-              <GoogleSignInButton class="w-full" @success="handleLoginSuccess"/>
+              <GoogleSignInButton class="w-full" @success="handleLoginSuccess" />
             </form>
           </div>
 
@@ -79,7 +79,7 @@
               <div>
                 <label class="block text-sm text-gray-600 mb-1">Year*</label>
                 <select v-model="selectedYear"
-                        class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
                   <option value="" disabled selected>Enter the vehicle's manufacturing year</option>
                   <option v-for="year in years" :value="year">{{ year }}</option>
                 </select>
@@ -88,7 +88,7 @@
               <div v-if="carData">
                 <label class="block text-sm text-gray-600 mb-1">Make*</label>
                 <select v-model="selectedMake"
-                        class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
                   <option value="" disabled selected>Enter vehicle make</option>
                   <option :value="make" v-for="make in uniqueMakes">{{ make }}</option>
                 </select>
@@ -97,14 +97,14 @@
               <div v-if="carData && selectedMake">
                 <label class="block text-sm text-gray-600 mb-1">Model*</label>
                 <select v-model="selectedModel"
-                        class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
+                  class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-red-300 focus:ring-1 focus:ring-red-300 outline-none transition bg-white text-sm">
                   <option value="" disabled selected>Enter vehicle model</option>
                   <option :value="model" v-for="model in filteredModels">{{ model }}</option>
                 </select>
               </div>
 
               <button @click.prevent="addCar"
-                      class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm">
+                class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm">
                 Add Car
               </button>
 
@@ -150,9 +150,9 @@
               </div>
             </div>
 
-            <div v-if="currentStep === 3"  class="w-full">
+            <div v-if="currentStep === 3" class="w-full">
               <div @click="login"
-                  class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm mt-4">
+                class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg transition-colors flex items-center justify-center text-sm mt-4">
                 Continue
               </div>
             </div>
@@ -164,7 +164,7 @@
 </template>
 
 <script setup>
-import {ref, reactive} from 'vue'
+import { ref, reactive } from 'vue'
 import { reloadNuxtApp } from "nuxt/app";
 const currentStep = ref(1)
 const formData = ref({
@@ -192,7 +192,7 @@ const skipAddingVehicle = () => {
 
 const startYear = 1992 // start
 const endYear = 2026 // Finish
-const years = Array.from({length: endYear - startYear + 1}, (v, i) => startYear + i) //Array to hold that
+const years = Array.from({ length: endYear - startYear + 1 }, (v, i) => startYear + i) //Array to hold that
 
 /* State variables to hold everything car related */
 const carData = ref('') // JSON with car information
@@ -205,7 +205,7 @@ const selectedModel = ref('') // Model
  */
 
 watch(selectedYear, async (newYear, oldYear) => {
-  console.log('lol')
+  // console.log('lol')
   if (newYear) {
     const data = await $fetch(`/cars/${newYear}.json`)
     carData.value = data;
@@ -213,7 +213,7 @@ watch(selectedYear, async (newYear, oldYear) => {
 })
 
 watch(selectedMake, async (newMake) => {
-  console.log(newMake)
+  // console.log(newMake)
 })
 
 /**
@@ -249,8 +249,8 @@ const uniqueMakes = computed(() => {
 const filteredModels = computed(() => {
   if (!selectedMake.value) return []
   return carData.value
-      .filter(car => car.make === selectedMake.value)
-      .map(car => car.model)
+    .filter(car => car.make === selectedMake.value)
+    .map(car => car.model)
 })
 
 async function addCar() {
@@ -258,20 +258,20 @@ async function addCar() {
     const car = await $fetch('/api/car/add', {
       method: 'POST',
       body:
-          {
-            make: selectedMake.value,
-            model: selectedModel.value,
-            year: selectedYear.value,
-            userEmail: formData.value.email,
-            tires: [{name: 'FL', pressure: 0, size: 'N/A', type: 'Normal'},
-              {name: 'FR', pressure: 0, size: 'N/A', type: 'Normal'},
-              {name: 'BL', pressure: 0, size: 'N/A', type: 'Normal'}, {
-                name: 'BR',
-                pressure: 0,
-                size: 'N/A',
-                type: 'Normal'
-              },]
-          }
+      {
+        make: selectedMake.value,
+        model: selectedModel.value,
+        year: selectedYear.value,
+        userEmail: formData.value.email,
+        tires: [{ name: 'FL', pressure: 0, size: 'N/A', type: 'Normal' },
+        { name: 'FR', pressure: 0, size: 'N/A', type: 'Normal' },
+        { name: 'BL', pressure: 0, size: 'N/A', type: 'Normal' }, {
+          name: 'BR',
+          pressure: 0,
+          size: 'N/A',
+          type: 'Normal'
+        },]
+      }
     })
     if (car === 'OK') {
       nextStep();
@@ -295,7 +295,7 @@ async function signUp() {
     const user = await $fetch('/api/auth/signup', {
       method: 'POST',
       body:
-      formData.value
+        formData.value
 
     })
     if (user?.registered) {
@@ -323,7 +323,7 @@ async function login() {
         password: formData.value.password
       }
     })
-    if(user?.loggedIn){
+    if (user?.loggedIn) {
       window.location.href = '/'
     }
   } catch (e) {
