@@ -11,7 +11,7 @@ const trackServiceClick = (serviceTitle: string) => {
   })
 }
 
-// Types for the service
+// Types for the service.
 interface Service {
   title: string;
   description: string;
