@@ -12,7 +12,7 @@ useHead({
   script: [
     {
       src: 'https://analytics.ahrefs.com/analytics.js',
-      'data-key': 'Erhl4Y2wj+tly5AEGz/AQw',
+      'data-key': 'jwx4Ux/8zI8uMeuakw68/Q',
       defer: true
     }
   ]
