@@ -5,8 +5,8 @@ export default defineEventHandler(async (event) => {
     try {
         const {text} = await readBody(event)
         const setting = await settingsSchema.findOneAndUpdate({name: 'banner'}, {text: text})
-        console.log(setting)
-        console.log(text)
+        // console.log(setting)
+        // console.log(text)
         return 'OK'
 
 
