@@ -24,24 +24,28 @@ const services: Service[] = [
     title: 'Professional Tire Installation',
     description: 'Backed by 8 years of industry experience and training, we offer a professional tire installation & balancing service to ensure safety and quality.',
     icon: '/images/icons/tireIcon.svg',
-    ctaText: 'Schedule Installation'
+    ctaText: 'Schedule Installation',
+    link: '/bookings'
   }, {
     title: 'Professional Tire Repair',
     description: 'At Mobile Tire Pro, we specialize in safe and reliable tire repairs to get you back on the road with peace of mind. We use high quality materials and a precise process to ensure that your tire is repaired to the highest safety standards. Please note that we do not offer roadside assistance; for tire repairs your vehicle must be in a safe location such as a driveway, garage, or public parking lot.',
     icon: '/images/icons/tireIcon.svg',
-    ctaText: 'Schedule Repair'
+    ctaText: 'Schedule Repair',
+    link: '/bookings?service=tirerepair'
   },
   {
     title: 'TPMS Sensor Installation and Recalibration',
     description: 'We offer new TPMS sensors (if needed or requested) for every vehicle. TPMS should always be in working order to alert drivers when tire pressures have dropped below manufacture specifications.',
     icon: '/images/icons/sensorIcon.svg',
-    ctaText: ''
+    ctaText: '',
+    link: '/bookings'
   },
   {
     title: 'Seasonal Changeover',
     description: `Whether it's separate tire & wheel assemblies or just tires, we can change them over for you so your vehicle is prepared for the weather ahead.Temperature controlled Storage for your separate tires is included with this service.`,
     icon: '/images/icons/seasonIcon.svg',
-    ctaText: ''
+    ctaText: '',
+    link: '/bookings?service=seasonalchangeover'
   }
 ]
 </script>
@@ -92,7 +96,7 @@ const services: Service[] = [
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <ServiceCard v-for="service in services" :key="service.title" :service="service" ctaLink="/bookings"
+      <ServiceCard v-for="service in services" :key="service.title" :service="service" :ctaLink='service.link'
         ctaText="Check Availability" @cta-click="trackServiceClick(service.title)" />
     </div>
   </div>
