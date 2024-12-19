@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
             from: '', // sender address
             to: "mobiletireprollc@gmail.com", // list of receivers
             subject: "New Appointment", // Subject line
-            text: `Your got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone} \n ${format(appointmentDate, 'PPpp')}`
+            text: `You got a new appointment \n ${service} \n ${address} \n ${car?.year} ${car?.make} ${car?.model} \n ${phone} \n`
             // html: "`<p>Your got a new appointment.</p> <p>${service}</p><p>${address}</p> <p>${car?.year} ${car?.make} ${car?.model}</p>`", // html body
         });
 
