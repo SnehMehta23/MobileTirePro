@@ -1,39 +1,5 @@
 <script setup>
-import TestimonialCard from '~/components/testimonialCard.vue';
-
-// Function to shuffle the array
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-// Define the reviews array in the script setup
-const reviews = [
-  {
-    rating: "5",
-    review: "No need to wait at a stores or drop your car off, they come to your house!!! What a great experience! Brenden was an excellent communicator from start to finish. He worked with us to select the tires we needed for our vehicle. Mobile Tire Pro showed right up to our house, on time, we’re quiet, clean and efficient. The tires are high quality, affordable and the service was awesome! Would highly recommend this company",
-    name: "Jonathan",
-    link: "https://g.co/kgs/PFva4sx", // Optional if you want to link something
-  },
-  {
-    rating: "5",
-    review: "Fast, reliable and mobile tire service. Call Brenden to get your new tires without any hassle installed right in your driveway or garage",
-    name: "Andy",
-    link: "https://g.co/kgs/2qbvzHz",
-  },
-  {
-    rating: "5",
-    review: "This was an excellent service - first time trying something like this and it was a breeze! Would highly recommend this for anyone who doesn’t have the time to go to a mechanic shop or tire shop - he’s very efficient and even gave my tires a nice shine before leaving.",
-    name: "Sneh",
-    link: "https://g.co/kgs/Yn4Fp76",
-  },
-];
-
-// Shuffle the reviews array and select a subset to display
-const shuffledReviews = shuffleArray([...reviews]).slice(0, 3); // Change '3' to the number of reviews you want to display
+import GoogleReviewsWidget from '@/components/googleReviewsWidget.vue'  
 </script>
 
 <script>
@@ -90,12 +56,7 @@ export default {
   </div>
 
   <div class="xl:px-0 px-4 mb-8">
-    <!-- Testimonials Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-vivid-red rounded-lg p-4 max-w-7xl mx-auto">
-      <a v-for="review in shuffledReviews" :key="review.name" :href="review.link" class="block">
-        <TestimonialCard :reviews="review" />
-      </a>
-    </div>
+    <GoogleReviewsWidget />
   </div>
 
   <LeafletComponent />

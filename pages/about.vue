@@ -16,7 +16,7 @@
                 <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-md mb-4 mt-2">
                     At Mobile Tire Pro, our mission is to bring convenience and peace of mind to our customers by
-                    offering professional tire installation services right at their doorstep. We understand the
+                    offering professional sales and tire installation right at their doorstep. We understand the
                     importance of safe and reliable tires, and we strive to make the process as seamless and efficient
                     as possible.
                 </p>

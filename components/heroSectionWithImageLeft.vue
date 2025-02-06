@@ -21,8 +21,8 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: 'Professional Tire Installation',
-    description: 'Backed by 8 years of industry experience and training, we offer a professional tire installation & balancing service to ensure safety and quality.',
+    title: 'Professional Sales & Tire Installation',
+    description: "With 8 years of specialized expertise, we not only sell a comprehensive selection of top-brand tires but also provide expert installation and precision balancing services. From helping you choose the perfect tires for your vehicle to ensuring they're professionally mounted and balanced, we deliver complete tire care with uncompromising attention to safety and quality.",
     icon: '/images/icons/tireIcon.svg',
     ctaText: 'Schedule Installation',
     link: '/bookings'

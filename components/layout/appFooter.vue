@@ -1,42 +1,93 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <footer class="xl:bg-pale-gray bg-vivid-red dark:bg-deep-charcoal py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="border-t border-gray-200">
-        <div class="flex flex-col md:flex-row justify-between items-center md:space-y-0">
-          <div class="flex items-center space-x-4 xl:mt-0 mt-4">
-            <div class="w-6 h-6">
-              <img src="/images/icons/racing.webp" alt="Mobile Tire Pro Small Icon Logo">
-            </div>
-            <p class="xl:text-gray-400 text-white">Convenience meets expertise in tire care</p>
+  <footer class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <!-- Brand Section -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <img src="/images/icons/racing.webp" alt="Mobile Tire Pro Small Icon Logo" class="w-6 h-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Mobile Tire Pro</h3>
           </div>
-          <div class="flex space-x-6 space-y-4 text-sm xl:text-gray-500 text-white">
-            <div>
-              <h4 class="font-semibold mb-2 mt-4">Hours of Operation:</h4>
-              <ul>
-                <li>Weekday appointments: 4pm - 5pm</li>
-                <li>Saturday appointments: 7:00am - 4pm</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2">Contact Us:</h4>
-              <ul class="flex flex-col">
-                <a class="hover:underline cursor-pointer" href="tel:815-355-1437">(815) 355-1437</a>
-                <a href="mailto:mobiletireprollc@gmail.com">mobiletireprollc@gmail.com</a>
-              </ul>
-            </div>
-          </div>
+          <p class="text-gray-600 dark:text-gray-300">
+            Convenience meets expertise in tire care, bringing professional service directly to you.
+          </p>
         </div>
 
-        <div class="text-sm text-gray-500 text-center md:text-left xl:mt-0 mt-4">
-          © 2024 MobileTirePro. All rights reserved.
+        <!-- Hours Section -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Hours</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li class="flex justify-between">
+              <span>Weekdays</span>
+              <span>7:00am - 5:00pm</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Saturday</span>
+              <span>7:00am - 4:00pm</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sunday</span>
+              <span>Closed</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Contact</h3>
+          </div>
+          <ul class="space-y-2">
+            <li>
+              <a href="tel:815-355-1437" class="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                (815) 355-1437
+              </a>
+            </li>
+            <li>
+              <a href="mailto:mobiletireprollc@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                mobiletireprollc@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Areas Section -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Service Areas</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">
+            Proudly serving McHenry County and surrounding areas with mobile tire services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 mt-8 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-center text-gray-500 dark:text-gray-400 text-sm">
+          © {{ new Date().getFullYear() }} MobileTirePro. All rights reserved.
+        </p>
+        <div class="text-sm text-[#1f1f1f] text-center">
+            Built by the
+            <NuxtLink @click="handleNavClick('AgencyClickout', 'TheWebAgencyWebsite')"
+                class="text-[#0d3d4f] underline" to="https://thewebagency.app">
+                TheWebAgency
+            </NuxtLink>
         </div>
       </div>
     </div>
   </footer>
 </template>
-
-<style scoped></style>

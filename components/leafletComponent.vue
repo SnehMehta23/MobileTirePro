@@ -63,25 +63,75 @@ var coverageRadius = 25000; // in meters
 
 <template>
     <div class="max-w-6xl mx-auto p-4 text-dark-charcoal">
-        <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Map Section - Keeping the same -->
             <div class="w-full md:w-2/3">
-                <LMap style="height: 400px" :zoom="10" :center="centralPoint" :use-global-leaflet="false">
+                <LMap style="height: 500px" :zoom="10" :center="centralPoint" :use-global-leaflet="false" class="rounded-xl shadow-lg">
                     <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution="&copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors"
                         layer-type="base" name="OpenStreetMap" />
                     <LCircle :lat-lng="centralPoint" :radius="coverageRadius" :color="'red'" />
                 </LMap>
             </div>
-            <div class="w-full md:w-1/3 dark:text-white dark:bg-gray-900 bg-cool-gray-light p-4 rounded-lg flex flex-col"
-                style="height: 400px;">
-                <h2 class="text-lg font-semibold mb-2">Cities We Service</h2>
-                <div class="flex-grow overflow-auto">
-                    <ul class="columns-2 gap-x-4 list-disc pl-5">
-                        <li class="text-md mb-1 break-inside-avoid" v-for="town in townList" :key="town">{{ town }}</li>
-                    </ul>
+
+            <!-- Redesigned Cities Section -->
+            <div class="w-full md:w-1/3">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 h-[500px] flex flex-col">
+                    <div class="border-b dark:border-gray-700 pb-4 mb-4">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Cities We Service</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                            Serving {{ townList.length }} communities in McHenry County and surrounding areas
+                        </p>
+                    </div>
+                    
+                    <div class="flex-grow overflow-y-auto custom-scrollbar">
+                        <div class="grid grid-cols-1 gap-2">
+                            <div v-for="town in townList" :key="town" 
+                                class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    class="h-4 w-4 text-red-500" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" 
+                                        stroke-linejoin="round" 
+                                        stroke-width="2" 
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" 
+                                        stroke-linejoin="round" 
+                                        stroke-width="2" 
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="text-gray-700 dark:text-gray-300">{{ town }}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-Last edited just now
+
+<style>
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #E5E7EB transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #E5E7EB;
+    border-radius: 3px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+}
+</style>
