@@ -11,7 +11,8 @@
                     Order Your Tires and Schedule Installation
                 </h1>
                 <div class="bg-red-100 text-red-600 px-6 py-2 rounded-md">
-                    Mobile Tire Pro is proud to be an affiliate of Tire Rack!
+                    Mobile Tire Pro offers a wide selection of tires from trusted brands. Order your tires and schedule
+                    installation today!
                 </div>
             </div>
         </div>
@@ -106,10 +107,57 @@
                         </select>
                     </div>
 
+                    <div class="md:col-span-2">
+                        <fieldset>
+                            <legend class="block mb-2 text-sm font-medium text-gray-900">What tires are you looking for?
+                            </legend>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input id="tire-original" name="tirePreference" type="radio"
+                                        value="original-equipment"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                    <label for="tire-original" class="ml-2 text-sm font-medium text-gray-900">
+                                        Original Equipment (Stock)
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="tire-safety" name="tirePreference" type="radio" value="safest-rated"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                    <label for="tire-safety" class="ml-2 text-sm font-medium text-gray-900">
+                                        Safest Rated
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="tire-cost" name="tirePreference" type="radio" value="cost-efficient"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                    <label for="tire-cost" class="ml-2 text-sm font-medium text-gray-900">
+                                        Cost Efficient
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="tire-unsure" name="tirePreference" type="radio" value="not-sure"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                    <label for="tire-unsure" class="ml-2 text-sm font-medium text-gray-900">
+                                        I'm not sure
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="notes" class="block mb-2 text-sm font-medium text-gray-900">
+                            Additional Notes
+                        </label>
+                        <textarea id="notes" name="notes" rows="4"
+                            class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            placeholder="Please enter any additional information, special requests, or questions here..."></textarea>
+                    </div>
+
                     <div class="md:col-span-2 mt-6">
                         <button type="submit"
                             class="w-full bg-vivid-red hover:bg-vivid-red text-white font-medium py-2.5 px-4 rounded-lg transition-colors">
-                            Submit Order
+                            Submit Inquiry
                         </button>
                     </div>
                 </form>

@@ -43,8 +43,6 @@ export default {
   <!-- <HeroSection /> -->
   <HeroSection />
   <div class="flex flex-col items-center justify-center mb-4 2xl:mb-6 text-dark-charcoal">
-    <p class="text-3xl 2xl:text-5xl dark:text-white">How It <span class="text-vivid-red">Works</span></p>
-    <h4 class="text-xl 2xl:text-3xl m-2 2xl:m-3 dark:text-white">Driving Excellence: Our Tire Service Process</h4>
   </div>
   <BentoGrid />
   <div class="flex flex-col items-center justify-center mb-2 text-dark-charcoal">

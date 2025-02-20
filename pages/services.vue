@@ -11,16 +11,12 @@
 <script setup>
 const faqItems = [
     {
-        question: "Do you offer single or 3 tire installations",
-        answer: "At this time we do not offer single tire installations, please call, text, or email if you need 3 tires installed. "
-    },
-    {
         question: "Do I have to pay online?",
         answer: "Payment taken online (preferred) or in person. Cash, venmo, and card payments are also accepted."
     },
     {
         question: "How long will my service take?",
-        answer: "We ask for 2 ½ hours total time. 1 hour time window for us to arrive, and then 1 ½ hours to complete the work. Any vehicle with oversized or ultra high performance tires we ask for 3 hours. Please be understanding that delays happen, we understand the importance of your time."
+        answer: " Depending on the vehicle, installation of 4 tires is typically 1 ½ - 2 ½ hours. Please note that due to our scheduling, we may arrive up to 30 minutes before or after your scheduled appointment time. We appreciate your flexibility as this helps us serve all our customers efficiently."
     },
     {
         question: "Do I need to stay on site while my vehicle is being worked on?",
