@@ -2,7 +2,7 @@
     <div class="flex flex-col md:flex-row gap-6 p-4">
         <!-- Calendar Section -->
         <div class="w-full md:w-2/3 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <div class="mb-6">
+            <div class="mb-6 mt-4">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-semibold dark:text-white">
                         {{ moment(currentMonth).format('MMMM YYYY') }}
@@ -84,6 +84,11 @@
                     <div v-if="props.selectedService.tireCount" class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Tire Count</span>
                         <span class="font-medium dark:text-white">{{ selectedService.tireCount }}</span>
+                    </div>
+
+                    <div v-if="props.selectedService.includeStorage" class="flex justify-between">
+                        <span class="text-gray-600 dark:text-gray-400">Seasonal Storage</span>
+                        <span class="font-medium dark:text-white">+$25</span>
                     </div>
 
                     <div v-if="selectedDate && selectedTime" class="flex justify-between">
@@ -204,8 +209,8 @@ const nextMonth = () => {
 }
 
 const calculateTotal = () => {
-    // Implement your pricing logic here based on selectedService
-    return '150' // Placeholder
+    if (!props.selectedService) return 0
+    return props.selectedService.price || 0
 }
 
 const proceedToBooking = () => {

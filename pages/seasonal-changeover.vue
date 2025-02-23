@@ -185,13 +185,10 @@
                     <!-- Option 1: Wheels/Tire Assemblies -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-8 text-center">
-                            <div
-                                class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-                                Most Popular</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Wheels/Tire Assemblies</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Wheel & Tire Assemblies</h3>
                             <div class="flex justify-center items-baseline my-6">
+                                <span class="text-gray-600 text-lg mr-2">Starting at</span>
                                 <span class="text-5xl font-extrabold text-gray-900">$125</span>
-                                <span class="text-gray-500 ml-2">flat rate</span>
                             </div>
 
                             <ul class="text-left space-y-4 mb-8">
@@ -201,7 +198,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-700">Complete wheel/tire assembly swap</span>
+                                    <span class="text-gray-700">Complete wheel & tire assembly swap</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
@@ -225,11 +222,12 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-700"><strong>Includes off-season storage</strong></span>
+                                    <span class="text-gray-700"><strong>Offsite storage available upon
+                                            request</strong></span>
                                 </li>
                             </ul>
 
-                            <div class="text-sm text-gray-500 mb-8">
+                            <div class="text-sm text-gray-500 mb-11 mt-4">
                                 Perfect for vehicles with separate winter wheel sets
                             </div>
 
@@ -248,8 +246,8 @@
                                 Tires Only</div>
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Tire Swap Service</h3>
                             <div class="flex justify-center items-baseline my-6">
+                                <span class="text-gray-600 text-lg mr-2">Starting at</span>
                                 <span class="text-5xl font-extrabold text-gray-900">$150</span>
-                                <span class="text-gray-500 ml-2">starting at</span>
                             </div>
 
                             <ul class="text-left space-y-4 mb-8">
@@ -275,15 +273,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-700">Mobile service charge included</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span class="text-gray-700"><strong>Includes off-season storage</strong></span>
+                                    <span class="text-gray-700"><strong>Offsite storage available upon
+                                            request</strong></span>
                                 </li>
                             </ul>
 

@@ -179,29 +179,34 @@
                 </div>
             </div>
 
-            <!-- Tire Brand Showcase Section -->
             <div class="mb-16 bg-white rounded-xl shadow-xl p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-10">Premium Tire Brands We Install</h2>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-16">
-                    <div class="w-32 md:w-40 p-4">
+                <h2 class="text-3xl font-bold text-center mb-2">Premium Tire Brands We Install</h2>
+                <p class="text-gray-600 text-center mb-10">Experienced servicing for all major tire manufacturers
+                    including
+                    Michelin, Goodyear, Bridgestone, Pirelli, Yokohama, Continental, and other leading brands</p>
+
+                <!-- Changed to grid with responsive columns -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 place-items-center">
+                    <div class="w-full max-w-32 p-2 md:p-4">
                         <img src="../public/images/Michelin_Corporate_Logo___color.jpg" alt="Michelin"
-                            class="h-16 object-contain mx-auto" />
+                            class="h-12 md:h-16 object-contain mx-auto" />
                     </div>
-                    <div class="w-32 md:w-40 p-4">
+                    <div class="w-full max-w-32 p-2 md:p-4">
                         <img src="../public/images/goodyear-logo-yellow.png" alt="Goodyear"
-                            class="h-12 object-contain mx-auto" />
+                            class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
-                    <div class="w-32 md:w-40 p-4">
+                    <div class="w-full max-w-32 p-2 md:p-4">
                         <img src="../public/images/BridgestoneMark-Black.png" alt="Bridgestone"
-                            class="h-12 object-contain mx-auto" />
+                            class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
-                    <div class="w-32 md:w-40 p-4">
+                    <div class="w-full max-w-32 p-2 md:p-4">
                         <img src="../public/images/logo-pirelli2x.jpg" alt="Pirelli"
-                            class="h-12 object-contain mx-auto" />
+                            class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
-                    <div class="w-32 md:w-40 p-4 flex justify-start md:justify-center">
+                    <!-- SVG container with same sizing as other logos -->
+                    <div class="w-full max-w-32 p-2 md:p-4 flex justify-center">
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 73.04"
-                            class="w-auto h-full" width="128" height="64">
+                            class="h-10 md:h-12 w-auto">
                             <polygon fill="#e31f26"
                                 points="7.05 0.01 0.98 0 35.55 34.58 35.69 34.7 35.55 34.85 1.23 69.17 7.31 69.17 41.76 34.7 7.05 0.01">
                             </polygon>
@@ -249,12 +254,16 @@
                             </path>
                         </svg>
                     </div>
+                    <div class="w-full max-w-32 p-2 md:p-4 md:hidden">
+                        <img src="../public/images/Continental_Logo_137c-TransBG.png" alt="Continental"
+                            class="h-10 md:h-12 object-contain mx-auto" />
+                    </div>
                 </div>
+
                 <div class="text-center mt-8">
                     <p class="text-gray-600 max-w-3xl mx-auto underline">
                         We source and install tires from all major manufacturers, ensuring you get the perfect match for
-                        your
-                        vehicle, driving needs, and budget.
+                        your vehicle, driving needs, and budget.
                     </p>
                 </div>
             </div>
@@ -262,7 +271,7 @@
             <section class="bg-gray-50 py-16">
                 <div class="max-w-4xl mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Tire Installation</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Mobile Tire Installation</h2>
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Expert tire mounting and balancing service
                             for a smooth, safe ride.</p>
                     </div>
@@ -274,8 +283,9 @@
                                 Your Offer!</div>
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Complete Tire Installation</h3>
                             <div class="flex justify-center items-baseline my-6">
-                                <span class="text-5xl font-extrabold text-gray-900">$150</span>
-                                <span class="text-gray-500 ml-2">per set of 4</span>
+                                <span class="text-gray-600 text-lg mr-1">Starting at</span>
+                                <span class="text-5xl font-extrabold text-gray-900 mx-2">$150</span>
+                                <span class="text-gray-500">per set of 4</span>
                             </div>
 
                             <ul class="text-left space-y-4 mb-8">
