@@ -6,9 +6,9 @@
                 props.selectedService === 'installation' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
                 'dark:bg-gray-800'
             ]">
-            <div class="flex justify-between items-start mb-3">
+            <div class="flex-col items-start mb-3">
                 <h3 class="text-lg font-semibold dark:text-white">Schedule Installation</h3>
-                <span class="text-vivid-red font-bold">Starting at $150</span>
+                <span class="text-vivid-red font-bold my-2">Starting at $150</span>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Professional tire installation service at your location
             </p>
@@ -21,9 +21,9 @@
                 props.selectedService === 'repair' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
                 'dark:bg-gray-800'
             ]">
-            <div class="flex justify-between items-start mb-3">
+            <div class="flex-col items-start mb-3">
                 <h3 class="text-lg font-semibold dark:text-white">Tire Repair</h3>
-                <span class="text-vivid-red font-bold">$80</span>
+                <span class="text-vivid-red font-bold my-2">$80</span>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">$15 repair + $65 mobile service charge</p>
             <div class="mt-3 text-sm text-gray-500">Professional on-site repair service</div>
@@ -35,9 +35,9 @@
                 props.selectedService === 'rotation' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
                 'dark:bg-gray-800'
             ]">
-            <div class="flex justify-between items-start mb-3">
+            <div class="flex-col items-start mb-3">
                 <h3 class="text-lg font-semibold dark:text-white">Rotation & Balance</h3>
-                <span class="text-vivid-red font-bold">$75</span>
+                <span class="text-vivid-red font-bold my-2">$75</span>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Complete service including mobile fee</p>
             <div class="mt-3 text-sm text-gray-500">Extends tire life and improves handling</div>
@@ -49,7 +49,7 @@
                 props.selectedService === 'changeover' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
                 'dark:bg-gray-800'
             ]">
-            <div class="flex justify-between items-start mb-3">
+            <div class="flex-col items-start mb-3">
                 <h3 class="text-lg font-semibold dark:text-white">Seasonal Changeover</h3>
                 <span class="text-vivid-red font-bold">From $125</span>
             </div>
@@ -66,9 +66,9 @@
                 props.selectedService === 'tpms' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
                 'dark:bg-gray-800'
             ]">
-            <div class="flex justify-between items-start mb-3">
+            <div class="flex-col items-start mb-3">
                 <h3 class="text-lg font-semibold dark:text-white">TPMS Service</h3>
-                <span class="text-vivid-red font-bold">Contact Us</span>
+                <span class="text-vivid-red font-bold my-2">Contact Us</span>
             </div>
             <p class="text-sm text-gray-600 dark:text-gray-300">Tire Pressure Monitoring System service</p>
             <div class="mt-3 text-sm text-gray-500">Please contact us for specific pricing</div>

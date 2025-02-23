@@ -122,7 +122,7 @@ onMounted(() => {
 <template>
   <div class="max-w-7xl mx-auto px-4 py-8">
     <!-- Header -->
-    <div class="mb-8">
+    <div class="mb-8 ml-8">
       <h1 class="text-2xl font-bold dark:text-white">Schedule Your Service</h1>
       <p class="text-gray-600 dark:text-gray-400 mt-2">Select a service to get started</p>
     </div>
