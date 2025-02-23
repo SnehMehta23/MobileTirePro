@@ -35,7 +35,7 @@
             </div>
 
             <!-- Tire Count Selection (for Installation) -->
-            <div v-if="props.selectedService === 'installation'" class="space-y-2">
+            <div v-if="props.selectedService === 'installation' || 'repair'" class="space-y-2">
                 <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold">
                     Number of Tires
                 </label>
