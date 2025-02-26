@@ -27,6 +27,9 @@
               <NuxtLink to="/tire-installation" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Tire Installaton</NuxtLink>
             </li>
             <li>
+              <NuxtLink to="/electric-vehicle-services" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">EV Servicing</NuxtLink>
+            </li>
+            <li>
               <NuxtLink to="/seasonal-changeover" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Seasonal Changeover</NuxtLink>
             </li>
             <li>
