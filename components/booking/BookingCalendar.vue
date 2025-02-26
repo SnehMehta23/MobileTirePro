@@ -66,14 +66,14 @@
         </div>
 
         <!-- Summary Section -->
-        <div v-if="props.selectedService" class="w-full md:w-1/3 space-y-4">
+        <div v-if="props.selectedService" class="w-full md:w-2/3 space-y-4">
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <h3 class="text-lg font-semibold mb-4 dark:text-white">Booking Summary</h3>
 
                 <div class="space-y-3">
                     <div class="flex justify-between">
                         <span class="text-gray-600 dark:text-gray-400">Service</span>
-                        <span class="font-medium dark:text-white">{{ props.selectedService.service }}</span>
+                        <span class="font-medium dark:text-white">{{ props.selectedService.service.name }}</span>
                     </div>
 
                     <div v-if="props.selectedService.rimSize" class="flex justify-between">

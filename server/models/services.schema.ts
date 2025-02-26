@@ -5,22 +5,26 @@ export const servicesSchema = defineMongooseModel({
     name: 'Service',
     schema: {
         name: {
-            type: 'String',
+            type: String,
             required: true
         },
-        rims: {
-            min: {type: 'number'},
-            max: {type: 'number'},
-        },
         price: {
-            type: 'number',
+            type: Number,
             required: true,
         },
-        tireCount: {
-            type: 'number'
+        maxTireCount: {
+            type: Number,
+            required: true,
         },
-        time: {
-            type: 'string'
+        description: {
+            type: String,
+            required: true,
+        },
+        //@ts-ignore
+        isActive: {
+            type: Boolean,
+            default: true,
+            index: true, // Useful if you often query by this field
         },
         discounts: [{
             type: 'ObjectId',

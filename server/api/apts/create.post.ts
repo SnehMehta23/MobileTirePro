@@ -17,11 +17,22 @@ export default defineEventHandler(async (event) => {
                 pass: config.pass,
             },
         });
-        const {carId, service, appointmentDate, address, phone} = await readBody(event);
+        const {carId, service, appointmentDate, address, phone, tireCount, rimSize} = await readBody(event);
         const email = await getAuth(event)
         const user = await userSchema.findOne({email}).select('-password')
         const car = await carSchema.findById(carId)
-        const apt = new aptsSchema({carId, service, appointmentDate, address, phone, userId: user?._id})
+        const apt = new aptsSchema({
+            carId,
+            service,
+            appointmentDate,
+            address,
+            phone,
+            userId: user?._id,
+            tireCount,
+            rimSize
+        });
+        console.log(apt)
+        console.log(user)
         await apt.save()
         await userSchema.findByIdAndUpdate(user?._id, {$push: {apts: apt._id}})
 

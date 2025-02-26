@@ -20,15 +20,17 @@ export const aptsSchema = defineMongooseModel({
         service: {
             type: 'string',
         },
-        //@ts-ignore
-        tpm: {
-            type: 'number',
-            default: 0
+        rimSize: {
+            type: 'string',
         },
+        tireCount: {
+            type: 'number',
+        },
+        //@ts-ignore
         address: {
             type: 'string'
         },
-        phone:{
+        phone: {
             type: 'string'
         },
         //@ts-ignore
