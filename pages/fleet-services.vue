@@ -233,3 +233,19 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Fleet Tire Services | Priority Mobile Tire Service for Businesses',
+  meta: [
+    { 
+      name: 'description', 
+      content: 'Specialized fleet tire services for businesses with priority scheduling, discounted rates, and simplified billing. Mobile service comes to your location to minimize vehicle downtime.'
+    },
+    { name: 'keywords', content: 'fleet tire services, business tire service, commercial tire maintenance, mobile fleet service' },
+    { property: 'og:title', content: 'Fleet Tire Services | Priority Mobile Tire Service for Businesses' },
+    { property: 'og:description', content: 'Keep your business moving with our specialized fleet tire services. Priority scheduling, competitive pricing, and fast turnaround times.' },
+    { property: 'og:type', content: 'website' }
+  ]
+})
+</script>

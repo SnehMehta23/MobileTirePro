@@ -191,32 +191,48 @@ const HANDLE_SERVICE_FEE = () => {
 
   <div class="max-w-7xl mx-auto px-4 py-8">
     <!-- Header -->
-    <div class="mb-8 ml-8">
+    <div class="mb-8 ml-0 md:ml-8">
       <h1 class="text-2xl font-bold dark:text-white">Schedule Your Service</h1>
       <p class="text-gray-600 dark:text-gray-400 mt-2">Select a service to get started</p>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-8">
-      <div v-if="!SERVICE_FEE" class="rounded-lg border w-1/3 p-2 flex flex-col space-y-2">
-        <div class="text-xl font-bold dark:text-white">
-          Please select the Zip Code where you would like to be serviced.
-        </div>
-        <div class="flex flex-col space-y-1">
-          <label class="text-sm text-gray-600 dark:text-gray-300">Zip code: </label>
-          <input class="px-2 bg-transparent border rounded-lg dark:text-white" :class="[
-                ZIP_CODE_SELECTION_ERROR ? 'border-vivid-red outline-none' : 'border-gray-200'
-            ]" v-model="SELECTED_ZIP_CODE" type="text" placeholder="e.g 60102">
-        </div>
-        <div>
-          <span v-if="ZIP_CODE_SELECTION_ERROR" class="text-vivid-red italic"> Sorry, we don't provide services in your service area.</span>
-        </div>
-        <div class="text-right">
-          <button @click="HANDLE_SERVICE_FEE"
-                  :class="[ZIP_CODE_SELECTION_ERROR ? 'cursor-not-allowed  bg-vivid-red/40 text-gray-600/40 dark:text-gray-800' : 'text-white']"
-                  :disabled="ZIP_CODE_SELECTION_ERROR" class="bg-vivid-red px-1 py-2 rounded-lg">Continue
-          </button>
-        </div>
-      </div>
+      <div v-if="!SERVICE_FEE" class="rounded-lg border w-full md:w-2/3 lg:w-1/3 p-4 flex flex-col space-y-3 ml-0 md:ml-8">
+  <div class="text-xl font-bold dark:text-white">
+    Please select the Zip Code where you would like to be serviced.
+  </div>
+  <div class="flex flex-col space-y-2">
+    <label class="text-sm text-gray-600 dark:text-gray-300">Zip code:</label>
+    <input 
+      class="px-3 py-2 bg-transparent border rounded-lg dark:text-white focus:outline-none" 
+      :class="[
+        ZIP_CODE_SELECTION_ERROR ? 'border-vivid-red' : 'border-gray-300'
+      ]" 
+      v-model="SELECTED_ZIP_CODE" 
+      type="text" 
+      placeholder="e.g 60102"
+    >
+  </div>
+  <div class="min-h-6">
+    <span v-if="ZIP_CODE_SELECTION_ERROR" class="text-vivid-red text-sm italic">
+      Sorry, we don't provide services in your area.
+    </span>
+  </div>
+  <div class="text-right mt-2">
+    <button 
+      @click="HANDLE_SERVICE_FEE"
+      class="bg-vivid-red px-4 py-2 rounded-lg font-medium"
+      :class="[
+        ZIP_CODE_SELECTION_ERROR 
+          ? 'cursor-not-allowed opacity-50 text-white/80' 
+          : 'text-white hover:bg-vivid-red/90 transition-colors'
+      ]"
+      :disabled="ZIP_CODE_SELECTION_ERROR"
+    >
+      Continue
+    </button>
+  </div>
+</div>
       <!-- Left Column - Dynamic Content -->
       <div v-if="SERVICE_FEE && !showContactForm" class="lg:w-1/2 relative">
         <!-- Back button when showing details -->
