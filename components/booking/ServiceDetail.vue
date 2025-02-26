@@ -190,7 +190,7 @@ console.log(SERVICE_FEE)
 const calculatedPrice = computed<number>(() => {
   // If neither rimSize nor tireCount has been selected, return the default price
   if (!rimSize.value && !tireCount.value) {
-    return selectedService.Price;
+    return selectedService.Price + SERVICE_FEE ;
   }
 
   // For services that are not "tires" changeover, calculate price based on tire count and rim size
@@ -203,6 +203,8 @@ const calculatedPrice = computed<number>(() => {
   if (rimSize.value && tireCount.value && changeoverType.value === 'tires') {
     return 150 + ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + (includeStorage.value ? 25 : 0) + SERVICE_FEE;
   }
+
+
 
   // Fallback: return the default service price if none of the above conditions match
   return selectedService.Price;
