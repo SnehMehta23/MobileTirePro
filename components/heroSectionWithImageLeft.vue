@@ -17,6 +17,8 @@ interface Service {
   description: string;
   icon: string;
   ctaText?: string;  // Optional CTA text per service
+  link?: string;
+  comingSoon?: boolean;
 }
 
 const services: Service[] = [
@@ -42,10 +44,18 @@ const services: Service[] = [
   },
   {
     title: 'Seasonal Changeover',
-    description: `Whether it's separate tire & wheel assemblies or just tires, we can change them over for you so your vehicle is prepared for the weather ahead.Temperature controlled Storage for your separate tires is included with this service.`,
+    description: `Whether it's separate tire & wheel assemblies or just tires, we can change them over for you so your vehicle is prepared for the weather ahead. Temperature controlled Storage for your separate tires is included with this service.`,
     icon: '/images/icons/seasonIcon.svg',
     ctaText: '',
     link: '/bookings?service=seasonalchangeover'
+  },
+  {
+    title: 'Oil Changes Coming Soon!',
+    description: `Our mobile oil change service will provide convenient, professional oil changes at your location. Using premium quality oils and filters, we'll help maintain your engine's performance and longevity without you having to visit a shop. Stay tuned for this upcoming service!`,
+    icon: '/images/icons/oil-can.svg',
+    ctaText: '',
+    link: '',
+    comingSoon: true
   }
 ]
 </script>

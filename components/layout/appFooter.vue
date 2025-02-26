@@ -14,6 +14,33 @@
           </p>
         </div>
 
+        <!-- Services Section -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Services</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li>
+              <NuxtLink to="/tire-installation" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Tire Installaton</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/electric-vehicle-services" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">EV Servicing</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/seasonal-changeover" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Seasonal Changeover</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/services" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Tire Repair</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/services" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">TPMS Recalibration</NuxtLink>
+            </li>
+          </ul>
+        </div>
+
         <!-- Hours Section -->
         <div class="space-y-4">
           <div class="flex items-center space-x-2">
@@ -43,7 +70,7 @@
           <div class="flex items-center space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
+            </svg>  
             <h3 class="font-semibold text-gray-900 dark:text-white">Contact</h3>
           </div>
           <ul class="space-y-2">
@@ -59,20 +86,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Service Areas Section -->
-        <div class="space-y-4">
-          <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <h3 class="font-semibold text-gray-900 dark:text-white">Service Areas</h3>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300">
-            Proudly serving McHenry County and surrounding areas with mobile tire services.
-          </p>
-        </div>
       </div>
 
       <!-- Bottom Bar -->
@@ -82,8 +95,7 @@
         </p>
         <div class="text-sm text-[#1f1f1f] text-center">
             Built by the
-            <NuxtLink @click="handleNavClick('AgencyClickout', 'TheWebAgencyWebsite')"
-                class="text-[#0d3d4f] underline" to="https://thewebagency.app">
+            <NuxtLink class="text-[#0d3d4f] underline" to="https://thewebagency.app">
                 TheWebAgency
             </NuxtLink>
         </div>

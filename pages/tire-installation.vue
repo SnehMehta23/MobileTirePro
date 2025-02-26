@@ -344,7 +344,7 @@
                     </div>
 
                     <div class="mt-10 text-center">
-                        <p class="text-gray-600">Questions? Call us at <span class="font-medium">(555) 123-4567</span>
+                        <p class="text-gray-600">Questions? Call us at <span class="font-medium">(815) 355-1437</span>
                         </p>
                         <p class="text-gray-500 text-sm mt-2">All installations backed by our satisfaction guarantee</p>
                     </div>
@@ -421,3 +421,19 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Mobile Tire Installation Service | Professional Tire Mounting',
+  meta: [
+    { 
+      name: 'description', 
+      content: 'Expert mobile tire installation service that comes to your location. Professional mounting, computerized balancing, and proper torquing with 8 years of specialized experience.'
+    },
+    { name: 'keywords', content: 'mobile tire installation, tire mounting service, professional tire balancing, at-home tire service' },
+    { property: 'og:title', content: 'Mobile Tire Installation Service | Professional Tire Mounting' },
+    { property: 'og:description', content: 'Expert mobile tire installation that comes to you. Save up to 2 hours with our convenient service.' },
+    { property: 'og:type', content: 'website' }
+  ]
+})
+</script>

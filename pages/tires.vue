@@ -255,3 +255,19 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Order Tires Online | Mobile Installation Service',
+  meta: [
+    { 
+      name: 'description', 
+      content: 'Order premium tires from trusted brands like Michelin, Goodyear, and Bridgestone. Schedule convenient mobile installation service that comes to your location.'
+    },
+    { name: 'keywords', content: 'order tires online, mobile tire installation, tire brands, tire replacement service' },
+    { property: 'og:title', content: 'Order Tires Online | Mobile Installation Service' },
+    { property: 'og:description', content: 'Mobile Tire Pro offers a wide selection of tires from trusted brands. Order your tires and schedule installation today!' },
+    { property: 'og:type', content: 'website' }
+  ]
+})
+</script>

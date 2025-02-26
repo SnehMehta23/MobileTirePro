@@ -291,7 +291,7 @@
                 </div>
 
                 <div class="mt-10 text-center">
-                    <p class="text-gray-600">Questions? Call us at <span class="font-medium">(555) 123-4567</span></p>
+                    <p class="text-gray-600">Questions? Call us at <span class="font-medium">(815) 355-1437</span></p>
                     <p class="text-gray-500 text-sm mt-2">Professional mobile service at your home or office</p>
                 </div>
             </div>
@@ -313,3 +313,19 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Professional Seasonal Tire Changeover Service | Mobile Service',
+  meta: [
+    { 
+      name: 'description', 
+      content: 'Expert mobile tire changeover service that comes to your location. Professional winter to summer tire swaps with pressure optimization and seasonal inspection included.'
+    },
+    { name: 'keywords', content: 'seasonal tire changeover, mobile tire service, winter tire swap, summer tire installation' },
+    { property: 'og:title', content: 'Professional Seasonal Tire Changeover Service | Mobile Service' },
+    { property: 'og:description', content: 'Expert mobile tire changeover service that comes to your location.' },
+    { property: 'og:type', content: 'website' }
+  ]
+})
+</script>
