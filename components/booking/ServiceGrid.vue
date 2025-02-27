@@ -9,7 +9,9 @@
       <div class="flex-col items-start mb-3">
         <h3 class="text-lg font-semibold dark:text-white">{{ service.name }}</h3>
         <span
-            class="text-vivid-red font-bold my-2">{{ (service.name.includes('Tire Installation') ? 'Starting at $' + service.Price : '$' + service.Price) }}</span>
+            class="text-vivid-red font-bold my-2">{{
+            (service.name.includes('Tire Installation') ? 'Starting at $' + service.Price : '$' + service.Price)
+          }}</span>
       </div>
       <p class="text-sm text-gray-600 dark:text-gray-300">{{
           service.description
@@ -105,19 +107,24 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import type {Service} from "~/types";
+
 
 const {data: FETCHED_SERVICES} = await useFetch('/api/services/list', {
   method: 'GET',
   key: 'services',
 })
 
+const route = useRoute();
+
 console.log(FETCHED_SERVICES.value)
 
 const SEASONAL_CHANGEOVER: Service = {
   name: 'Seasonal Changeover',
   description: 'Two options available:',
-  Price: 125,
+  price: 125,
   tireCount: 4,
+  isActive: true
 }
 
 
@@ -134,10 +141,26 @@ const props = defineProps({
   }
 })
 
+onMounted(() => {
+  if (route.query?.service?.includes('seasonalchangeover')) {
+    selectService(SEASONAL_CHANGEOVER)
+  }
+  if (route.query?.service?.includes('tirerepair')) {
+    const TARGET = FETCHED_SERVICES?.value?.find((SERVICE: Service) => SERVICE.name.includes('Tire Repair'))
+    selectService(TARGET)
+  }
+  if (route.query?.service?.includes('installation')) {
+    const TARGET = FETCHED_SERVICES?.value?.find((SERVICE: Service) => SERVICE.name.includes('Tire Installation'))
+
+    selectService(TARGET)
+  }
+})
+
 const showTPMSModal = ref(false)
 const emit = defineEmits(['service-selected'])
 
 const selectService = (service: Service) => {
+  console.log(service)
   emit('service-selected', service)
 }
 

@@ -27,7 +27,7 @@ const services: Service[] = [
     description: "With 8 years of specialized expertise, we not only sell a comprehensive selection of top-brand tires but also provide expert installation and precision balancing services. From helping you choose the perfect tires for your vehicle to ensuring they're professionally mounted and balanced, we deliver complete tire care with uncompromising attention to safety and quality.",
     icon: '/images/icons/tireIcon.svg',
     ctaText: 'Schedule Installation',
-    link: '/bookings'
+    link: '/bookings?service=installation'
   }, {
     title: 'Professional Tire Repair',
     description: 'At Mobile Tire Pro, we specialize in safe and reliable tire repairs to get you back on the road with peace of mind. We use high quality materials and a precise process to ensure that your tire is repaired to the highest safety standards. Please note that we do not offer roadside assistance; for tire repairs your vehicle must be in a safe location such as a driveway, garage, or public parking lot.',

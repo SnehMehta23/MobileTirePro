@@ -4,32 +4,133 @@ import {ref, computed} from 'vue'  // Add ref here
 import {useQuoteStore} from '~/stores/store'
 import moment from 'moment-timezone'
 
+
 const ZIP_CODES = [
-  {"name": "Algonquin", "price": 50, "zip": "60102"},
-  {"name": "Antioch", "price": 75, "zip": "60002"},
-  {"name": "Barrington", "price": 75, "zip": "60010"},
-  {"name": "Carpentersville", "price": 75, "zip": "60110"},
-  {"name": "Cary", "price": 50, "zip": "60013"},
-  {"name": "Crystal Lake", "price": 50, "zip": "60012"},
-  {"name": "Grayslake", "price": 50, "zip": "60030"},
-  {"name": "Gurnee", "price": 75, "zip": "60031"},
-  {"name": "Huntley", "price": 50, "zip": "60142"},
-  {"name": "Hawthorne Woods", "price": 75, "zip": "60060"},
-  {"name": "Island Lake", "price": 50, "zip": "60041"},
-  {"name": "Johnsburg", "price": 50, "zip": "60051"},
-  {"name": "Lake in the Hills", "price": 50, "zip": "60043"},
-  {"name": "Lake Villa", "price": 75, "zip": "60046"},
-  {"name": "Lake Zurich", "price": 75, "zip": "60060"},
-  {"name": "Lakemoor", "price": 50, "zip": "60047"},
-  {"name": "McHenry", "price": 50, "zip": "60050"},
-  {"name": "Richmond", "price": 50, "zip": "60071"},
-  {"name": "Ringwood", "price": 50, "zip": "60068"},
-  {"name": "Round Lake", "price": 50, "zip": "60073"},
-  {"name": "Spring grove", "price": 50, "zip": "60081"},
-  {"name": "Volo", "price": 50, "zip": "60073"},
-  {"name": "Wauconda", "price": 50, "zip": "60087"},
-  {"name": "Wonder Lake", "price": 50, "zip": "60097"},
-  {"name": "Woodstock", "price": 50, "zip": "60098"}
+  {
+    "name": "Algonquin",
+    "price": 50,
+    "zip": ["60013", "60102", "60118", "60142", "60156"]
+  },
+  {
+    "name": "Antioch",
+    "price": 75,
+    "zip": ["60002"]
+  },
+  {
+    "name": "Barrington",
+    "price": 75,
+    "zip": ["60010", "60011"]
+  },
+  {
+    "name": "Carpentersville",
+    "price": 75,
+    "zip": ["60102", "60110", "60118"]
+  },
+  {
+    "name": "Cary",
+    "price": 50,
+    "zip": ["60013"]
+  },
+  {
+    "name": "Crystal Lake",
+    "price": 50,
+    "zip": ["60012", "60014", "60039"]
+  },
+  {
+    "name": "Grayslake",
+    "price": 50,
+    "zip": ["60030"]
+  },
+  {
+    "name": "Gurnee",
+    "price": 75,
+    "zip": ["60031"]
+  },
+  {
+    "name": "Huntley",
+    "price": 50,
+    "zip": ["60142"]
+  },
+  {
+    "name": "Hawthorne Woods",
+    "price": 75,
+    "zip": ["60047", "60060"]
+  },
+  {
+    "name": "Island Lake",
+    "price": 50,
+    "zip": ["60042", "60051", "60084"]
+  },
+  {
+    "name": "Johnsburg",
+    "price": 50,
+    "zip": ["60050", "60051"]
+  },
+  {
+    "name": "Lake in the Hills",
+    "price": 50,
+    "zip": ["60102", "60156"]
+  },
+  {
+    "name": "Lake Villa",
+    "price": 75,
+    "zip": ["60046"]
+  },
+  {
+    "name": "Lake Zurich",
+    "price": 75,
+    "zip": ["60047", "60049"]
+  },
+  {
+    "name": "Lakemoor",
+    "price": 50,
+    "zip": ["60041", "60050", "60051", "60073"]
+  },
+  {
+    "name": "McHenry",
+    "price": 50,
+    "zip": ["60050", "60051"]
+  },
+  {
+    "name": "Richmond",
+    "price": 50,
+    "zip": ["60071"]
+  },
+  {
+    "name": "Ringwood",
+    "price": 50,
+    "zip": ["60072"]
+  },
+  {
+    "name": "Round Lake",
+    "price": 50,
+    "zip": ["60073"]
+  },
+  {
+    "name": "Spring grove",
+    "price": 50,
+    "zip": ["60081"]
+  },
+  {
+    "name": "Volo",
+    "price": 50,
+    "zip": ["60020", "60041", "60051", "60073"]
+  },
+  {
+    "name": "Wauconda",
+    "price": 50,
+    "zip": ["60084"]
+  },
+  {
+    "name": "Wonder Lake",
+    "price": 50,
+    "zip": ["60097"]
+  },
+  {
+    "name": "Woodstock",
+    "price": 50,
+    "zip": ["60098"]
+  }
 ]
 
 // State
@@ -148,40 +249,45 @@ const handleSubmitBooking = async () => {
   }
 }
 
-// Handle direct service selection from URL
-onMounted(() => {
-  const {service} = route.query
-  if (service) {
-    selectedService.value = service
-  }
-})
-//watcher to handle if the zipcode thing shows or not
 
+// Watcher for changes in the selected zip code
 watch(SELECTED_ZIP_CODE, (newValue) => {
-  ZIP_CODE_SELECTION_ERROR.value = false
+  // Reset the error flag on each new input
+  ZIP_CODE_SELECTION_ERROR.value = false;
+
+  // Only validate when we have a full 5-digit zip code
   if (newValue.length === 5) {
-    if (ZIP_CODES.find(zip => zip.zip === newValue)) {
-      IS_ZIP_CODE_VALID.value = true
-
+    // Check if any city in ZIP_CODES has this zip in its array
+    const zipExists = ZIP_CODES.some(city => city.zip.includes(newValue));
+    if (zipExists) {
+      IS_ZIP_CODE_VALID.value = true;
     } else {
-      ZIP_CODE_SELECTION_ERROR.value = true
-
+      ZIP_CODE_SELECTION_ERROR.value = true;
     }
   }
-})
+});
 
-//handle the service fee price
-
+// Function to handle setting the service fee based on the selected zip code
 const HANDLE_SERVICE_FEE = () => {
-  if (!IS_ZIP_CODE_VALID.value) return;
-  const zipCode = ZIP_CODES.find(zip => zip.zip === SELECTED_ZIP_CODE.value);
-  if (zipCode) {
-    SERVICE_FEE.value = zipCode.price;
-    address.value.zipcode = zipCode.zip
+  if (!IS_ZIP_CODE_VALID.value) return;  // Do nothing if zip code is not valid
+
+  // Find the city object whose zip array contains the selected zip code
+  const city = ZIP_CODES.find(city => city.zip.includes(SELECTED_ZIP_CODE.value));
+  if (city) {
+    // Set service fee to the city's price and update the address zipcode
+    SERVICE_FEE.value = city.price;
+    address.value.zipcode = SELECTED_ZIP_CODE.value;
   } else {
+    // Fallback (no city found for this zip)
     SERVICE_FEE.value = 0;
   }
-  console.log(SERVICE_FEE.value)
+  console.log(SERVICE_FEE.value);
+};
+
+const showCalendar = ref<boolean>(false);
+
+const handleNextStep = () => {
+  showCalendar.value = true;
 }
 
 
@@ -197,57 +303,60 @@ const HANDLE_SERVICE_FEE = () => {
     </div>
 
     <div class="flex flex-col lg:flex-row gap-8">
-      <div v-if="!SERVICE_FEE" class="rounded-lg border w-full md:w-2/3 lg:w-1/3 p-4 flex flex-col space-y-3 ml-0 md:ml-8">
-  <div class="text-xl font-bold dark:text-white">
-    Please select the Zip Code where you would like to be serviced.
-  </div>
-  <div class="flex flex-col space-y-2">
-    <label class="text-sm text-gray-600 dark:text-gray-300">Zip code:</label>
-    <input 
-      class="px-3 py-2 bg-transparent border rounded-lg dark:text-white focus:outline-none" 
-      :class="[
+      <div v-if="!SERVICE_FEE"
+           class="rounded-lg border w-full md:w-2/3 lg:w-1/3 p-4 flex flex-col space-y-3 ml-0 md:ml-8">
+        <div class="text-xl font-bold dark:text-white">
+          Please select the Zip Code where you would like to be serviced.
+        </div>
+        <div class="flex flex-col space-y-2">
+          <label class="text-sm text-gray-600 dark:text-gray-300">Zip code:</label>
+          <input
+              class="px-3 py-2 bg-transparent border rounded-lg dark:text-white focus:outline-none"
+              :class="[
         ZIP_CODE_SELECTION_ERROR ? 'border-vivid-red' : 'border-gray-300'
-      ]" 
-      v-model="SELECTED_ZIP_CODE" 
-      type="text" 
-      placeholder="e.g 60102"
-    >
-  </div>
-  <div class="min-h-6">
+      ]"
+              v-model="SELECTED_ZIP_CODE"
+              type="text"
+              placeholder="e.g 60102"
+          >
+        </div>
+        <div class="min-h-6">
     <span v-if="ZIP_CODE_SELECTION_ERROR" class="text-vivid-red text-sm italic">
       Sorry, we don't provide services in your area.
     </span>
-  </div>
-  <div class="text-right mt-2">
-    <button 
-      @click="HANDLE_SERVICE_FEE"
-      class="bg-vivid-red px-4 py-2 rounded-lg font-medium"
-      :class="[
+        </div>
+        <div class="text-right mt-2">
+          <button
+              @click="HANDLE_SERVICE_FEE"
+              class="bg-vivid-red px-4 py-2 rounded-lg font-medium"
+              :class="[
         ZIP_CODE_SELECTION_ERROR 
           ? 'cursor-not-allowed opacity-50 text-white/80' 
           : 'text-white hover:bg-vivid-red/90 transition-colors'
       ]"
-      :disabled="ZIP_CODE_SELECTION_ERROR"
-    >
-      Continue
-    </button>
-  </div>
-</div>
+              :disabled="ZIP_CODE_SELECTION_ERROR"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
       <!-- Left Column - Dynamic Content -->
       <div v-if="SERVICE_FEE && !showContactForm" class="lg:w-1/2 relative">
         <!-- Back button when showing details -->
         <button v-if="selectedService" @click="handleBack"
                 class="mb-4 text-vivid-red hover:text-red-700 flex items-center gap-2">
-          ← Back to services
+          ← Start over
         </button>
 
         <!-- Wrap components in a div inside Transition -->
         <Transition name="fade" mode="out-in">
-          <div>
+          <div :class="[serviceDetails ? 'hidden lg:flex' : 'flex']">
             <BookingServiceGrid v-if="!selectedService" :selected-service="selectedService"
+                                :query="$route.query.service"
                                 @service-selected="(n) => selectedService = n"/>
             <BookingServiceDetail v-else :selected-service="selectedService" :service-fee="SERVICE_FEE"
-                                  @ready-for-scheduling="handleServiceDetails"/>
+                                  @ready-for-scheduling="handleServiceDetails"
+                                  @next="handleNextStep"/>
           </div>
         </Transition>
       </div>
@@ -258,12 +367,17 @@ const HANDLE_SERVICE_FEE = () => {
                          @proceed-to-booking="(n) => handleBookingProceed(n)"/>
       </div>
     </div>
-    <div v-if="showSquareModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <button v-if="showSquareModal && !showConfirmation" @click="() => {showSquareModal = false; showContactForm = true}"
+            class="mb-4 text-vivid-red hover:text-red-700 flex items-start justify-start text-left gap-2">
+      ← Start over
+    </button>
+    <div v-if="showSquareModal && !showConfirmation" class="flex flex-col items-center justify-center z-50">
+
       <SquarePayment :price="serviceDetails.price" @payment="handleSubmitBooking"/>
     </div>
 
     <!-- Contact/Location Form -->
-    <div v-if="showContactForm" class="flex items-center justify-center">
+    <div v-if="showContactForm && !showSquareModal" class="flex items-center justify-center">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-2xl w-full mx-4">
         <h2 class="text-xl font-bold mb-6 dark:text-white">Complete Your Booking</h2>
 
