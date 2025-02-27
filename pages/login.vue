@@ -12,22 +12,35 @@ const authForm = reactive({
   password: ""
 })
 
+const route = useRoute();
+const router = useRouter();
 
 /**
  * Sends a login request to the API server.
  * @returns {Promise} A promise that resolves to the user object upon successful login.
  */
 async function login() {
-  const user = $fetch('/api/auth/login', {
-    method: 'POST',
-    body: {
-      email: authForm.username,
-      password: authForm.password
+  try {
+    const user = await $fetch('/api/auth/login', {
+      method: 'POST',
+      body: {
+        email: authForm.username,
+        password: authForm.password
+      }
+    });
+
+    if (user) {
+      if (route.query.redirect) {
+        // Navigate back to the original page
+        router.push(route.query.redirect.toString());
+      } else {
+        // Fallback to reloading the app (home page)
+        reloadNuxtApp();
+      }
     }
-  })
-  if ((await user)) {
-    // console.log(user)
-    reloadNuxtApp();
+  } catch (error) {
+    console.error('Login error:', error);
+    // Handle login error here
   }
 }
 
@@ -38,21 +51,29 @@ const handleLoginSuccess = async (response: CredentialResponse) => {
 };
 
 const sendCredentialsToBackend = async (credentials: any) => {
-  const user = $fetch('/api/auth/googleAuth', {
-    method: "POST",
-    body: {
-      credentials
+  try {
+    const user = await $fetch('/api/auth/googleAuth', {
+      method: "POST",
+      body: {
+        credentials
+      }
+    });
+
+    if (user) {
+      if (route.query.redirect) {
+        // Navigate back to the original page
+        router.push(route.query.redirect.toString());
+      } else {
+        // Fallback to reloading the app
+        reloadNuxtApp();
+      }
     }
-  })
-  if ((await user)) {
-    // console.log(user)
-    reloadNuxtApp()
+  } catch (error) {
+    console.error('Google auth error:', error);
+    // Handle auth error here
   }
 }
-
-
 </script>
-
 
 <template>
   <div class="flex justify-center items-center p-8 bg-gray-100">

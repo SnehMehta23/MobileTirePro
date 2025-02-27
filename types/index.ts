@@ -1,8 +1,10 @@
 type Service = {
     name: string,
-    price: number,
+    Price: number,
     tireCount?: number
     isActive: boolean
     description: string
     discount?: any
 }
+
+export type { Service };

@@ -76,7 +76,7 @@
               <h4 class="font-semibold dark:text-white">Wheels/Tire Assemblies</h4>
               <p class="text-sm text-gray-600 dark:text-gray-400">Complete wheel and tire sets</p>
             </div>
-            <span class="text-vivid-red font-bold">$125</span>
+            <span class="text-vivid-red font-bold">${{calculatedPrice || '125'}}</span>
           </div>
           <div class="mt-2 text-sm text-gray-500">
             • Complete assembly swap
@@ -139,6 +139,7 @@
               {{ size }} inches
             </option>
           </select>
+
         </div>
 
         <!-- Tire Count Selection -->
@@ -153,6 +154,10 @@
               {{ count }} {{ count === 1 ? 'Tire' : 'Tires' }}
             </option>
           </select>
+          <button @click="proceedToScheduling"
+                  class="w-full bg-vivid-red text-white py-3 rounded-lg hover:bg-red-700 transition-colors">
+            Continue to Scheduling
+          </button>
         </div>
       </div>
     </div>
@@ -175,7 +180,8 @@
 </template>
 
 <script setup lang="ts">
-import {ref, computed, watch} from 'vue' // Added watch import
+import {ref, computed, watch} from 'vue'
+import type {Service} from "~/types"; // Added watch import
 
 const props = defineProps<{
   selectedService: Service
@@ -189,12 +195,17 @@ console.log(SERVICE_FEE)
 
 const calculatedPrice = computed<number>(() => {
   // If neither rimSize nor tireCount has been selected, return the default price
-  if (!rimSize.value && !tireCount.value) {
+  if (!rimSize.value && !tireCount.value && !changeoverType.value) {
     return selectedService.Price + SERVICE_FEE ;
   }
 
+  // For "assembly" changeover, return fixed price plus optional storage
+  if(changeoverType.value === 'assembly'){
+    return 125 + (includeStorage.value ? 25 : 0) + SERVICE_FEE;
+  }
+
   // For services that are not "tires" changeover, calculate price based on tire count and rim size
-  if (tireCount.value && changeoverType.value !== 'tires') {
+  if (changeoverType.value !== 'tires') {
     return selectedService.Price + ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + SERVICE_FEE;
   }
 
@@ -213,13 +224,13 @@ const calculatedPrice = computed<number>(() => {
 
 
 
-const emit = defineEmits(['ready-for-scheduling'])
+const emit = defineEmits(['ready-for-scheduling', 'next'])
 
 // State
 const rimSize = ref<number | null>(null)
 const tireCount = ref<number>(0)
 const showRimTip = ref(false)
-const changeoverType = ref('')
+const changeoverType = ref<'tires' | 'assembly' | ''>('')
 const includeStorage = ref(false)
 
 watch(tireCount, (newTire, oldTire) => {

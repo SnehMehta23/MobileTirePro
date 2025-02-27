@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col md:flex-row gap-6 p-4">
+    <div class="w-full flex flex-col md:flex-row gap-6 p-4">
         <!-- Calendar Section -->
-        <div class="w-full md:w-2/3 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div :class="[selectedDate && selectedTime ? 'hidden lg:flex lg:flex-col' : 'flex flex-col']" class="w-full md:w-2/3 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div class="mb-6 mt-4">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-semibold dark:text-white">
@@ -66,8 +66,8 @@
         </div>
 
         <!-- Summary Section -->
-        <div v-if="props.selectedService" class="w-full md:w-2/3 space-y-4">
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div :class="[selectedDate && selectedTime ? 'flex' : 'hidden lg:flex lg:flex-col']"  class="w-full md:w-2/3 space-y-4">
+            <div v-if="props.selectedService" class="bg-white w-full dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <h3 class="text-lg font-semibold mb-4 dark:text-white">Booking Summary</h3>
 
                 <div class="space-y-3">
