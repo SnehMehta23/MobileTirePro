@@ -1,7 +1,7 @@
 <!-- pages/booking.vue -->
 <script setup lang="ts">
-import {ref, computed} from 'vue'  // Add ref here
-import {useQuoteStore} from '~/stores/store'
+import { ref, computed } from 'vue'  // Add ref here
+import { useQuoteStore } from '~/stores/store'
 import moment from 'moment-timezone'
 
 
@@ -164,18 +164,18 @@ const phone = ref('')
 const isLoggedIn = ref(false)
 
 // First check auth status
-const {data: authData} = await useLazyFetch('/api/auth/test', {
+const { data: authData } = await useLazyFetch('/api/auth/test', {
   server: false,
-  onResponse({response}) {
+  onResponse({ response }) {
     isLoggedIn.value = response._data.token ? true : false
   }
 })
 
 // Then fetch cars only if logged in
-const {data: carData} = await useLazyFetch('/api/car/list', {
+const { data: carData } = await useLazyFetch('/api/car/list', {
   server: false,
   enabled: isLoggedIn.value, // Only fetch if logged in
-  onResponse({response}) {
+  onResponse({ response }) {
     console.log('Car data response:', response._data)
     selectedCar.value = response._data[0]
   }
@@ -184,10 +184,10 @@ const {data: carData} = await useLazyFetch('/api/car/list', {
 // Form Validation
 const isFormValid = computed(() => {
   return selectedCar.value &&
-      address.value.street &&
-      address.value.city &&
-      address.value.zipcode &&
-      phone.value
+    address.value.street &&
+    address.value.city &&
+    address.value.zipcode &&
+    phone.value
 })
 
 // Handlers
@@ -290,6 +290,55 @@ const handleNextStep = () => {
   showCalendar.value = true;
 }
 
+const saveBookingState = () => {
+  const bookingState = {
+    selectedService: selectedService.value,
+    serviceDetails: serviceDetails.value,
+    showContactForm: showContactForm.value,
+    selectedCar: selectedCar.value,
+    address: address.value,
+    phone: phone.value,
+    date: DATE.value,
+    selectedZipCode: SELECTED_ZIP_CODE.value,
+    serviceFee: SERVICE_FEE.value
+  };
+
+  localStorage.setItem('bookingState', JSON.stringify(bookingState));
+};
+
+// Restore booking state after login redirect
+const restoreBookingState = () => {
+  const savedState = localStorage.getItem('bookingState');
+
+  if (savedState) {
+    try {
+      const bookingState = JSON.parse(savedState);
+
+      // Restore state values
+      selectedService.value = bookingState.selectedService;
+      serviceDetails.value = bookingState.serviceDetails;
+      showContactForm.value = bookingState.showContactForm;
+      selectedCar.value = bookingState.selectedCar;
+      address.value = bookingState.address;
+      phone.value = bookingState.phone;
+      DATE.value = bookingState.date;
+      SELECTED_ZIP_CODE.value = bookingState.selectedZipCode;
+      SERVICE_FEE.value = bookingState.serviceFee;
+
+      // Clear stored state after restoration
+      localStorage.removeItem('bookingState');
+    } catch (error) {
+      console.error('Error restoring booking state:', error);
+    }
+  }
+};
+
+// Call this in onMounted hook
+onMounted(() => {
+  restoreBookingState();
+});
+
+
 
 </script>
 
@@ -304,38 +353,27 @@ const handleNextStep = () => {
 
     <div class="flex flex-col lg:flex-row gap-8">
       <div v-if="!SERVICE_FEE"
-           class="rounded-lg border w-full md:w-2/3 lg:w-1/3 p-4 flex flex-col space-y-3 ml-0 md:ml-8">
+        class="rounded-lg border w-full md:w-2/3 lg:w-1/3 p-4 flex flex-col space-y-3 ml-0 md:ml-8">
         <div class="text-xl font-bold dark:text-white">
           Please select the Zip Code where you would like to be serviced.
         </div>
         <div class="flex flex-col space-y-2">
           <label class="text-sm text-gray-600 dark:text-gray-300">Zip code:</label>
-          <input
-              class="px-3 py-2 bg-transparent border rounded-lg dark:text-white focus:outline-none"
-              :class="[
-        ZIP_CODE_SELECTION_ERROR ? 'border-vivid-red' : 'border-gray-300'
-      ]"
-              v-model="SELECTED_ZIP_CODE"
-              type="text"
-              placeholder="e.g 60102"
-          >
+          <input class="px-3 py-2 bg-transparent border rounded-lg dark:text-white focus:outline-none" :class="[
+            ZIP_CODE_SELECTION_ERROR ? 'border-vivid-red' : 'border-gray-300'
+          ]" v-model="SELECTED_ZIP_CODE" type="text" placeholder="e.g 60102">
         </div>
         <div class="min-h-6">
-    <span v-if="ZIP_CODE_SELECTION_ERROR" class="text-vivid-red text-sm italic">
-      Sorry, we don't provide services in your area.
-    </span>
+          <span v-if="ZIP_CODE_SELECTION_ERROR" class="text-vivid-red text-sm italic">
+            Sorry, we don't provide services in your area.
+          </span>
         </div>
         <div class="text-right mt-2">
-          <button
-              @click="HANDLE_SERVICE_FEE"
-              class="bg-vivid-red px-4 py-2 rounded-lg font-medium"
-              :class="[
-        ZIP_CODE_SELECTION_ERROR 
-          ? 'cursor-not-allowed opacity-50 text-white/80' 
-          : 'text-white hover:bg-vivid-red/90 transition-colors'
-      ]"
-              :disabled="ZIP_CODE_SELECTION_ERROR"
-          >
+          <button @click="HANDLE_SERVICE_FEE" class="bg-vivid-red px-4 py-2 rounded-lg font-medium" :class="[
+            ZIP_CODE_SELECTION_ERROR
+              ? 'cursor-not-allowed opacity-50 text-white/80'
+              : 'text-white hover:bg-vivid-red/90 transition-colors'
+          ]" :disabled="ZIP_CODE_SELECTION_ERROR">
             Continue
           </button>
         </div>
@@ -344,7 +382,7 @@ const handleNextStep = () => {
       <div v-if="SERVICE_FEE && !showContactForm" class="lg:w-1/2 relative">
         <!-- Back button when showing details -->
         <button v-if="selectedService" @click="handleBack"
-                class="mb-4 text-vivid-red hover:text-red-700 flex items-center gap-2">
+          class="mb-4 text-vivid-red hover:text-red-700 flex items-center gap-2">
           ← Start over
         </button>
 
@@ -352,11 +390,9 @@ const handleNextStep = () => {
         <Transition name="fade" mode="out-in">
           <div :class="[serviceDetails ? 'hidden lg:flex' : 'flex']">
             <BookingServiceGrid v-if="!selectedService" :selected-service="selectedService"
-                                :query="$route.query.service"
-                                @service-selected="(n) => selectedService = n"/>
+              :query="$route.query.service" @service-selected="(n) => selectedService = n" />
             <BookingServiceDetail v-else :selected-service="selectedService" :service-fee="SERVICE_FEE"
-                                  @ready-for-scheduling="handleServiceDetails"
-                                  @next="handleNextStep"/>
+              @ready-for-scheduling="handleServiceDetails" @next="handleNextStep" />
           </div>
         </Transition>
       </div>
@@ -364,16 +400,17 @@ const handleNextStep = () => {
       <!-- Right Column - Calendar -->
       <div v-if="!showContactForm" class="lg:w-1/2">
         <BookingCalendar v-if="serviceDetails" :selected-service="serviceDetails"
-                         @proceed-to-booking="(n) => handleBookingProceed(n)"/>
+          @proceed-to-booking="(n) => handleBookingProceed(n)" />
       </div>
     </div>
-    <button v-if="showSquareModal && !showConfirmation" @click="() => {showSquareModal = false; showContactForm = true}"
-            class="mb-4 text-vivid-red hover:text-red-700 flex items-start justify-start text-left gap-2">
+    <button v-if="showSquareModal && !showConfirmation"
+      @click="() => { showSquareModal = false; showContactForm = true }"
+      class="mb-4 text-vivid-red hover:text-red-700 flex items-start justify-start text-left gap-2">
       ← Start over
     </button>
     <div v-if="showSquareModal && !showConfirmation" class="flex flex-col items-center justify-center z-50">
 
-      <SquarePayment :price="serviceDetails.price" @payment="handleSubmitBooking"/>
+      <SquarePayment :price="serviceDetails.price" @payment="handleSubmitBooking" />
     </div>
 
     <!-- Contact/Location Form -->
@@ -388,11 +425,12 @@ const handleNextStep = () => {
           </label>
           <div v-if="!isLoggedIn" class="text-gray-600">
             Please
-            <NuxtLink to="/login" class="text-vivid-red hover:underline">login</NuxtLink>
+            <NuxtLink @click="saveBookingState" :to="{ path: '/login', query: { redirect: $route.fullPath } }"
+              class="text-vivid-red hover:underline">login</NuxtLink>
             to select your vehicle
           </div>
           <select v-else v-model="selectedCar"
-                  class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
             <option value="" disabled>Select a Vehicle</option>
             <option v-for="car in carData" :key="car._id" :value="car">
               {{ car.year }} {{ car.make }} {{ car.model }}
@@ -407,21 +445,21 @@ const handleNextStep = () => {
               Street Address
             </label>
             <input v-model="address.street" type="text"
-                   class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           </div>
           <div>
             <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">
               City
             </label>
             <input v-model="address.city" type="text"
-                   class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           </div>
           <div>
             <label class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">
               State
             </label>
             <select v-model="address.State"
-                    class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
               <option>IL</option>
             </select>
           </div>
@@ -430,7 +468,7 @@ const handleNextStep = () => {
               Zip Code
             </label>
             <input v-model="address.zipcode" type="text"
-                   class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           </div>
         </div>
 
@@ -440,7 +478,7 @@ const handleNextStep = () => {
             Contact Phone
           </label>
           <input v-model="phone" type="tel"
-                 class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            class="w-full p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         </div>
 
         <!-- Actions -->
@@ -449,7 +487,7 @@ const handleNextStep = () => {
             Cancel
           </button>
           <button @click="showSquareModal = true" :disabled="!isFormValid"
-                  class="px-4 py-2 bg-vivid-red text-white rounded-lg hover:bg-red-700 disabled:opacity-50">
+            class="px-4 py-2 bg-vivid-red text-white rounded-lg hover:bg-red-700 disabled:opacity-50">
             Confirm Booking
           </button>
         </div>
