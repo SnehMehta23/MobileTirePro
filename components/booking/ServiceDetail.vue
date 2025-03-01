@@ -206,13 +206,13 @@ const calculatedPrice = computed<number>(() => {
 
   // For services that are not "tires" changeover, calculate price based on tire count and rim size
   if (changeoverType.value !== 'tires') {
-    return selectedService.Price + ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + SERVICE_FEE;
+    return ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + SERVICE_FEE;
   }
 
   // For "tires" changeover, add a base price and include the cost per tire,
   // plus an extra storage fee if includeStorage is true.
   if (rimSize.value && tireCount.value && changeoverType.value === 'tires') {
-    return 150 + ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + (includeStorage.value ? 25 : 0) + SERVICE_FEE;
+    return ((rimSize.value <= 18 ? 25 : 30) * tireCount.value) + (includeStorage.value ? 25 : 0) + SERVICE_FEE;
   }
 
 
