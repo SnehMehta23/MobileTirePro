@@ -8,15 +8,16 @@
                 <h2 class="text-2xl font-bold mb-4">About Us</h2>
                 <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-md mb-8 mt-2">
-                    Welcome to Mobile Tire Pro, your trusted mobile tire installation service. With over 8 years of
-                    dedicated experience in the tire industry, we are committed to providing top-notch tire services
+                    Welcome to Mobile Tire Pro, your trusted mobile tire installation service. <b>With over 8 years of
+                        dedicated experience</b> in the tire industry, we are committed to providing top-notch tire
+                    services
                     that prioritize your safety, deliver exceptional quality, and ensure a superior customer experience.
                 </p>
                 <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
                 <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <p class="text-md mb-4 mt-2">
                     At Mobile Tire Pro, our mission is to bring convenience and peace of mind to our customers by
-                    offering professional tire installation services right at their doorstep. We understand the
+                    offering professional sales and tire installation right at their doorstep. We understand the
                     importance of safe and reliable tires, and we strive to make the process as seamless and efficient
                     as possible.
                 </p>
@@ -24,7 +25,8 @@
                 <hr class="w-24 h-1 bg-vivid-red border-0 rounded mt-2" />
                 <div class="flex flex-col gap-2 mt-2">
                     <p class="text-md mt-2">
-                        With 8 years of industry expertise, our team has honed their skills and knowledge to deliver the
+                        <b>With over 8 years of
+                            industry experience</b>, our team has honed their skills and knowledge to deliver the
                         highest standards of service. Our experience has been built on a foundation of:
                     </p>
                     <li class="text-md">

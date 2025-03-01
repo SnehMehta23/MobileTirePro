@@ -17,15 +17,17 @@ interface Service {
   description: string;
   icon: string;
   ctaText?: string;  // Optional CTA text per service
+  link?: string;
+  comingSoon?: boolean;
 }
 
 const services: Service[] = [
   {
-    title: 'Professional Tire Installation',
-    description: 'Backed by 8 years of industry experience and training, we offer a professional tire installation & balancing service to ensure safety and quality.',
+    title: 'Professional Sales & Tire Installation',
+    description: "With 8 years of specialized expertise, we not only sell a comprehensive selection of top-brand tires but also provide expert installation and precision balancing services. From helping you choose the perfect tires for your vehicle to ensuring they're professionally mounted and balanced, we deliver complete tire care with uncompromising attention to safety and quality.",
     icon: '/images/icons/tireIcon.svg',
     ctaText: 'Schedule Installation',
-    link: '/bookings'
+    link: '/bookings?service=installation'
   }, {
     title: 'Professional Tire Repair',
     description: 'At Mobile Tire Pro, we specialize in safe and reliable tire repairs to get you back on the road with peace of mind. We use high quality materials and a precise process to ensure that your tire is repaired to the highest safety standards. Please note that we do not offer roadside assistance; for tire repairs your vehicle must be in a safe location such as a driveway, garage, or public parking lot.',
@@ -42,10 +44,18 @@ const services: Service[] = [
   },
   {
     title: 'Seasonal Changeover',
-    description: `Whether it's separate tire & wheel assemblies or just tires, we can change them over for you so your vehicle is prepared for the weather ahead.Temperature controlled Storage for your separate tires is included with this service.`,
+    description: `Whether it's separate tire & wheel assemblies or just tires, we can change them over for you so your vehicle is prepared for the weather ahead. Temperature controlled Storage for your separate tires is included with this service.`,
     icon: '/images/icons/seasonIcon.svg',
     ctaText: '',
     link: '/bookings?service=seasonalchangeover'
+  },
+  {
+    title: 'Oil Changes Coming Soon!',
+    description: `Our mobile oil change service will provide convenient, professional oil changes at your location. Using premium quality oils and filters, we'll help maintain your engine's performance and longevity without you having to visit a shop. Stay tuned for this upcoming service!`,
+    icon: '/images/icons/oil-can.svg',
+    ctaText: '',
+    link: '',
+    comingSoon: true
   }
 ]
 </script>

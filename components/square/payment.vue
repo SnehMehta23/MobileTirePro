@@ -18,13 +18,15 @@ let card;
 let paymentStatus = ref("");
 let loading = ref(false);
 
+console.log(price)
+
 
 function buildPaymentRequest(payments) {
   return payments.paymentRequest({
     countryCode: 'US',
     currencyCode: 'USD',
     total: {
-      amount: price,
+      amount: price.toString(),
       label: 'Total',
     },
   });
@@ -139,7 +141,7 @@ const handleGooglePaySubmission = async (googlePlay) => {
 
 <template>
   <div>
-    <div class="w-full">
+    <div class="w-full bg-dark-charcoal p-4 rounded-lg">
       <form class="space-y-2.5" @submit.prevent="handlePaymentMethodSubmission">
         <div v-if="loading">Loading...</div>
         <div id="card-container"/>
@@ -148,6 +150,9 @@ const handleGooglePaySubmission = async (googlePlay) => {
       </form>
       <div v-if="paymentStatus" id="payment-status-container">
         {{ paymentStatus }}
+      </div>
+      <div class="w-full text-white italic text-center mt-2">
+        Payments protected by Square
       </div>
     </div>
   </div>

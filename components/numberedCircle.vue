@@ -1,16 +1,11 @@
 <template>
-    <div class="w-8 h-8 rounded-full border border-vivid-red bg-red-300 dark:bg-vivid-red flex items-center justify-center">
-        <span class="text-pale-gray font-bold text-lg">{{ number }}</span>
+    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/50">
+        <span class="text-red-600 dark:text-red-200 font-semibold">{{ number }}</span>
     </div>
 </template>
 
-<script>
-export default {
-    props: {
-        number: {
-            type: Number,
-            required: true
-        }
-    }
-}
+<script setup lang="ts">
+defineProps<{
+    number: number
+}>();
 </script>
