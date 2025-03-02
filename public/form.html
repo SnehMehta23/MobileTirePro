@@ -1,8 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<form name="test" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="fullName" />
-    <input type="text" name="email" />
-    <textarea name="message"></textarea>
+<form name="fleet-services" method="POST" netlify netlify-honeypot="bot-field">
+    <!-- Hidden input required by Netlify -->
+    <input type="hidden" name="form-name" value="fleet-services" />
+    <!-- Honeypot field to reduce spam -->
+    <div hidden>
+        <input name="bot-field" />
+    </div>
+
+    <!-- Input fields -->
+    <input type="text" name="businessName" placeholder="Business Name" required />
+    <input type="text" name="associateName" placeholder="Associate Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <textarea name="notes" placeholder="Additional Information"></textarea>
+
+    <button type="submit">Submit</button>
 </form>
-</html>
