@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <form name="fleet-services" method="POST" netlify netlify-honeypot="bot-field"
+                <form name="fleet-services" method="POST" netlify
                     class="max-w-4xl mx-auto">
                     <input type="hidden" name="form-name" value="fleet-services" />
 
