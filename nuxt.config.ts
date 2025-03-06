@@ -32,6 +32,15 @@ export default defineNuxtConfig({
             locationId: ''
         }
     },
+    routeRules: {
+        // Static routes (including the form page)
+        '/tires': { static: true },
+        '/fleet-services': { static: true },
+        // Server routes
+        '/api/**': { ssr: true },
+        // Default
+        '/**': { ssr: true }
+    },
     tailwindcss: {
         configPath: '~/tailwind.config.js',
         exposeConfig: true,
