@@ -34,8 +34,8 @@ export default defineNuxtConfig({
     },
     routeRules: {
         // Static routes (including the form page)
-        '/tires': { static: true },
-        '/fleet-services': { static: true },
+            '/tires': { ssr: false },
+        '/fleet-services': { prerender: true },
         // Server routes
         '/api/**': { ssr: true },
         // Default
