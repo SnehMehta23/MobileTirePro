@@ -19,33 +19,33 @@
       </p>
       <!--            <div class="mt-3 text-sm text-gray-500">Includes mounting and balancing</div>-->
     </div>
-    <!--        &lt;!&ndash; Tire Repair &ndash;&gt;-->
-    <!--        <div @click="selectService('repair')"-->
-    <!--            class="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer relative" :class="[-->
-    <!--                props.selectedService === 'repair' ? 'border-vivid-red shadow-lg' : 'border-gray-200',-->
-    <!--                'dark:bg-gray-800'-->
-    <!--            ]">-->
-    <!--            <div class="flex-col items-start mb-3">-->
-    <!--                <h3 class="text-lg font-semibold dark:text-white">Tire Repair</h3>-->
-    <!--                <span class="text-vivid-red font-bold my-2">$80</span>-->
-    <!--            </div>-->
-    <!--            <p class="text-sm text-gray-600 dark:text-gray-300">$15 repair + $65 mobile service charge</p>-->
-    <!--            <div class="mt-3 text-sm text-gray-500">Professional on-site repair service</div>-->
-    <!--        </div>-->
+            <!-- Tire Repair -->
+            <div @click="selectService('repair')"
+                class="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer relative" :class="[
+                    props.selectedService === 'repair' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
+                    'dark:bg-gray-800'
+                ]">
+                <div class="flex-col items-start mb-3">
+                    <h3 class="text-lg font-semibold dark:text-white">Tire Repair</h3>
+                    <span class="text-vivid-red font-bold my-2">$80</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300">$15 repair + $65 mobile service charge</p>
+                <div class="mt-3 text-sm text-gray-500">Professional on-site repair service</div>
+            </div>
 
-    <!--        &lt;!&ndash; Rotation & Balance &ndash;&gt;-->
-    <!--        <div @click="selectService('rotation')"-->
-    <!--            class="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer" :class="[-->
-    <!--                props.selectedService === 'rotation' ? 'border-vivid-red shadow-lg' : 'border-gray-200',-->
-    <!--                'dark:bg-gray-800'-->
-    <!--            ]">-->
-    <!--            <div class="flex-col items-start mb-3">-->
-    <!--                <h3 class="text-lg font-semibold dark:text-white">Rotation & Balance</h3>-->
-    <!--                <span class="text-vivid-red font-bold my-2">$75</span>-->
-    <!--            </div>-->
-    <!--            <p class="text-sm text-gray-600 dark:text-gray-300">Complete service including mobile fee</p>-->
-    <!--            <div class="mt-3 text-sm text-gray-500">Extends tire life and improves handling</div>-->
-    <!--        </div>-->
+            <!-- Rotation & Balance -->
+            <div @click="selectService('rotation')"
+                class="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer" :class="[
+                    props.selectedService === 'rotation' ? 'border-vivid-red shadow-lg' : 'border-gray-200',
+                    'dark:bg-gray-800'
+                ]">
+                <div class="flex-col items-start mb-3">
+                    <h3 class="text-lg font-semibold dark:text-white">Rotation & Balance</h3>
+                    <span class="text-vivid-red font-bold my-2">$75</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Complete service including mobile fee</p>
+                <div class="mt-3 text-sm text-gray-500">Extends tire life and improves handling</div>
+            </div>
 
 
     <!-- Seasonal Changeover -->
