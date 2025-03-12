@@ -2,7 +2,7 @@
     <div class="min-h-screen bg-gray-50">
         <!-- Hero Section -->
         <div class="relative h-[350px] bg-gray-900">
-            <img src="../public/images/tireInstallation.jpg" alt="Professional Tire Installation"
+            <img src="/images/tireInstallation.jpg" alt="Professional Tire Installation"
                 class="absolute inset-0 w-full h-full object-cover object-center" />
             <div class="absolute inset-0 bg-black/60"></div>
 
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="../public/images/tire-installation-service.jpg" alt="Tire Installation Service"
+                        <img src="/images/tire-installation-service.jpg" alt="Tire Installation Service"
                             class="rounded-lg shadow-lg w-full h-auto" />
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                 <div class="grid md:grid-cols-2">
                     <!-- Left side: Image -->
                     <div class="relative h-full min-h-[350px]">
-                        <img src="../public/images/happyCustomer.jpg" alt="Happy Mobile Tire Pro Customer"
+                        <img src="/images/happyCustomer.jpg" alt="Happy Mobile Tire Pro Customer"
                             class="absolute inset-0 w-full h-full object-cover object-center" />
                     </div>
                     <!-- Right side: Content -->
@@ -188,19 +188,19 @@
                 <!-- Changed to grid with responsive columns -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 place-items-center">
                     <div class="w-full max-w-32 p-2 md:p-4">
-                        <img src="../public/images/Michelin_Corporate_Logo___color.jpg" alt="Michelin"
+                        <img src="/images/Michelin_Corporate_Logo___color.jpg" alt="Michelin"
                             class="h-12 md:h-16 object-contain mx-auto" />
                     </div>
                     <div class="w-full max-w-32 p-2 md:p-4">
-                        <img src="../public/images/goodyear-logo-yellow.png" alt="Goodyear"
+                        <img src="/images/goodyear-logo-yellow.png" alt="Goodyear"
                             class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
                     <div class="w-full max-w-32 p-2 md:p-4">
-                        <img src="../public/images/BridgestoneMark-Black.png" alt="Bridgestone"
+                        <img src="/images/BridgestoneMark-Black.png" alt="Bridgestone"
                             class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
                     <div class="w-full max-w-32 p-2 md:p-4">
-                        <img src="../public/images/logo-pirelli2x.jpg" alt="Pirelli"
+                        <img src="/images/logo-pirelli2x.jpg" alt="Pirelli"
                             class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
                     <!-- SVG container with same sizing as other logos -->
@@ -255,7 +255,7 @@
                         </svg>
                     </div>
                     <div class="w-full max-w-32 p-2 md:p-4 md:hidden">
-                        <img src="../public/images/Continental_Logo_137c-TransBG.png" alt="Continental"
+                        <img src="/images/Continental_Logo_137c-TransBG.png" alt="Continental"
                             class="h-10 md:h-12 object-contain mx-auto" />
                     </div>
                 </div>
@@ -424,16 +424,16 @@
 
 <script setup>
 useHead({
-  title: 'Mobile Tire Installation Service | Professional Tire Mounting',
-  meta: [
-    { 
-      name: 'description', 
-      content: 'Expert mobile tire installation service that comes to your location. Professional mounting, computerized balancing, and proper torquing with 8 years of specialized experience.'
-    },
-    { name: 'keywords', content: 'mobile tire installation, tire mounting service, professional tire balancing, at-home tire service' },
-    { property: 'og:title', content: 'Mobile Tire Installation Service | Professional Tire Mounting' },
-    { property: 'og:description', content: 'Expert mobile tire installation that comes to you. Save up to 2 hours with our convenient service.' },
-    { property: 'og:type', content: 'website' }
-  ]
+    title: 'Mobile Tire Installation Service | Professional Tire Mounting',
+    meta: [
+        {
+            name: 'description',
+            content: 'Expert mobile tire installation service that comes to your location. Professional mounting, computerized balancing, and proper torquing with 8 years of specialized experience.'
+        },
+        { name: 'keywords', content: 'mobile tire installation, tire mounting service, professional tire balancing, at-home tire service' },
+        { property: 'og:title', content: 'Mobile Tire Installation Service | Professional Tire Mounting' },
+        { property: 'og:description', content: 'Expert mobile tire installation that comes to you. Save up to 2 hours with our convenient service.' },
+        { property: 'og:type', content: 'website' }
+    ]
 })
 </script>

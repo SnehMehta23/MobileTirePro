@@ -17,13 +17,41 @@
             class="w-[15rem] h-1/2 min-w-[48px] mr-2 object-cover">
         </NuxtLink>
         <div class="hidden lg:flex items-center space-x-4">
-          <NuxtLink @click="trackNavigation(link.label)" v-for="link in links" :key="link.to" :to="link.to" class="text-charcoal-gray font-bold no-underline
+          <NuxtLink @click="trackNavigation(link.label)" v-for="link in filteredDesktopLinks" :key="link.to"
+            :to="link.to" class="text-charcoal-gray font-bold no-underline
             hover:underline
             underline-offset-8
             decoration-vivid-red decoration-4
             py-2 dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">
             {{ link.label }}
           </NuxtLink>
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <NuxtLink to="/services" @mouseenter="showServicesDropdown = true" @mouseleave="startHideTimer" class="text-charcoal-gray font-bold no-underline
+              hover:underline
+              underline-offset-8
+              decoration-vivid-red decoration-4
+              py-2 dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white
+              flex items-center">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" :class="{ 'rotate-180': showServicesDropdown }">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </NuxtLink>
+            <div v-show="showServicesDropdown" @mouseenter="showServicesDropdown = true; clearHideTimer()"
+              @mouseleave="startHideTimer"
+              class="absolute left-0 mt-1 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md py-1 z-50 transition-opacity duration-300">
+              <!-- Individual service links -->
+              <NuxtLink v-for="service in serviceLinks" :key="service.to" :to="service.to"
+                @click="trackNavigation(service.label)"
+                class="block px-4 py-2 text-charcoal-gray dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-dark-charcoal dark:hover:text-white">
+                {{ service.label }}
+              </NuxtLink>
+            </div>
+          </div>
+
           <NuxtLink to="/login" v-if="!isLogged" class="text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white font-bold no-underline
             hover:underline
             underline-offset-8
@@ -71,10 +99,36 @@
     <transition name="fade">
       <div v-if="mobileMenuOpen" class="lg:hidden mobile-menu-overlay">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <NuxtLink @click="closeMobileMenu" v-for="link in links" :key="link.to" :to="link.to"
+          <NuxtLink @click="closeMobileMenu" v-for="link in filteredMobileLinks" :key="link.to" :to="link.to"
             class="block px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">
             {{ link.label }}
           </NuxtLink>
+
+          <!-- Mobile Services Dropdown -->
+          <div>
+            <div @click="toggleMobileServicesDropdown"
+              class="flex justify-between items-center px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white cursor-pointer">
+              <span>Services</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200"
+                :class="{ 'rotate-180': mobileServicesOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+
+            <div v-show="mobileServicesOpen" class="pl-4 pb-1 space-y-1">
+              <!-- All Services link -->
+              <NuxtLink @click="closeMobileMenu" to="/services"
+                class="block px-3 py-1 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white border-l-2 border-gray-300 dark:border-gray-700 font-medium">
+                All Services
+              </NuxtLink>
+              <!-- Individual service links -->
+              <NuxtLink @click="closeMobileMenu" v-for="service in serviceLinks" :key="service.to" :to="service.to"
+                class="block px-3 py-1 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white border-l-2 border-gray-300 dark:border-gray-700">
+                {{ service.label }}
+              </NuxtLink>
+            </div>
+          </div>
+
           <NuxtLink to="/login" v-if="!isLogged" @click="closeMobileMenu"
             class="block px-3 py-2 text-charcoal-gray dark:text-gray-300 hover:text-dark-charcoal dark:hover:text-white">
             Log in
@@ -108,11 +162,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeMount, watch } from 'vue';
+import { ref, onBeforeMount, watch, computed } from 'vue';
 import { useFetch } from '#app';
 
 const mobileMenuOpen = ref(false);
 const isLogged = ref(false);
+const showServicesDropdown = ref(false);
+const mobileServicesOpen = ref(false);
+const hideTimer = ref(null);
 
 const $gtm = useGTM();
 
@@ -132,10 +189,8 @@ onBeforeMount(async () => {
   const { data } = await useFetch('/api/auth/test', {
     onResponse({ response }) {
       isLogged.value = !!response._data.token;
-
     }
   });
-
 });
 
 const handleLogout = async () => {
@@ -152,6 +207,7 @@ const toggleMobileMenu = () => {
 
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
+  mobileServicesOpen.value = false;
 };
 
 const handleLogoutAndClose = async () => {
@@ -159,12 +215,46 @@ const handleLogoutAndClose = async () => {
   closeMobileMenu();
 };
 
+const toggleServicesDropdown = () => {
+  showServicesDropdown.value = !showServicesDropdown.value;
+};
+
+const toggleMobileServicesDropdown = () => {
+  mobileServicesOpen.value = !mobileServicesOpen.value;
+};
+
+const startHideTimer = () => {
+  hideTimer.value = setTimeout(() => {
+    showServicesDropdown.value = false;
+  }, 300);
+};
+
+const clearHideTimer = () => {
+  if (hideTimer.value) {
+    clearTimeout(hideTimer.value);
+    hideTimer.value = null;
+  }
+};
+
 const links: Link[] = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/services', label: 'Services' },
+  // Services link will be handled by the dropdown
   { to: '/fleet-services', label: 'Fleet Services' }
 ];
+
+const serviceLinks: Link[] = [
+  { to: '/services/seasonal-changeover', label: 'Seasonal Changeover' },
+  { to: '/services/tire-installation', label: 'Professional Sales & Tire Installation' },
+  { to: '/services', label: 'Tire Repair' },
+  { to: '/services', label: 'TPMS Sensor Recalibration' },
+  { to: '/services/electric-vehicle-services', label: 'EV Servicing' }
+  // Add more service pages as needed
+];
+
+// Don't filter out the main Services link, we'll show it alongside the dropdown
+const filteredDesktopLinks = computed(() => links);
+const filteredMobileLinks = computed(() => links);
 
 watch(mobileMenuOpen, (newVal) => {
   if (newVal) {

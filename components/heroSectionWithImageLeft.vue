@@ -129,7 +129,7 @@ p {
 
 @media (max-width: 1023px) {
   .hero-bg {
-    background-image: url('/images/undraw_automobile_repair_ywci.webp');
+    background-image: url('/images/stockTiresImage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
